@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h2 {
+    background-color: brown;
+    margin-bottom: 2rem;
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+}
+
+p {
+    background-color: blue;
+}
