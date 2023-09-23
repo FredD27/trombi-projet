@@ -30,8 +30,12 @@ p {
     margin: 1rem;
 }
 
+.carouselBox {
+    text-align: center;
+}
+
 #profilePicture {
-    width: 18rem;
+    width: 12rem;
     height: 15rem;
     margin: 1rem;
 }
