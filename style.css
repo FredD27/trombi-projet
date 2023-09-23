@@ -8,7 +8,6 @@
 }
 
 h2 {
-    background-color: brown;
     font-family: 'Just Another Hand', cursive;
     font-weight: 200;
     font-size: 2rem;
@@ -26,8 +25,4 @@ img {
     height: 50px;
     border-radius: 25px;
     
-}
-
-p {
-    background-color: blue;
 }
