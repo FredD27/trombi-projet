@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour la barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    height: 70px;
+}
+
+.burger {
+    width: 40px;
+    margin-right: 20px;
+}
+
+nav div p {
+   text-align: center;
+   margin-left: 70px;
+}
+
+nav div h1 {
+    margin-left: 20px;
+}
+
+/* Styles pour la section principale */
+main {
+    background-color: lightgrey;
+}
+
+/* Styles pour le carrousel */
+.carousel-container {
+    margin: 40px;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-height: 200px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Styles pour la pagination en points */
+.carousel-pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: red;
+}
