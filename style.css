@@ -48,6 +48,20 @@ h2 {
     border-radius: 1rem;
 }
 
+#profilePicture3 {
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+#profilePicture4 {
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
 @media screen and (min-width: 768px){
     .paragraph {
         margin: 2rem 4rem;
@@ -76,7 +90,7 @@ h2 {
         grid-column: 2;
         grid-row: 2;
         text-align: left;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     #profilePicture2 {
@@ -90,6 +104,33 @@ h2 {
         grid-row: 1;
         text-align: left;
         margin-left: 1rem;
+    }
+
+    #profilePicture3 {
+        grid-column: 4;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .description3 {
+        grid-column: 4;
+        grid-row: 2;
+        text-align: left;
+        margin: 1rem;
+    }
+
+    #profilePicture4 {
+        grid-column: 5;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    .description4 {
+        grid-column: 5;
+        grid-row: 1;
+        text-align: left;
+        margin: 1rem;
+        overflow: auto;
     }
 }
 
