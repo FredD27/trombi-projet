@@ -34,7 +34,7 @@ h2 {
     text-align: center;
 }
 
-.profilePic
+.profilePicture1, .profilePicture2, .profilePicture3, .profilePicture4, .profilePicture5, .profilePicture6, .profilePicture7, .profilePicture8, .profilePicture9, .profilePicture10, .profilePicture11, .profilePicture12, .profilePicture13,.profilePicture14, .profilePicture15, .profilePicture16, .profilePicture17, .profilePicture18, .profilePicture19, .profilePicture20, .profilePicture21, .profilePicture22
 
 {
     width: 12rem;
@@ -43,9 +43,68 @@ h2 {
     border-radius: 1rem;
 }
 
-.carouselBoxGrid1, .carouselBoxGrid2, .carouselBoxGrid3 {
+.carouselBoxGrid1, .carouselBoxGrid2, .carouselBoxGrid3, .carouselBoxGrid4 {
     margin-left: 3rem;
 }
+
+  
+  /* Styles pour la barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+  }
+  
+.burger {
+    width: 40px;
+    margin-right: 20px;
+  }
+  
+nav div p {
+     text-align: center;
+     margin-left: 70px;
+  }
+  
+  nav div h1 {
+      margin-left: 20px;
+  }
+
+  /* menu burger */
+.menu-burger .menu {
+    display: none;
+}
+
+.menu-burger.active .menu {
+    display: block;
+    background-color: rgba(212, 207, 207, 0.726);
+    border:3px  lightslategray;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 27px, rgba(0, 0, 0, 0.22) 0px 8px 7px;
+}
+
+li {
+    list-style-type: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.burger :hover {
+    background-color: coral;
+ }
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px){
     .paragraph {
@@ -58,12 +117,12 @@ h2 {
         margin: 2rem 10rem
     }
 
-    .profilePicture1, .profilePicture2, .profilePicture3, .profilePicture4, .profilePicture5, .profilePicture6, .profilePicture7, .profilePicture8, .profilePicture9, .profilePicture10, .profilePicture11, .profilePicture12, .profilePicture13
+    .profilePicture1, .profilePicture2, .profilePicture3, .profilePicture4, .profilePicture5, .profilePicture6, .profilePicture7, .profilePicture8, .profilePicture9, .profilePicture10, .profilePicture11, .profilePicture12, .profilePicture13, .profilePicture14, .profilePicture15, .profilePicture16, .profilePicture17, .profilePicture18, .profilePicture19, .profilePicture20, .profilePicture21, .profilePicture22
     {
         margin: 0;
     }
     
-    .description1, .description2, .description3, .description4, .description5, .description6, .description7, .description8, .description9, .description10, .description11, .description12, .description13
+    .description1, .description2, .description3, .description4, .description5, .description6, .description7, .description8, .description9, .description10, .description11, .description12, .description13, .description14, .description15, .description16, .description17, .description18, .description19, .description20, .description21, .description22 
     {
         text-align: left;
         margin: 1rem;
@@ -219,6 +278,113 @@ h2 {
     }
 
     .description13 {
+        grid-column: 4;
+        grid-row: 1;
+
+    }
+
+    .carouselBoxGrid4 {
+        display: grid;
+        grid-template-columns: repeat(5, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilePicture14 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description14 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture15 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description15 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .profilePicture16 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .description16 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture17 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description17 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .profilePicture18 {
+        grid-column: 5;
+        grid-row: 1;
+    }
+
+    .description18 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+    
+    .carouselBoxGrid5 {
+        display: grid;
+        grid-template-columns: repeat(4, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilPicture19 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description19 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture20 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description20 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .profilePicture21 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .description21 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture22 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description22 {
         grid-column: 4;
         grid-row: 1;
 
