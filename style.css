@@ -27,7 +27,7 @@ h2 {
 }
 
 .paragraph {
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 .carouselBox {
@@ -40,6 +40,10 @@ h2 {
     height: 15rem;
     margin: 1rem;
     border-radius: 1rem;
+}
+
+.carouselBoxGrid1, .carouselBoxGrid2, .carouselBoxGrid3 {
+    margin-left: 3rem;
 }
 
 @media screen and (min-width: 768px){
