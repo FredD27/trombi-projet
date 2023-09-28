@@ -8,9 +8,9 @@
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: beige;
     height: 70px;
+    width: 100%;
 }
 
 .burger {
@@ -33,41 +33,89 @@ main {
 }
 
 /* Styles pour le carrousel */
+
+
+.arrow_button_next {
+    right: 20px;
+    z-index: 1;
+}
+.arrow_button_prev {
+    left: 20px;
+    z-index: 1;
+}
+
+.arrow_button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    z-index: 1;
+}
+
+.arrow_button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow_button svg {
+    width: 50px;
+    height: 50px;
+}
+.arrow_button svg path {
+    stroke: white;
+}
+
 .carousel-container {
-    margin: 40px;
+    height: 100%;
+    width: 100%;
     background: white;
-    overflow: hidden;
     position: relative;
 }
 
+.carousel-container img {
+    margin: 2.5%;
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
 .carousel {
+    height: 100%;
+    width: 100%;
     display: flex;
-    transition: transform 0.5s ease;
-    overflow: hidden;
+    /* scroll-behavior: smooth; */
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
-    min-height: 200px;
-    text-align: center;
+    min-width: 95%; 
+    height: 100%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 5px;
+.d-none {
+    display: none;
 }
+.active {
+    display: block!important;
+    min-width: 95%; 
+    height: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    scroll-behavior: smooth;
+
+} 
+
 
 /* Styles pour la pagination en points */
-.carousel-pagination {
+/* .carousel-pagination {
     text-align: center;
     margin-top: 10px;
-}
+} */
 
-.carousel-dot {
+/* .carousel-dot {
     width: 10px;
     height: 10px;
     background-color: lightgray;
@@ -76,8 +124,9 @@ img {
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
-.carousel-dot.active {
-    background-color: red;
-}
+/* .carousel-dot.active {
+    background-color: darkgrey;
+} */
+
