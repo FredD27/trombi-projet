@@ -34,9 +34,14 @@ h2 {
     display: grid;
     grid-template-columns: repeat(5, 12rem);
     grid-template-rows: repeat(2, 15rem);
+    justify-content: center;
 }
 
-
+.reversed {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-row: 2;
+}
 
 img
 {
@@ -59,6 +64,6 @@ img
 
 @media screen and (min-width: 1440px) {
     .paragraph {
-        margin: 0 20rem;
+        margin: 5rem;
     }
 }

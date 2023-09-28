@@ -8,6 +8,7 @@ const personnes = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         objectif: "Réussir dans la vie"
       },
+
       {
         nom: "Bard",
         prenom: "Raphaël",
@@ -15,6 +16,7 @@ const personnes = [
         description: "Praesent non erat nec neque lacinia fringilla.",
         objectif: "Réussir dans la vie"
       },
+
       {
         nom: "Bard",
         prenom: "Cédric",
@@ -22,6 +24,7 @@ const personnes = [
         description: "Praesent non erat nec neque lacinia fringilla.",
         objectif: "Réussir dans la vie"
       },
+
       {
         nom: "Bard",
         prenom: "Mahdi",
@@ -29,6 +32,7 @@ const personnes = [
         description: "Praesent non erat nec neque lacinia fringilla.",
         objectif: "Réussir dans la vie"
       },
+
       {
         nom: "Bard",
         prenom: "Marie",
@@ -52,6 +56,22 @@ const personnes = [
         image: "jean.jpg",
         description: "Vestibulum ut justo ut neque fringilla sodales.",
         objectif: "Réussir dans la vie"
+      },
+
+      {
+        nom: "Pierre",
+        prenom: "Jean",
+        image: "jean.jpg",
+        description: "Vestibulum ut justo ut neque fringilla sodales.",
+        objectif: "Réussir dans la vie"
+      },
+
+      {
+        nom: "Pierre",
+        prenom: "Jean",
+        image: "jean.jpg",
+        description: "Vestibulum ut justo ut neque fringilla sodales.",
+        objectif: "Réussir dans la vie"
       }
     ]
   ];
@@ -65,7 +85,6 @@ const grid1 = document.querySelector("#grid1");
 personnes[0].forEach((personne) => {
 const card = createPersonneCard(personne);
 grid1.appendChild(card);
-
 });
 
 //^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
@@ -75,13 +94,23 @@ grid1.appendChild(card);
 function createPersonneCard(personne) {
     const card = document.createElement("div");
     card.classList.add("personne-card");
+    const cardList = document.querySelectorAll(".personne-card")
+     
+    for (let i = 1; i < cardList.length; i += 2) {
+        cardList[i].classList.add("reversed");
+        };
+
     card.innerHTML = `
         <img src="${personne.image}" alt="${personne.nom}">
         <h3>${personne.prenom} ${personne.nom}</h3>
         <p>${personne.description} ${personne.objectif}</p>
     `
     return card;
+
 };
+
+
+
 
 // ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
 // à (personne) et qui permettra de créer une div, lui donner la class personne-card
