@@ -38,16 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesContainer.appendChild(slide);
     });
   
-    function updateCarousel() {
-      loadCurrentSlide();
-    }
+    // function updateCarousel() {
+    //   loadCurrentSlide();
+    // }
   
     function nextSlide() {
       currentSlideIndex++;
       if (currentSlideIndex >= imagesArray.length) {
         currentSlideIndex = 0;
       }
-      updateCarousel();
+      loadCurrentSlide();
     }
   
     function prevSlide() {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentSlideIndex < 0) {
         currentSlideIndex = imagesArray.length - 1;
       }
-      updateCarousel();
+      loadCurrentSlide();
     }
   
     nextButton.addEventListener("click", nextSlide);
@@ -71,44 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-    // const imageDescription = document.getElementById('imageDescription');
-    
-    // slides.forEach((slide, index) => {
-    //     slide.addEventListener('click', function() {
-    //         const descriptions = [
-    //             "Description de l'image 1",
-    //             "Description de l'image 2",
-    //             "Description de l'image 3",
-    //             "Description de l'image 4"
-    //         ];
-    
-    //         imageDescription.textContent = descriptions[index];
-    //     });
-    // });
-    // });
-    
-    // console.log(nextButton)
-    // console.log(prevButton)
-  
-//   function nextSlide() {
-//     slides[currentSlideIndex].classList.remove("active");
-//     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-//     slides[currentSlideIndex].classList.add("active");
-//   }
 
-//   setInterval(nextSlide, 3000);
-
-// function updateCarousel() {
-//       for (let i = 0; i < slides.length; i++) {
-//     slides[i].classList.remove("active");
-//   }
-//   slides[currentSlideIndex].classList.add("active");
-//   console.log("Slide active :", currentSlideIndex);
-// };
-//   }
-
-//   nextButton.addEventListener("click", nextSlide);
-//   prevButton.addEventListener("click", prevSlide);
 
 // _________________________
 // const carouselContainer = document.querySelector('.carousel');
