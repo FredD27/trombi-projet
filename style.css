@@ -30,32 +30,38 @@ h2 {
     margin: 0.5rem;
 }
 
-.carouselBoxGrid1 {
-    display: grid;
-    grid-template-columns: repeat(5, 12rem);
-    grid-template-rows: repeat(2, 15rem);
+.div-groupes, .div-groupes2, .div-groupes3, .div-groupes4, .div-groupes5 {
+    display: flex;
+    margin: 60px;
     justify-content: center;
+}
+
+.personne-card {
+    min-height: 475px;
 }
 
 .reversed {
     display: flex;
     flex-direction: column-reverse;
-    grid-row: 2;
+    /* grid-row: 2; */
 }
+
+
+
 
 img
 {
     width: 12rem;
     height: 15rem;
     border-radius: 1rem;
+    margin: 2rem;
 }
 
 
 
+
 @media screen and (min-width: 768px){
-    .paragraph {
-        margin: 2rem 4rem;
-    }
+    
 }
 
 @media screen and (min-width: 1024px) {
@@ -63,7 +69,5 @@ img
 }
 
 @media screen and (min-width: 1440px) {
-    .paragraph {
-        margin: 5rem;
-    }
+    
 }
