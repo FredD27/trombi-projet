@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*navBar*/
+
+h3 {
+    
+}
+
+
+li {
+    list-style: none;
+}
+
+a, a :visited {
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Just Another Hand', cursive;
+}
+
+a:hover {
+    color: white;
+}
+
+nav {
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    #icons {
+        display: block;
+    }
+    #icons:before {
+        content: "\2630";
+    }
+    .active #icons:before {
+        content: "\2715";
+    }
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background-color: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav ul li {
+       padding: 3px 0;
+    }
+    nav ul li:hover {
+        background: rgb(177, 219, 236);
+    }
+    nav.active ul {
+        left: 0;
+    }
+
+}
+
+
+
+
+h2 {
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.titleLogo {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logoOg {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.paragraph {
+    margin: 0.5rem;
+}
+
+.carouselBox {
+    text-align: center;
+}
+
+.profilePicture1, .profilePicture2, .profilePicture3, .profilePicture4, .profilePicture5, .profilePicture6, .profilePicture7, .profilePicture8, .profilePicture9, .profilePicture10, .profilePicture11, .profilePicture12, .profilePicture13,.profilePicture14, .profilePicture15, .profilePicture16, .profilePicture17, .profilePicture18, .profilePicture19, .profilePicture20, .profilePicture21, .profilePicture22
+
+{
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.carouselBoxGrid1, .carouselBoxGrid2, .carouselBoxGrid3, .carouselBoxGrid4 {
+    margin-left: 3rem;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    .paragraph {
+        margin: 2rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .paragraph {
+        margin: 2rem 10rem
+    }
+
+    .profilePicture1, .profilePicture2, .profilePicture3, .profilePicture4, .profilePicture5, .profilePicture6, .profilePicture7, .profilePicture8, .profilePicture9, .profilePicture10, .profilePicture11, .profilePicture12, .profilePicture13, .profilePicture14, .profilePicture15, .profilePicture16, .profilePicture17, .profilePicture18, .profilePicture19, .profilePicture20, .profilePicture21, .profilePicture22
+    {
+        margin: 0;
+    }
+    
+    .description1, .description2, .description3, .description4, .description5, .description6, .description7, .description8, .description9, .description10, .description11, .description12, .description13, .description14, .description15, .description16, .description17, .description18, .description19, .description20, .description21, .description22 
+    {
+        text-align: left;
+        margin: 1rem;
+        overflow: auto;
+    }
+    .carouselBoxGrid1 {
+        display: grid;
+        grid-template-columns: repeat(4, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+    }
+
+    .profilePicture1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description1 {
+        grid-column: 1;
+        grid-row: 2;
+       
+    }
+
+    .profilePicture2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .profilePicture3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .description3 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture4 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description4 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .carouselBoxGrid2 {
+        display: grid;
+        grid-template-columns: repeat(5, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilePicture5 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description5 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture6 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description6 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .profilePicture7 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .description7 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture8 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description8 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .profilePicture9 {
+        grid-column: 5;
+        grid-row: 1;
+    }
+
+    .description9 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+
+    .carouselBoxGrid3 {
+        display: grid;
+        grid-template-columns: repeat(4, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilPicture10 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description10 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture11 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description11 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .profilePicture12 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .description12 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture13 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description13 {
+        grid-column: 4;
+        grid-row: 1;
+
+    }
+
+    .carouselBoxGrid4 {
+        display: grid;
+        grid-template-columns: repeat(5, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilePicture14 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description14 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture15 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description15 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .profilePicture16 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .description16 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture17 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description17 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .profilePicture18 {
+        grid-column: 5;
+        grid-row: 1;
+    }
+
+    .description18 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+    
+    .carouselBoxGrid5 {
+        display: grid;
+        grid-template-columns: repeat(4, 12rem);
+        grid-template-rows: 15rem 15rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .profilPicture19 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .description19 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .profilePicture20 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .description20 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .profilePicture21 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .description21 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .profilePicture22 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .description22 {
+        grid-column: 4;
+        grid-row: 1;
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .paragraph {
+        margin: 0 20rem;
+    }
+}
