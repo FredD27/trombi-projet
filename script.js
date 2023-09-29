@@ -1,10 +1,9 @@
-const carouselContainer = document.querySelector(".carousel");
-const slides = document.querySelectorAll(".carousel-slide");
-const nextButton = document.querySelector(".arrow_button_next");
-const prevButton = document.querySelector(".arrow_button_prev");
-let currentSlideIndex = 0;
-
 document.addEventListener("DOMContentLoaded", function () {
+  const slidesContainer = document.querySelector(".carousel");
+  const nextButton = document.querySelector(".arrow_button_next");
+  const prevButton = document.querySelector(".arrow_button_prev");
+  let currentSlideIndex = 0;
+
   const imagesArray = [
     "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
     "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
@@ -12,44 +11,51 @@ document.addEventListener("DOMContentLoaded", function () {
     "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
   ];
 
-  slides.forEach((slide, index) => {
-    const imgElement = document.createElement("img");
-    imgElement.src = imagesArray[index];
-    imgElement.classList.add("carousel-slide");
-    slide.appendChild(imgElement);
-  });
+  function loadCurrentSlide() {
+    slidesContainer.innerHTML = ""; // Supprimer le contenu actuel du carrousel
 
-  nextButton.addEventListener("click", function () {
+    const currentSlide = document.createElement("div");
+    currentSlide.classList.add("carousel-slide");
+    const img = document.createElement("img");
+    img.src = imagesArray[currentSlideIndex];
+    currentSlide.appendChild(img);
+    slidesContainer.appendChild(currentSlide);
+  }
+
+  function updateCarousel() {
+    loadCurrentSlide();
+  }
+
+  function nextSlide() {
     currentSlideIndex++;
-    if (currentSlideIndex >= slides.length) {
+    if (currentSlideIndex >= imagesArray.length) {
       currentSlideIndex = 0;
     }
     updateCarousel();
-  });
+  }
 
-  prevButton.addEventListener("click", function () {
+  function prevSlide() {
     currentSlideIndex--;
     if (currentSlideIndex < 0) {
-      currentSlideIndex = slides.length - 1;
+      currentSlideIndex = imagesArray.length - 1;
     }
     updateCarousel();
-  });
-  function updateCarousel() {
-      const slideWidth = slides[0].offsetWidth;
-      const scrollAmount = currentSlideIndex * slideWidth;
-      
-      carouselContainer.style.transform = `translateX(-${scrollAmount}px)`;
-      console.log("Slide active :", currentSlideIndex);
-    }
+  }
 
-    // function nextSlide() {
-    //   slides[currentSlideIndex].classList.remove('active');
-    //   currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    //   slides[currentSlideIndex].classList.add('active');
-    // }
-    
-    // setInterval(nextSlide, 3000);
+  nextButton.addEventListener("click", nextSlide);
+  prevButton.addEventListener("click", prevSlide);
+
+  loadCurrentSlide();
+  
 });
+//   function nextSlide() {
+//     slides[currentSlideIndex].classList.remove("active");
+//     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+//     slides[currentSlideIndex].classList.add("active");
+//   }
+
+//   setInterval(nextSlide, 3000);
+
 // function updateCarousel() {
 //       for (let i = 0; i < slides.length; i++) {
 //     slides[i].classList.remove("active");

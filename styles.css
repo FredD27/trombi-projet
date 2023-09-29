@@ -74,39 +74,36 @@ main {
     position: relative;
 }
 
-.carousel-container img {
-    margin: 2.5%;
-    width: 95%;
-    height: 100%;
-    border-radius: 10px;
-
+/* Styles pour le carrousel */
+.carousel-container {
+    /* height: 100vh; 100% de la hauteur de la vue */
+    width: 100%;
+    background: white;
+    position: relative;
 }
 
-.carousel {
-    height: 100%;
+.carousel-container img {
     width: 100%;
-    display: flex;
-    /* scroll-behavior: smooth; */
-    transition: transform 0.5s ease-in-out;
+    height: 100%; /* 100% de la hauteur de la vue */
+    object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur */
+    border-radius: 10px;
 }
 
 .carousel-slide {
-    min-width: 95%; 
+    width: 100%;
     height: 100%;
+    /* margin-inline: 2.5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.d-none {
-    display: none;
-}
 .active {
-    display: block!important;
-    min-width: 95%; 
+    min-width: 100%; 
     height: 100%;
     transform: scale(1);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    scroll-behavior: smooth;
-
-} 
+    transition: transform 0.3s ease-in-out;
+}
 
 
 /* Styles pour la pagination en points */
