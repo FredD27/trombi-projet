@@ -1,53 +1,95 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const slidesContainer = document.querySelector(".carousel");
-  const nextButton = document.querySelector(".arrow_button_next");
-  const prevButton = document.querySelector(".arrow_button_prev");
-  let currentSlideIndex = 0;
-
-  const imagesArray = [
-    "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
-  ];
-
-  function loadCurrentSlide() {
-    slidesContainer.innerHTML = ""; // Supprimer le contenu actuel du carrousel
-
-    const currentSlide = document.createElement("div");
-    currentSlide.classList.add("carousel-slide");
-    const img = document.createElement("img");
-    img.src = imagesArray[currentSlideIndex];
-    currentSlide.appendChild(img);
-    slidesContainer.appendChild(currentSlide);
-  }
-
-  function updateCarousel() {
-    loadCurrentSlide();
-  }
-
-  function nextSlide() {
-    currentSlideIndex++;
-    if (currentSlideIndex >= imagesArray.length) {
-      currentSlideIndex = 0;
-    }
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    currentSlideIndex--;
-    if (currentSlideIndex < 0) {
-      currentSlideIndex = imagesArray.length - 1;
-    }
-    updateCarousel();
-  }
-
-  nextButton.addEventListener("click", nextSlide);
-  prevButton.addEventListener("click", prevSlide);
-
-  loadCurrentSlide();
+    const slidesContainer = document.querySelector(".carousel");
+    const nextButton = document.querySelector(".arrow_button_next");
+    const prevButton = document.querySelector(".arrow_button_prev");
+    let currentSlideIndex = 0;
   
-});
+    const imagesArray = [
+      "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
+      "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
+      "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
+      "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
+    ];
+  
+    const descriptions = [
+      "Description de l'image 1",
+      "Description de l'image 2",
+      "Description de l'image 3",
+      "Description de l'image 4",
+    ];
+  
+    function loadCurrentSlide() {
+      slidesContainer.innerHTML = "";
+  
+      const currentSlide = document.createElement("div");
+      currentSlide.classList.add("carousel-slide");
+      const img = document.createElement("img");
+      img.src = imagesArray[currentSlideIndex];
+      currentSlide.appendChild(img);
+      slidesContainer.appendChild(currentSlide);
+    }
+  
+    imagesArray.forEach((imagePath) => {
+      const slide = document.createElement("div");
+      slide.classList.add("carousel-slide");
+      const img = document.createElement("img");
+      img.src = imagePath;
+      slide.appendChild(img);
+      slidesContainer.appendChild(slide);
+    });
+  
+    function updateCarousel() {
+      loadCurrentSlide();
+    }
+  
+    function nextSlide() {
+      currentSlideIndex++;
+      if (currentSlideIndex >= imagesArray.length) {
+        currentSlideIndex = 0;
+      }
+      updateCarousel();
+    }
+  
+    function prevSlide() {
+      currentSlideIndex--;
+      if (currentSlideIndex < 0) {
+        currentSlideIndex = imagesArray.length - 1;
+      }
+      updateCarousel();
+    }
+  
+    nextButton.addEventListener("click", nextSlide);
+    prevButton.addEventListener("click", prevSlide);
+  
+    loadCurrentSlide();
+  
+    setInterval(nextSlide, 4000);
+    const imageDescription = document.getElementById("imageDescription");
+  
+    slidesContainer.addEventListener("click", function () {
+      imageDescription.textContent = descriptions[currentSlideIndex];
+    });
+  });
+  
+    // const imageDescription = document.getElementById('imageDescription');
+    
+    // slides.forEach((slide, index) => {
+    //     slide.addEventListener('click', function() {
+    //         const descriptions = [
+    //             "Description de l'image 1",
+    //             "Description de l'image 2",
+    //             "Description de l'image 3",
+    //             "Description de l'image 4"
+    //         ];
+    
+    //         imageDescription.textContent = descriptions[index];
+    //     });
+    // });
+    // });
+    
+    // console.log(nextButton)
+    // console.log(prevButton)
+  
 //   function nextSlide() {
 //     slides[currentSlideIndex].classList.remove("active");
 //     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
@@ -133,24 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     // }
 
 //     // ________________________________________________
-//     const imageDescription = document.getElementById('imageDescription');
-
-//     slides.forEach((slide, index) => {
-//         slide.addEventListener('click', function() {
-//             const descriptions = [
-//                 "Description de l'image 1",
-//                 "Description de l'image 2",
-//                 "Description de l'image 3",
-//                 "Description de l'image 4"
-//             ];
-
-//             imageDescription.textContent = descriptions[index];
-//         });
-//     });
-// });
-
-// console.log(nextButton)
-// console.log(prevButton)
 
 // // ____________________
 

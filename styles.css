@@ -80,6 +80,7 @@ main {
     width: 100%;
     background: white;
     position: relative;
+    padding: 0 5%;
 }
 
 .carousel-container img {
