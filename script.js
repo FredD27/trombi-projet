@@ -9,7 +9,6 @@ const personnes = [
         description: "Talent: Imitations multiples",
         objectif: "Objectif professionnel: Vendre des applications qui changeront le monde",
         bref: "En bref: Bon client de la connerie universelle"
-        // rajouter deux parametres type github/linkedin
       },
 
       {
@@ -35,11 +34,11 @@ const personnes = [
       {
         nom: "Mcheik",
         prenom: "Mahdi",
-        age: 0,
+        age: "20 + 17 ans",
         image: "./Photos/RastaRockets/IMG_0020.jpg",
-        description: "Talent: Praesent non erat nec neque lacinia fringilla.",
-        objectif: "Objectif professionnel: Réussir dans la vie",
-        bref: "En bref: "
+        description: "Talent: « Je dessine gavé bien »",
+        objectif: "Objectif professionnel: Développeur d'applications",
+        bref: "En bref: « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »"
       },
 
       {
@@ -54,39 +53,43 @@ const personnes = [
     ],
     [
       {
-        nom: "dazdjnand",
+        nom: "BONNAURE",
         prenom: "Sylvain",
-        age: 0,
+        age: "Pas assez vieux pour connaître woodstuck",
         image: "./Photos/Les 4 Fantastiques/IMG_0037.jpg",
-        description: "Vestibulum ut justo ut neque fringilla sodales.",
-        objectif: "Réussir dans la vie"
+        description: "Talent: Créateur du cocktail officiel du festival burlesque de Montréal",
+        objectif: "Objectif professionnel: Vivre sa meilleure vie (près de l'océan)",
+        bref: "En bref: Qui ne tente rien n'a rien"
       },
   
       {
-        nom: "zefzhf",
+        nom: "DURANTY",
         prenom: "David",
-        age: 0,
+        age: 48,
         image: "./Photos/Les 4 Fantastiques/IMG_0038.jpg",
-        description: "Vestibulum ut justo ut neque fringilla sodales.",
-        objectif: "Réussir dans la vie"
+        description: "Talent: Triche avec son vélo électrique",
+        objectif: "Objectif professionnel: Devenir meilleur que Dimitri (a.k.a: Dieu)",
+        bref: "En bref: « T'inquiètes, je gère »"
       },
 
       {
-        nom: "efionzofz",
+        nom: "CAIREY",
         prenom: "Antoine",
-        age: 0,
+        age: 27,
         image: "./Photos/Les 4 Fantastiques/IMG_0039.jpg",
-        description: "Vestibulum ut justo ut neque fringilla sodales.",
-        objectif: "Réussir dans la vie"
+        description: "Talent: Champion de géoguessr",
+        objectif: "Objectif professionnel: Devenir Elon Musk en mieux",
+        bref: "En bref: « Chauve qui peut ! »"
       },
 
       {
         nom: "Guyomard",
         prenom: "Victor",
-        age: 0,
+        age: 24,
         image: "./Photos/Les 4 Fantastiques/IMG_0040.jpg",
-        description: "Vestibulum ut justo ut neque fringilla sodales.",
-        objectif: "Réussir dans la vie"
+        description: "Talent: Décapsule une bière, avec une autre bière",
+        objectif: "Objectif professionnel: Devenir Président",
+        bref: "En bref: Les plus belles années d’une vie sont celles que l’ont a pas encore vécues"
       }
     ],
     [
@@ -98,7 +101,6 @@ const personnes = [
           description: "Talent: Gps intégré dans son cerveau",
           objectif: "Objectif professionnel: Programmeur logiciel",
           bref: "En bref: La fin justifie les moyens"
-          // rajouter deux parametres type github/linkedin
         },
   
         {
@@ -150,7 +152,6 @@ const personnes = [
           description: "Talent: Roi du cookéo",
           objectif: "Objectif professionnel: Aspirer à un meilleur cadre de vie",
           bref: "En bref: Fidèle comme son ombre"
-          // rajouter deux parametres type github/linkedin
         },
   
         {
@@ -160,37 +161,28 @@ const personnes = [
           image: "./Photos/The OG/IMG_9997.jpg",
           description: "Talent: Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
           objectif: "Objectif pro: Joueur e-sport",
-          bref: "En bref: « Tu vas finir ton sandwich ? »"
+          bref: "En bref: « Ca geek ce soir ? »"
         },
   
         {
-          nom: "DUPONT",
-          prenom: "Cédric",
+          nom: "HEMAMOU",
+          prenom: "Adam",
           age: 26,
-          image: "./Photos/RastaRockets/IMG_0019.jpg",
-          description: "Talent: Très très bon vendeur",
-          objectif: "Objectif professionnel: Nomade Digital"
+          image: "./Photos/The OG/IMG_9998.jpg",
+          description: "Talent: Chaud sur overwatch",
+          objectif: "Objectif professionnel: Finir le caroussel",
+          bref: "En bref: « J'en ai marre du caroussel »"
         },
-  
+        
         {
-          nom: "Mcheik",
-          prenom: "Mahdi",
-          age: 0,
-          image: "./Photos/RastaRockets/IMG_0020.jpg",
-          description: "Talent: Praesent non erat nec neque lacinia fringilla.",
-          objectif: "Objectif professionnel: Réussir dans la vie",
-          bref: "En bref: "
+            nom: "DRUET",
+            prenom: "Frédérique",
+            age: "« Pas très vieille »",
+            image: "./Photos/The OG/IMG_9999.jpg",
+            description: "Talent: Chaud sur overwatch",
+            objectif: "Objectif professionnel: Finir le caroussel",
+            bref: "En bref: « J'en ai marre du caroussel »"
         },
-  
-        {
-          nom: "DELAIRE",
-          prenom: "Marie",
-          age: 29,
-          image: "./Photos/RastaRockets/IMG_0022.jpg",
-          description: "Talent: Incarne le talent lui-même",
-          objectif: "Objectif professionnel: Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
-          bref: "En bref: « Est-ce que c’est bon pour vous ? » Octogone : Dimitri VS Squeezy"
-        }
     ],
   ];
 
