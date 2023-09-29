@@ -4,7 +4,7 @@ const personnes = [
       {
         nom: "CHAUVEAU",
         prenom: "Mathieu",
-        age: 33,
+       // age: 33,
         image: "./Photos/RastaRockets/IMG_0014.jpg",
         description: "Talent: Imitations multiples",
         objectif: "Objectif professionnel: Vendre des applications qui changeront le monde",
@@ -14,7 +14,7 @@ const personnes = [
       {
         nom: "BARD",
         prenom: "Raphaël",
-        age: 25,
+      //  age: 25,
         image: "./Photos/RastaRockets/IMG_0017.jpg",
         description: "Talent: Ne sait pas roter",
         objectif: "Objectif pro: Nomade Digital",
@@ -24,7 +24,7 @@ const personnes = [
       {
         nom: "DUPONT",
         prenom: "Cédric",
-        age: 26,
+      //  age: 26,
         image: "./Photos/RastaRockets/IMG_0019.jpg",
         description: "Talent: Très très bon vendeur",
         objectif: "Objectif professionnel: Nomade Digital",
@@ -34,7 +34,7 @@ const personnes = [
       {
         nom: "Mcheik",
         prenom: "Mahdi",
-        age: "20 + 17 ans",
+      //  age: "20 + 17 ans",
         image: "./Photos/RastaRockets/IMG_0020.jpg",
         description: "Talent: « Je dessine gavé bien »",
         objectif: "Objectif professionnel: Développeur d'applications",
@@ -44,59 +44,59 @@ const personnes = [
       {
         nom: "DELAIRE",
         prenom: "Marie",
-        age: 29,
+      //  age: 29,
         image: "./Photos/RastaRockets/IMG_0022.jpg",
         description: "Talent: Incarne le talent lui-même",
-        objectif: "Objectif professionnel: Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
-        bref: "En bref: « Est-ce que c’est bon pour vous ? » Octogone : Dimitri VS Squeezy"
+        objectif: "Objectif professionnel: Gérer sa propre entreprise avec </br> ses propres valeurs : on bosse, mais pas trop",
+        bref: "En bref: « Est-ce que c’est bon pour vous ? » -Octogone : Dimitri VS Squeezy"
       }
     ],
     [
       {
         nom: "BONNAURE",
         prenom: "Sylvain",
-        age: "Pas assez vieux pour connaître woodstuck",
+      //  age: "Pas assez vieux pour connaître woodstuck",
         image: "./Photos/Les 4 Fantastiques/IMG_0037.jpg",
-        description: "Talent: Créateur du cocktail officiel du festival burlesque de Montréal",
-        objectif: "Objectif professionnel: Vivre sa meilleure vie (près de l'océan)",
+        description: "Talent: Créateur du cocktail officiel </br> du festival burlesque de Montréal",
+        objectif: "Objectif professionnel: Vivre sa </br> meilleure vie (près de l'océan)",
         bref: "En bref: Qui ne tente rien n'a rien"
       },
   
       {
         nom: "DURANTY",
         prenom: "David",
-        age: 48,
+      //  age: 48,
         image: "./Photos/Les 4 Fantastiques/IMG_0038.jpg",
         description: "Talent: Triche avec son vélo électrique",
-        objectif: "Objectif professionnel: Devenir meilleur que Dimitri (a.k.a: Dieu)",
+        objectif: "Objectif professionnel: Devenir meilleur </br> que Dimitri (a.k.a: Dieu)",
         bref: "En bref: « T'inquiètes, je gère »"
       },
 
       {
         nom: "CAIREY",
         prenom: "Antoine",
-        age: 27,
+      //  age: 27,
         image: "./Photos/Les 4 Fantastiques/IMG_0039.jpg",
         description: "Talent: Champion de géoguessr",
-        objectif: "Objectif professionnel: Devenir Elon Musk en mieux",
+        objectif: "Objectif professionnel: Devenir </br> Elon Musk en mieux",
         bref: "En bref: « Chauve qui peut ! »"
       },
 
       {
         nom: "Guyomard",
         prenom: "Victor",
-        age: 24,
+      //  age: 24,
         image: "./Photos/Les 4 Fantastiques/IMG_0040.jpg",
-        description: "Talent: Décapsule une bière, avec une autre bière",
+        description: "Talent: Décapsule une bière, </br> avec une autre bière",
         objectif: "Objectif professionnel: Devenir Président",
-        bref: "En bref: Les plus belles années d’une vie sont celles que l’ont a pas encore vécues"
+        bref: "En bref: Les plus belles années d’une vie </br> sont celles que l’ont a pas encore vécues"
       }
     ],
     [
         {
           nom: "HARMACH",
           prenom: "Nassime",
-          age: 21,
+        //  age: 21,
           image: "./Photos/Tango Charlie/IMG_0005.jpg",
           description: "Talent: Gps intégré dans son cerveau",
           objectif: "Objectif professionnel: Programmeur logiciel",
@@ -106,7 +106,7 @@ const personnes = [
         {
           nom: "LAURIE",
           prenom: "Cassiopée",
-          age: 23,
+        //  age: 23,
           image: "./Photos/Tango Charlie/IMG_0008.jpg",
           description: "Talent: Voltige, avec des chevaux",
           objectif: "Hackeuse professionnelle",
@@ -116,50 +116,50 @@ const personnes = [
         {
           nom: "CAUVIN",
           prenom: "Annaëlle",
-          age: 22,
+        //  age: 22,
           image: "./Photos/Tango Charlie/IMG_0009.jpg",
           description: "Talent: N'arrive pas à être en retard",
           objectif: "Objectif professionnel: Nomade Digital",
-          bref: "En bref: « Je ne suis pas optimiste, je suis déterminée »"
+          bref: "En bref: « Je ne suis pas optimiste, </br> je suis déterminée »"
         },
   
         {
           nom: "VALLEIX",
           prenom: "Aurore",
-          age: 41,
+        //  age: 41,
           image: "./Photos/Tango Charlie/IMG_0011.jpg",
           description: "Talent: Touche son nez avec sa langue",
-          objectif: "Objectif professionnel: Développer au quatres coins du monde",
+          objectif: "Objectif professionnel: Développer au </br> quatres coins du monde",
           bref: "En bref: « Je vais bien, tout vas bien »"
         },
   
         {
           nom: "HAYET",
           prenom: "Benoit",
-          age: 33,
+        //  age: 33,
           image: "./Photos/Tango Charlie/IMG_0012.jpg",
           description: "Talent: Réalise des peintures abstraites",
           objectif: "Objectif professionnel: Devenir Freelance",
-          bref: "En bref: « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »"
+          bref: "En bref: « Il n’y a rien de noble à être </br> supérieur à vos semblables. La vraie </br> noblesse est d’être supérieur à celui </br> que vous avez été auparavant »"
         }
     ],
     [
         {
           nom: "BRUN",
           prenom: "Florian",
-          age: 33,
+        //  age: 33,
           image: "./Photos/The OG/IMG_9996.jpg",
           description: "Talent: Roi du cookéo",
-          objectif: "Objectif professionnel: Aspirer à un meilleur cadre de vie",
+          objectif: "Objectif professionnel: Aspirer à un </br> meilleur cadre de vie",
           bref: "En bref: Fidèle comme son ombre"
         },
   
         {
           nom: "GARCIA",
           prenom: "Victor",
-          age: 28,
+       //   age: 28,
           image: "./Photos/The OG/IMG_9997.jpg",
-          description: "Talent: Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
+          description: "Talent: Peux manger un bucket pour </br> deux + les deux frites au KFC, et un </br> burger en plus",
           objectif: "Objectif pro: Joueur e-sport",
           bref: "En bref: « Ca geek ce soir ? »"
         },
@@ -167,7 +167,7 @@ const personnes = [
         {
           nom: "HEMAMOU",
           prenom: "Adam",
-          age: 26,
+        //  age: 26,
           image: "./Photos/The OG/IMG_9998.jpg",
           description: "Talent: Chaud sur overwatch",
           objectif: "Objectif professionnel: Finir le caroussel",
@@ -177,13 +177,54 @@ const personnes = [
         {
             nom: "DRUET",
             prenom: "Frédérique",
-            age: "« Pas très vieille »",
+        //    age: "« Pas très vieille »",
             image: "./Photos/The OG/IMG_9999.jpg",
-            description: "Talent: Chaud sur overwatch",
-            objectif: "Objectif professionnel: Finir le caroussel",
-            bref: "En bref: « J'en ai marre du caroussel »"
+            description: "Talent: As de CSS",
+            objectif: "Objectif professionnel: Survivre à la WCS",
+            bref: "En bref: « J'aime pas Javascript »"
         },
     ],
+    [
+      {
+        nom: "ABAJOLI",
+        prenom: "Leslie",
+      //  age: 34,
+        image: "./Photos/Totally Spies/IMG_0026.jpg",
+        description: "Talent: Danse très bien </br> sur de l'afro rythm",
+        objectif: "Objectif professionnel: </br> Développeuse web riche </br> et célèbre",
+        bref: "En bref: « Tout ce qui </br> est petit est mignon »"
+      },
+  
+      {
+        nom: "BORDES",
+        prenom: "Lucas",
+      //  age: 48,
+        image: "./Photos/Totally Spies/IMG_0028.jpg",
+        description: "Talent: Décapsuler des bières </br> avec les pieds",
+        objectif: "Objectif professionnel: Survivre à une </br> autre journée à la Wild",
+        bref: "En bref: « Ce n’est pas l’émotion qui </br> définie l’expression mais </br> l’expression qui définie l’émotion »"
+      },
+
+      {
+        nom: "VANNIER",
+        prenom: "Claire",
+      //  age: "Pas assez grande pour atteindre la dernière étagère",
+        image: "./Photos/Totally Spies/IMG_0032.jpg",
+        description: "Talent: Chanter sous la douche",
+        objectif: "Objectif professionnel: Apporter </br> aux autres ce </br> qu'on lui a apporté",
+        bref: "En bref: Réussir c'est prendre </br> le risque d'échouer"
+      },
+
+      {
+        nom: "COUTAIS",
+        prenom: "Nélia",
+      //  age: "Pas assez grande pour maîtriser le code",
+        image: "./Photos/Totally Spies/IMG_0034.jpg",
+        description: "Talent: Trop bien caché",
+        objectif: "Objectif professionnel: </br> Alternance et vivre de son travail",
+        bref: "En bref: « Some people live more in </br> 20 years than others do in 80, </br> it’s not the time that matters, </br> it’s the person »"
+      }
+    ]
   ];
 
 //Crée la variable div-groupes pour stocker l'élément html #div-groupes
@@ -213,19 +254,31 @@ divGroupes3.appendChild(card);
     }); 
 
 const divGroupes4 = document.querySelector(".div-groupes4");
+let cardCounter = 0;    
 
-    
 personnes[3].forEach((personne) => {
 const card = createPersonneCard(personne);
 divGroupes4.appendChild(card);
+// Si le reste de la division de cardCounter par 2 est égal à 1,
+//alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
+  if (cardCounter % 2 === 1) {
+    card.classList.add("reversed");
+  }
+
+  cardCounter++
      }); 
 
 const divGroupes5 = document.querySelector(".div-groupes5");
-
+let cardCount = 0;
 
 personnes[4].forEach((personne) => {
 const card = createPersonneCard(personne);
 divGroupes5.appendChild(card);
+  if (cardCount % 2 === 1) {
+  card.classList.add("reversed");
+  }
+
+  cardCount++
      }); 
 
 //^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
@@ -244,9 +297,11 @@ function createPersonneCard(personne) {
     card.innerHTML = `
         <img src="${personne.image}" alt="${personne.nom}">
         <h3>${personne.prenom} ${personne.nom}</h3>
-        <p> ${personne.age} </br> 
+        <p> <!--${personne.age} </br> -->
         ${personne.description} </br>
-        ${personne.objectif}</p>
+        ${personne.objectif} </br>
+        ${personne.bref}
+        </p>
     `
     return card;
 };
