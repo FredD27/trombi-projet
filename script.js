@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentSlideIndex = 0;
       }
       loadCurrentSlide();
+      imageDescription.textContent = "";
     }
   
     function prevSlide() {
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentSlideIndex = imagesArray.length - 1;
       }
       loadCurrentSlide();
+      imageDescription.textContent = "";
     }
   
     nextButton.addEventListener("click", nextSlide);
@@ -63,108 +65,46 @@ document.addEventListener("DOMContentLoaded", function () {
   
     loadCurrentSlide();
   
-    setInterval(nextSlide, 4000);
+    // setInterval(nextSlide, 4000);
+    // _____________________________
     const imageDescription = document.getElementById("imageDescription");
   
     slidesContainer.addEventListener("click", function () {
       imageDescription.textContent = descriptions[currentSlideIndex];
     });
+    // _______________________________
+    let touchStartX = null;
+    let touchEndX = null;
+    
+    slidesContainer.addEventListener('touchstart', function(event) {
+      touchStartX = event.touches[0].clientX;
+    });
+    
+    slidesContainer.addEventListener('touchmove', function(event) {
+      touchEndX = event.touches[0].clientX;
+    });
+    
+    slidesContainer.addEventListener('touchend', function() {
+      if (touchStartX !== null && touchEndX !== null) {
+        const deltaX = touchEndX - touchStartX;
+        if (deltaX > 0) {
+          prevSlide();
+        } else if (deltaX < 0) {
+          nextSlide();
+        }
+      }
+    
+      touchStartX = null;
+      touchEndX = null;
+    });
   });
   
 
 
-// _________________________
-// const carouselContainer = document.querySelector('.carousel');
-// const slides = document.querySelectorAll('.carousel-slide');
-// const nextButton = document.querySelector('.arrow_button_next');
-// const prevButton = document.querySelector('.arrow_button_prev');
-
-// let currentSlideIndex = 0;
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const imagesArray = [
-//         "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
-//         "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
-//         "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
-//         "./Photos/Les-4-Fantastiques/IMG_0040.jpg"
-//     ];
-
-//     slides.forEach((slide, index) => {
-//         const imgElement = document.createElement('img');
-//         imgElement.src = imagesArray[index];
-//         imgElement.classList.add('carousel-slide');
-//         slide.appendChild(imgElement);
-//     });
-//     // ... Le reste de votre code
-//     // imagesArray.forEach(imagePath => {
-//     //     const imgElement = document.createElement('img');
-
-//     //     imgElement.src = imagePath;
-
-//     //     imgElement.classList.add('carousel-slide');
-
-//     //     console.log('Image ajoutée :', imagePath);
-//     //     for (let i = 0; i < slides.length; i++) {
-//     //         slides[i].appendChild(imgElement);
-//     //     }
-//     // });
-
-//     nextButton.addEventListener('click', function() {
-//         currentSlideIndex++;
-//         if (currentSlideIndex >= slides.length) {
-//             currentSlideIndex = 0;
-//         }
-
-//         updateCarousel();
-//     });
-
-//     prevButton.addEventListener('click', function() {
-
-//         currentSlideIndex--;
-//         if (currentSlideIndex < 0) {
-//             currentSlideIndex = slides.length - 1;
-//         }
-
-//         updateCarousel();
-//     });
-
-//     // function updateCarousel() {
-//     //     for (let i = 0; i < slides.length; i++) {
-//     //         slides[i].classList.remove('active');
-//     //     }
-//     //     slides[currentSlideIndex].classList.add('active');
-
-//     //     console.log('Slide active :', currentSlideIndex);
-//     // }
-
-//     // ________________________________________________
+// ________________________//     // ________________________________________________
 
 // // ____________________
 
-// // let touchStartX = null;
-// // let touchEndX = null;
-
-// // carouselContainer.addEventListener('touchstart', function(event) {
-// //   touchStartX = event.touches[0].clientX;
-// // });
-
-// // carouselContainer.addEventListener('touchmove', function(event) {
-// //   touchEndX = event.touches[0].clientX;
-// // });
-
-// // carouselContainer.addEventListener('touchend', function() {
-// //   if (touchStartX !== null && touchEndX !== null) {
-// //     const deltaX = touchEndX - touchStartX;
-// //     if (deltaX > 0) {
-// //       prevSlide();
-// //     } else if (deltaX < 0) {
-// //       nextSlide();
-// //     }
-// //   }
-
-// //   touchStartX = null;
-// //   touchEndX = null;
-// // });
 // // ___________________________
 
 // // function previous() {
@@ -187,28 +127,23 @@ document.addEventListener("DOMContentLoaded", function () {
 // // ________________________
 // // let currentIndex = 0;
 
-// // // Fonction pour mettre à jour la pagination
-// // function updatePagination() {
-// //     pagination.innerHTML = ''; // Efface le contenu précédent
+// function updatePagination() {
+//     pagination.innerHTML = '';
 
-// //     // Parcourez les diapositives et créez des points de pagination
-// //     slides.forEach((slide, i) => {
-// //         const dot = document.createElement('div');
-// //         dot.classList.add('carousel-dot');
+//     slides.forEach((slide, i) => {
+//         const dot = document.createElement('div');
+//         dot.classList.add('carousel-dot');
 
-// //         // Ajoutez une classe "active" au point actuel
-// //         if (i === currentIndex) {
-// //             dot.classList.add('active');
-// //         }
+//         if (i === currentIndex) {
+//             dot.classList.add('active');
+//         }
 
-// //         // Ajoutez un gestionnaire d'événement pour chaque point de pagination
-// //         dot.addEventListener('click', () => {
-// //             goToSlide(i);
-// //         });
+//         dot.addEventListener('click', () => {
+//             goToSlide(i);
+//         });
 
-// //         // Ajoutez le point à la pagination
-// //         pagination.appendChild(dot);
-// //     });
+//         pagination.appendChild(dot);
+//     });
 // // }
 // // ________________________
 // // function loadImages() {
