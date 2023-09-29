@@ -7,6 +7,84 @@
     font-family: sans-serif;
 }
 
+/*navBar*/
+
+h3 {
+    
+}
+
+
+li {
+    list-style: none;
+
+}
+
+a, a :visited {
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Just Another Hand', cursive;
+}
+
+a:hover {
+    color: white;
+}
+
+nav {
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    #icons {
+        display: block;
+    }
+    #icons:before {
+        content: "\2630";
+    }
+    .active #icons:before {
+        content: "\2715";
+    }
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background-color: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav ul li {
+       padding: 3px 0;
+    }
+    nav ul li:hover {
+        background: rgb(177, 219, 236);
+    }
+    nav.active ul {
+        left: 0;
+    }
+
+}
+
+
+
+
 h2 {
     font-family: 'Just Another Hand', cursive;
     font-weight: 200;
@@ -46,62 +124,6 @@ h2 {
 .carouselBoxGrid1, .carouselBoxGrid2, .carouselBoxGrid3, .carouselBoxGrid4 {
     margin-left: 3rem;
 }
-
-  
-  /* Styles pour la barre de navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: beige;
-    height: 70px;
-    width: 100%;
-    position: sticky;
-  }
-  
-.burger {
-    width: 40px;
-    margin-right: 20px;
-  }
-  
-nav div p {
-     text-align: center;
-     margin-left: 70px;
-  }
-  
-  nav div h1 {
-      margin-left: 20px;
-  }
-
-  /* menu burger */
-.menu-burger .menu {
-    display: none;
-}
-
-.menu-burger.active .menu {
-    display: block;
-    background-color: rgba(212, 207, 207, 0.726);
-    border:3px  lightslategray;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 27px, rgba(0, 0, 0, 0.22) 0px 8px 7px;
-}
-
-li {
-    list-style-type: none;
-    
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.burger :hover {
-    background-color: coral;
- }
-
-
-
-
 
 
 
