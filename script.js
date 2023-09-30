@@ -328,37 +328,73 @@ const groupDescriptions = [
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
-    titre: "Les Rasta Rockets",
+    titre: "Les Quatres Fantastiques",
     logo: "img.logo",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
-    titre: "Les Rasta Rockets",
+    titre: "Tango Charlie",
     logo: "img.logo",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
-    titre: "Les Rasta Rockets",
+    titre: "Les OGs",
     logo: "img.logo",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
-    titre: "Les Rasta Rockets",
+    titre: "Les Totally Spies",
     logo: "img.logo",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
 ];
 
-const groupDescription1 = document.querySelector(".groupDescription1");
 
-groupDescriptions.forEach((group) => {
-  const newGroup = createGroup(group);
-  groupDescription1.appendChild(newGroup);
-});
+// ^ Tableau des descriptions des groupes; comprend titre, logo, description
+const groupDescription1 = document.querySelector(".groupDescription1");
+ const firstGroup = groupDescriptions[0];
+ const newGroup = createGroup(firstGroup);
+//variable groupDescription1 = la div qui va contenir la description du groupe
+//firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
+//newGroup est la variable qui appelle la fonction createGroup et l'argument
+//permet de l'insérer dans firstGroup
+
+ groupDescription1.appendChild(newGroup);
+ //on fini sur un appendChild pour pousser notre nouvelle description dans la div
+ //présente sur le HTML
+
+ const groupDescription2 = document.querySelector(".groupDescription2");
+ const secondGroup = groupDescriptions[1];
+ const newGroup2 = createGroup(secondGroup);
+
+ groupDescription2.appendChild(newGroup2);
+
+ const groupDescription3 = document.querySelector(".groupDescription3");
+ const thirdGroup = groupDescriptions[2];
+ const newGroup3 = createGroup(thirdGroup);
+
+ groupDescription3.appendChild(newGroup3)
+
+ const groupDescription4 = document.querySelector(".groupDescription4");
+ const fourthGroup = groupDescriptions[3];
+ const newGroup4 = createGroup(fourthGroup);
+
+ groupDescription4.appendChild(newGroup4);
+
+ const groupDescription5 = document.querySelector(".groupDescription5");
+ const fifthGroup = groupDescriptions[4];
+ const newGroup5 = createGroup(fifthGroup);
+
+ groupDescription5.appendChild(newGroup5);
+
+ //J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
+ //sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
+ //un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
+
 
 function createGroup(group) {
   const groupDiv = document.createElement("div");
@@ -367,3 +403,9 @@ function createGroup(group) {
                         <p>${group.description}</p>`;
   return groupDiv;
 };
+
+//Fonction du nom de createGroup, paramètre group.
+//variable groupDiv crée une div,
+//groupDiv.classList.add ajoute la classe "groupDiv" à la div,
+//groupDiv.innerHTML ajouter les éléments à afficher
+//return groupDiv sinon elle est inutilisable
