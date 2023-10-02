@@ -1,66 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-h2 {
-  font-family: "Just Another Hand", cursive;
-  font-weight: 200;
-  font-size: 2rem;
-}
-
-h3 {
-  margin: rem;
-}
-
-.titleLogo {
-  margin: 3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#logoOg {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-}
-
-.div-groupes,
-.div-groupes2,
-.div-groupes3,
-.div-groupes4,
-.div-groupes5 {
-  display: flex;
-  margin: 60px;
-  justify-content: center;
-}
-
-.personne-card {
-  min-height: 475px;
-}
-
-.reversed {
-  display: flex;
-  flex-direction: column-reverse;
-  /* grid-row: 2; */
-}
-
-img {
-  width: 12rem;
-  height: 15rem;
-  margin: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-}
-
 @media screen and (min-width: 1024px) {
-}
+  @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
 
-@media screen and (min-width: 1440px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    font-family: "Just Another Hand", cursive;
+    font-weight: 200;
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin: rem;
+  }
+
+  .titleLogo {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #logoOg {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .div-groupes,
+  .div-groupes2,
+  .div-groupes3,
+  .div-groupes4,
+  .div-groupes5 {
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+  }
+
+  .personne-card {
+    min-height: 475px;
+  }
+
+  .reversed {
+    display: flex;
+    flex-direction: column-reverse;
+    /* grid-row: 2; */
+  }
+
+  img {
+    width: 12rem;
+    height: 15rem;
+    margin: 2rem;
+  }
 }

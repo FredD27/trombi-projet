@@ -353,48 +353,46 @@ const groupDescriptions = [
   },
 ];
 
-
 // ^ Tableau des descriptions des groupes; comprend titre, logo, description
 const groupDescription1 = document.querySelector(".groupDescription1");
- const firstGroup = groupDescriptions[0];
- const newGroup = createGroup(firstGroup);
+const firstGroup = groupDescriptions[0];
+const newGroup = createGroup(firstGroup);
 //variable groupDescription1 = la div qui va contenir la description du groupe
 //firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
 //newGroup est la variable qui appelle la fonction createGroup et l'argument
 //permet de l'insérer dans firstGroup
 
- groupDescription1.appendChild(newGroup);
- //on fini sur un appendChild pour pousser notre nouvelle description dans la div
- //présente sur le HTML
+groupDescription1.appendChild(newGroup);
+//on fini sur un appendChild pour pousser notre nouvelle description dans la div
+//présente sur le HTML
 
- const groupDescription2 = document.querySelector(".groupDescription2");
- const secondGroup = groupDescriptions[1];
- const newGroup2 = createGroup(secondGroup);
+const groupDescription2 = document.querySelector(".groupDescription2");
+const secondGroup = groupDescriptions[1];
+const newGroup2 = createGroup(secondGroup);
 
- groupDescription2.appendChild(newGroup2);
+groupDescription2.appendChild(newGroup2);
 
- const groupDescription3 = document.querySelector(".groupDescription3");
- const thirdGroup = groupDescriptions[2];
- const newGroup3 = createGroup(thirdGroup);
+const groupDescription3 = document.querySelector(".groupDescription3");
+const thirdGroup = groupDescriptions[2];
+const newGroup3 = createGroup(thirdGroup);
 
- groupDescription3.appendChild(newGroup3)
+groupDescription3.appendChild(newGroup3);
 
- const groupDescription4 = document.querySelector(".groupDescription4");
- const fourthGroup = groupDescriptions[3];
- const newGroup4 = createGroup(fourthGroup);
+const groupDescription4 = document.querySelector(".groupDescription4");
+const fourthGroup = groupDescriptions[3];
+const newGroup4 = createGroup(fourthGroup);
 
- groupDescription4.appendChild(newGroup4);
+groupDescription4.appendChild(newGroup4);
 
- const groupDescription5 = document.querySelector(".groupDescription5");
- const fifthGroup = groupDescriptions[4];
- const newGroup5 = createGroup(fifthGroup);
+const groupDescription5 = document.querySelector(".groupDescription5");
+const fifthGroup = groupDescriptions[4];
+const newGroup5 = createGroup(fifthGroup);
 
- groupDescription5.appendChild(newGroup5);
+groupDescription5.appendChild(newGroup5);
 
- //J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
- //sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
- //un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
-
+//J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
+//sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
+//un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
 
 function createGroup(group) {
   const groupDiv = document.createElement("div");
@@ -402,7 +400,7 @@ function createGroup(group) {
   groupDiv.innerHTML = `<h4>${group.titre} ${group.logo}</h4>
                         <p>${group.description}</p>`;
   return groupDiv;
-};
+}
 
 //Fonction du nom de createGroup, paramètre group.
 //variable groupDiv crée une div,
