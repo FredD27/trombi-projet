@@ -156,15 +156,4 @@ document.addEventListener("DOMContentLoaded", function () {
 // //     });
 // // }
 
-// // __________________________
-// // // Fonction pour déplacer le carrousel vers une diapositive spécifique
-// // function goToSlide(index) {
-// //     console.log(slides);
-// //     currentIndex = index;
-// //     const translateX = -currentIndex * 100 + '%'; // Déplace le carrousel en pourcentage
-// //     carousel.style.transform = `translateX(${translateX})`;
-// //     updatePagination();
-// // }
 
-// // // prevButton.addEventListener('click', prevSlide);
-// // // nextButton.addEventListener('click', nextSlide);
