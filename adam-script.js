@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
       "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
     ];
+    
   
     const descriptions = [
       "Description de l'image 1",
