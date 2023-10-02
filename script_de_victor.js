@@ -407,3 +407,4 @@ function createGroup(group) {
 //groupDiv.classList.add ajoute la classe "groupDiv" à la div,
 //groupDiv.innerHTML ajouter les éléments à afficher
 //return groupDiv sinon elle est inutilisable
+
