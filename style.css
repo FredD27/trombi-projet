@@ -28,6 +28,86 @@
      margin-left: 20px;
  }
 
+ .arrow_button_next {
+    right: 20px;
+    z-index: 1;
+}
+.arrow_button_prev {
+    left: 20px;
+    z-index: 1;
+}
+
+.arrow_button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    z-index: 1;
+}
+
+.arrow_button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow_button svg {
+    width: 50px;
+    height: 50px;
+}
+.arrow_button svg path {
+    stroke: white;
+}
+
+.carousel-container {
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+/* Styles pour le carrousel */
+.carousel-container {
+    /* height: 100vh; 100% de la hauteur de la vue */
+    width: 100%;
+    background: white;
+    position: relative;
+    padding: 0 5%;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 90%; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    /* margin-inline: 2.5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    min-width: 100%; 
+    height: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#imageDescription {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
  .container {
      display: flex;
      align-items: center;
@@ -230,4 +310,5 @@ h2 {
 
 @media screen and (min-width: 1024px) {
     
+}
 }
