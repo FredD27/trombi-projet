@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const currentSlide = document.createElement("div");
       currentSlide.classList.add("carousel-slide");
+      currentSlide.classList.add("fade-transition");
       const img = document.createElement("img");
       img.src = imagesArray[currentSlideIndex];
       currentSlide.appendChild(img);
@@ -37,10 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       slide.appendChild(img);
       slidesContainer.appendChild(slide);
     });
-  
-    // function updateCarousel() {
-    //   loadCurrentSlide();
-    // }
   
     function nextSlide() {
       currentSlideIndex++;
@@ -102,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ________________________//     // ________________________________________________
-
 // // ____________________
 
 // // ___________________________
