@@ -7,9 +7,78 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
+  
+/*navBar*/
 
-  h2 {
-    font-family: "Just Another Hand", cursive;
+li {
+    list-style: none;
+}
+
+a, a :visited {
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Just Another Hand', cursive;
+}
+
+a:hover {
+    color: white;
+}
+
+nav {
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    #icons {
+        display: block;
+    }
+    #icons:before {
+        content: "\2630";
+    }
+    .active #icons:before {
+        content: "\2715";
+    }
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background-color: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav ul li {
+       padding: 3px 0;
+    }
+    nav ul li:hover {
+        background: rgb(177, 219, 236);
+    }
+    nav.active ul {
+        left: 0;
+    }
+
+}
+
+h2 {
+    font-family: 'Just Another Hand', cursive;
     font-weight: 200;
     font-size: 2rem;
   }
@@ -44,7 +113,6 @@
   .personne-card {
     min-height: 475px;
   }
-
   .reversed {
     display: flex;
     flex-direction: column-reverse;
@@ -54,6 +122,16 @@
   img {
     width: 12rem;
     height: 15rem;
-    margin: 2rem;
-  }
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    .paragraph {
+        margin: 2rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
 }

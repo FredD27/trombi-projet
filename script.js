@@ -1,3 +1,18 @@
+// NAVBAR
+const links = document.querySelectorAll("nav li");
+
+icons.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
+
+//CONTENU BODY DESKTOP
+
 //Tableau des personnes, eux même encapsulé dans des tableaux (1 tableau par groupe)
 const personnes = [
   [
