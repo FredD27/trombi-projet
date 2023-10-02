@@ -1,3 +1,4 @@
+
  * {
      margin: 0;
      padding: 0;
@@ -93,3 +94,140 @@
 
 
  }
+@media screen and (min-width: 1024px) {
+  @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+/*navBar*/
+
+li {
+    list-style: none;
+}
+
+a, a :visited {
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Just Another Hand', cursive;
+}
+
+a:hover {
+    color: white;
+}
+
+nav {
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    #icons {
+        display: block;
+    }
+    #icons:before {
+        content: "\2630";
+    }
+    .active #icons:before {
+        content: "\2715";
+    }
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background-color: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav ul li {
+       padding: 3px 0;
+    }
+    nav ul li:hover {
+        background: rgb(177, 219, 236);
+    }
+    nav.active ul {
+        left: 0;
+    }
+
+}
+
+h2 {
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 200;
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin: rem;
+  }
+
+  .titleLogo {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #logoOg {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .div-groupes,
+  .div-groupes2,
+  .div-groupes3,
+  .div-groupes4,
+  .div-groupes5 {
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+  }
+
+  .personne-card {
+    min-height: 475px;
+  }
+  .reversed {
+    display: flex;
+    flex-direction: column-reverse;
+    /* grid-row: 2; */
+  }
+
+  img {
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    .paragraph {
+        margin: 2rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
