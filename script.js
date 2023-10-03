@@ -119,10 +119,10 @@ const personnes = [
       prenom: "Mathieu",
       age: 33,
       image: "./Photos/Rasta-Rockets/IMG_0014.jpg",
-      description: "Talent: Imitations multiples",
+      description: "<strong>Talent:</strong> Imitations multiples",
       objectif:
-        "Objectif professionnel: Vendre des applications qui changeront le monde",
-      bref: "En bref: Bon client de la connerie universelle",
+        "<strong>Objectif professionnel:</strong> Vendre des applications qui changeront le monde",
+      bref: "<strong>En bref:</strong> Bon client de la connerie universelle",
       linkedin: "https://www.linkedin.com/in/mathieu-chauveau-a21393291/",
       gitHub: "https://github.com/MatCabdel"
     },
@@ -132,9 +132,9 @@ const personnes = [
       prenom: "Raphaël",
       age: 25,
       image: "./Photos/Rasta-Rockets/IMG_0017.jpg",
-      description: "Talent: Ne sait pas roter",
-      objectif: "Objectif pro: Nomade Digital",
-      bref: "En bref: La vie est un jeu",
+      description: "<strong>Talent:</strong> Ne sait pas roter",
+      objectif: "<strong>Objectif pro:</strong> Nomade Digital",
+      bref: "<strong>En bref:</strong> La vie est un jeu",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -144,9 +144,9 @@ const personnes = [
       prenom: "Cédric",
       age: 26,
       image: "./Photos/Rasta-Rockets/IMG_0019.jpg",
-      description: "Talent: Très très bon vendeur",
-      objectif: "Objectif professionnel: Nomade Digital",
-      bref: "",
+      description: "<strong>Talent:</strong> Très très bon vendeur",
+      objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
+      bref: "<strong>En bref:</strong> On apprend pas à nager hors de l'eau",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -156,9 +156,9 @@ const personnes = [
       prenom: "Mahdi",
       age: "20 + 17",
       image: "./Photos/Rasta-Rockets/IMG_0020.jpg",
-      description: "Talent: « Je dessine gavé bien »",
-      objectif: "Objectif professionnel: Développeur d'applications",
-      bref: "En bref: « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
+      description: "<strong>Talent:</strong> « Je dessine gavé bien »",
+      objectif: "<strong>Objectif professionnel:</strong> Développeur d'applications",
+      bref: "<strong>En bref:</strong> « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -168,10 +168,10 @@ const personnes = [
       prenom: "Marie",
       age: 29,
       image: "./Photos/Rasta-Rockets/IMG_0022.jpg",
-      description: "Talent: Incarne le talent lui-même",
+      description: "<strong>Talent:</strong> Incarne le talent lui-même",
       objectif:
-        "Objectif professionnel: Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
-      bref: "En bref: « Est-ce que c’est bon pour vous ? » -Octogone : Dimitri VS Squeezy",
+        "<strong>Objectif professionnel:</strong> Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
+      bref: "<strong>En bref:</strong> « Est-ce que c’est bon pour vous ? » -Octogone : Dimitri VS Squeezy",
       linkedin: "https://www.linkedin.com/in/marie-delaire-dev/",
       gitHub: "https://github.com/Hepsox"
     },
@@ -183,10 +183,10 @@ const personnes = [
       age: "Pas assez vieux pour connaître woodstuck",
       image: "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
       description:
-        "Talent: Créateur du cocktail officiel du festival burlesque de Montréal",
+        "<strong>Talent:</strong> Créateur du cocktail officiel du festival burlesque de Montréal",
       objectif:
-        "Objectif professionnel: Vivre sa meilleure vie (près de l'océan)",
-      bref: "En bref: Qui ne tente rien n'a rien",
+        "<strong>Objectif professionnel:</strong> Vivre sa meilleure vie (près de l'océan)",
+      bref: "<strong>En bref:</strong> Qui ne tente rien n'a rien",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -196,10 +196,10 @@ const personnes = [
       prenom: "David",
       age: 48,
       image: "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
-      description: "Talent: Triche avec son vélo électrique",
+      description: "<strong>Talent:</strong> Triche avec son vélo électrique",
       objectif:
-        "Objectif professionnel: Devenir meilleur que Dimitri (a.k.a: Dieu)",
-      bref: "En bref: « T'inquiètes, je gère »",
+        "<strong>Objectif professionnel:</strong> Devenir meilleur que Dimitri (a.k.a: Dieu)",
+      bref: "<strong>En bref:</strong> « T'inquiètes, je gère »",
       linkedin: "https://www.linkedin.com/in/david-duranty-166998251/",
       gitHub: "https://github.com/davidduranty"
     },
@@ -209,9 +209,9 @@ const personnes = [
       prenom: "Antoine",
       age: 27,
       image: "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
-      description: "Talent: Champion de géoguessr",
-      objectif: "Objectif professionnel: Devenir Elon Musk en mieux",
-      bref: "En bref: « Chauve qui peut ! »",
+      description: "<strong>Talent:</strong> Champion de géoguessr",
+      objectif: "<strong>Objectif professionnel:</strong> Devenir Elon Musk en mieux",
+      bref: "<strong>En bref:</strong> « Chauve qui peut ! »",
       linkedin: "https://www.linkedin.com/in/antoine-cairey/",
       gitHub: "https://github.com/AntoineCairey"
     },
@@ -221,9 +221,9 @@ const personnes = [
       prenom: "Victor",
       age: 24,
       image: "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
-      description: "Talent: Décapsule une bière, avec une autre bière",
-      objectif: "Objectif professionnel: Devenir Président",
-      bref: "En bref: Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
+      description: "<strong>Talent:</strong> Décapsule une bière, avec une autre bière",
+      objectif: "<strong>Objectif professionnel:</strong> Devenir Président",
+      bref: "<strong>En bref:</strong> Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
       linkedin: "https://www.linkedin.com/in/victor-guyomard-b8b432158/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -234,9 +234,9 @@ const personnes = [
       prenom: "Nassime",
       age: 21,
       image: "./Photos/Tango-Charlie/IMG_0005.jpg",
-      description: "Talent: Gps intégré dans son cerveau",
-      objectif: "Objectif professionnel: Programmeur logiciel",
-      bref: "En bref: La fin justifie les moyens",
+      description: "<strong>Talent: </strong>Gps intégré dans son cerveau",
+      objectif: "<strong>Objectif professionnel: </strong>Programmeur logiciel",
+      bref: "<strong>En bref:</strong> La fin justifie les moyens",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -246,9 +246,9 @@ const personnes = [
       prenom: "Cassiopée",
       age: 23,
       image: "./Photos/Tango-Charlie/IMG_0008.jpg",
-      description: "Talent: Voltige, avec des chevaux",
-      objectif: "Hackeuse professionnelle",
-      bref: "En bref: Hakuna matata",
+      description: "<strong>Talent:</strong> Voltige, avec des chevaux",
+      objectif: "<strong>Objectif professionnel:</strong> Hackeuse professionnelle",
+      bref: "<strong>En bref:</strong> Hakuna matata",
       linkedin: "#",
       gitHub: "https://github.com/cassiopeelaurie"
     },
@@ -258,9 +258,9 @@ const personnes = [
       prenom: "Annaëlle",
       age: 22,
       image: "./Photos/Tango-Charlie/IMG_0009.jpg",
-      description: "Talent: N'arrive pas à être en retard",
-      objectif: "Objectif professionnel: Nomade Digital",
-      bref: "En bref: « Je ne suis pas optimiste, je suis déterminée »",
+      description: "<strong>Talent:</strong> N'arrive pas à être en retard",
+      objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
+      bref: "<strong>En bref:</strong> « Je ne suis pas optimiste, je suis déterminée »",
       linkedin: "https://www.linkedin.com/in/anaelle-cauvin-4310a6201/",
       gitHub: "https://github.com/Ellana33"
     },
@@ -270,10 +270,10 @@ const personnes = [
       prenom: "Aurore",
       age: 41,
       image: "./Photos/Tango-Charlie/IMG_0011.jpg",
-      description: "Talent: Touche son nez avec sa langue",
+      description: "<strong>Talent:</strong> Touche son nez avec sa langue",
       objectif:
-        "Objectif professionnel: Développer au quatres coins du monde",
-      bref: "En bref: « Je vais bien, tout vas bien »",
+        "Objectif professionnel:</strong> Développer au quatres coins du monde",
+      bref: "<strong>En bref:</strong> « Je vais bien, tout vas bien »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -283,9 +283,9 @@ const personnes = [
       prenom: "Benoit",
       age: 33,
       image: "./Photos/Tango-Charlie/IMG_0012.jpg",
-      description: "Talent: Réalise des peintures abstraites",
-      objectif: "Objectif professionnel: Devenir Freelance",
-      bref: "En bref: « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
+      description: "<strong>Talent:</strong> Réalise des peintures abstraites",
+      objectif: "<strong>Objectif professionnel:</strong> Devenir Freelance",
+      bref: "<strong>En bref:</strong> « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
       linkedin: "#",
       gitHub: "https://github.com/Benoit-Hayet"
     },
@@ -296,10 +296,10 @@ const personnes = [
       prenom: "Florian",
       age: 33,
       image: "./Photos/The-OG/IMG_9996.jpg",
-      description: "Talent: Roi du cookéo",
+      description: "<strong>Talent: </strong>Roi du cookéo",
       objectif:
-        "Objectif professionnel: Devenir le maître de Javascript",
-      bref: "En bref: Fidèle comme son ombre",
+        "<strong>Objectif professionnel: </strong>Devenir le maître de Javascript",
+      bref: "<strong>En bref:</strong> Fidèle comme son ombre",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -310,9 +310,9 @@ const personnes = [
       age: 28,
       image: "./Photos/The-OG/IMG_9997.jpg",
       description:
-        "Talent: Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
-      objectif: "Objectif pro: Joueur e-sport",
-      bref: "En bref: « Ca geek ce soir ? »",
+        "<strong>Talent:</strong> Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
+      objectif: "<strong>Objectif pro: </strong>Joueur e-sport",
+      bref: "<strong>En bref:</strong> « Ca geek ce soir ? »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -322,9 +322,9 @@ const personnes = [
       prenom: "Adam",
       age: 26,
       image: "./Photos/The-OG/IMG_9998.jpg",
-      description: "Talent: Chaud sur overwatch",
-      objectif: "Objectif professionnel: Finir le caroussel",
-      bref: "En bref: « J'en ai marre du caroussel »",
+      description: "<strong>Talent:</strong> Chaud sur overwatch",
+      objectif: "<strong>Objectif professionnel:</strong> Finir le caroussel",
+      bref: "<strong>En bref:</strong> « J'en ai marre du caroussel »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -334,9 +334,9 @@ const personnes = [
       prenom: "Frédérique",
       age: "« Pas très vieille »",
       image: "./Photos/The-OG/IMG_9999.jpg",
-      description: "Talent: Bouge ses oreilles sans les toucher",
-      objectif: "Objectif professionnel: Comédie-dev à plein temps",
-      bref: "En bref: « Ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse »",
+      description: "<strong>Talent: </strong>Bouge ses oreilles sans les toucher",
+      objectif: "<strong>Objectif professionnel:</strong> Comédie-dev à plein temps",
+      bref: "<strong>En bref: </strong>« Ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse »",
       linkedin: "https://www.linkedin.com/in/fred-druet-855b58293/",
       gitHub: "https://github.com/FredD27"
     },
@@ -347,10 +347,10 @@ const personnes = [
       prenom: "Leslie",
       age: 34,
       image: "./Photos/Totally-Spies/IMG_0026.jpg",
-      description: "Talent: Danse très bien sur de l'afro rythm",
+      description: "<strong>Talent:</strong> Danse très bien sur de l'afro rythm",
       objectif:
-        "Objectif professionnel: Développeuse web riche et célèbre",
-      bref: "En bref: « Tout ce qui est petit est mignon »",
+        "<strong>Objectif professionnel: </strong>Développeuse web riche et célèbre",
+      bref: "<strong>En bref:</strong> « Tout ce qui est petit est mignon »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -360,10 +360,10 @@ const personnes = [
       prenom: "Lucas",
       age: 48,
       image: "./Photos/Totally-Spies/IMG_0028.jpg",
-      description: "Talent: Décapsuler des bières avec les pieds",
+      description: "<strong>Talent: </strong>Décapsuler des bières avec les pieds",
       objectif:
-        "Objectif professionnel: Survivre à une autre journée à la Wild",
-      bref: "En bref: « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
+        "<strong>Objectif professionnel:</strong> Survivre à une autre journée à la Wild",
+      bref: "<strong>En bref:</strong> « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -373,10 +373,10 @@ const personnes = [
       prenom: "Claire",
       age: "Pas assez grande pour atteindre la dernière étagère",
       image: "./Photos/Totally-Spies/IMG_0032.jpg",
-      description: "Talent: Chanter sous la douche",
+      description: "<strong>Talent:</strong> Chanter sous la douche",
       objectif:
-        "Objectif professionnel: Apporter aux autres ce qu'on lui a apporté",
-      bref: "En bref: Réussir c'est prendre le risque d'échouer",
+        "<strong>Objectif professionnel:</strong> Apporter aux autres ce qu'on lui a apporté",
+      bref: "<strong>En bref:</strong> Réussir c'est prendre le risque d'échouer",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -386,10 +386,10 @@ const personnes = [
       prenom: "Nélia",
       age: "Pas assez grande pour maîtriser le code",
       image: "./Photos/Totally-Spies/IMG_0034.jpg",
-      description: "Talent: Trop bien caché",
+      description: "<strong>Talent:</strong> Trop bien caché",
       objectif:
-        "Objectif professionnel: Alternance et vivre de son travail",
-      bref: "En bref: « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
+        "<strong>Objectif professionnel:</strong> Alternance et vivre de son travail",
+      bref: "<strong>En bref:</strong> « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain"
     },
@@ -462,12 +462,12 @@ function createPersonneCard(personne) {
   // }
 
   card.innerHTML = `
-        <div class="personnel"><img src="${personne.image}" alt="${personne.nom}">
-        <div class="tamere"><h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+        <div class="personnel"><img class="img-perso" src="${personne.image}" alt="${personne.nom}">
+        <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
         <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
         <a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
         <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a>
-        </p></div></div>
+        </p></div>
     `;
   return card;
 }
@@ -554,8 +554,7 @@ function createGroup(group) {
   const groupDiv = document.createElement("div");
   groupDiv.classList.add("groupDiv");
   groupDiv.innerHTML = `<h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}"></img></h4>
-                        
-                        <p>${group.description}</p>`;
+                        <p class="group-txt">${group.description}</p>`;
   return groupDiv;
 }
 

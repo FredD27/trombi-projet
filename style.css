@@ -23,7 +23,7 @@ a:hover {
 }
 
 nav {
-  background-color: skyblue;
+  background-color: #0077b5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,7 +138,7 @@ nav ul {
       left: -100%;
       top: 5%;
       flex-direction: column;
-      background-color: skyblue;
+      background-color: #0077b5;
       width: 100%;
       text-align: center;
       transition: 0.25s;
@@ -232,6 +232,7 @@ nav ul {
 
   .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
     display: flex;
+    margin: 0 5rem;
   }
 
   .groupDiv {
@@ -241,9 +242,14 @@ nav ul {
 
   h4 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-family: "Just Another Hand", cursive;
+    font-family: "Arial", cursive;
+    font-size: 30px;
+  }
+
+  .group-txt {
+    margin: 2rem 0 0 0;
   }
 
   .logo-des-groupes {
@@ -266,11 +272,15 @@ nav ul {
   .personnel {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
+    }
 
   .card-txt {
     max-width: 250px;
+  }
+
+  .img-perso {
+    border: solid black 2px;
+    box-shadow: 5px 5px 5px grey;
   }
 
 }
