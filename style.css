@@ -27,19 +27,6 @@ nav div h1 {
   margin-left: 20px;
 }
 
-.arrow_button_next,
-.arrow_button_next2 {
-  right: 20px;
-  z-index: 1;
-  /* position: absolute; */
-}
-.arrow_button_prev,
-.arrow_button_prev {
-  left: 20px;
-  z-index: 1;
-  /* position: absolute; */
-}
-
 a,
 a :visited {
   color: black;
@@ -113,6 +100,19 @@ nav ul {
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.arrow_button_next,
+.arrow_button_next2 {
+  right: 20px;
+  z-index: 1;
+  /* position: absolute; */
+}
+.arrow_button_prev,
+.arrow_button_prev {
+  left: 20px;
+  z-index: 1;
+  /* position: absolute; */
 }
 
 .arrow_button {
