@@ -3,10 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*navBar*/
 
-li {
-  list-style: none;
+/* Styles pour la barre de navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  height: 70px;
+  width: 100%;
+}
+
+.burger {
+  width: 40px;
+  margin-right: 20px;
+}
+
+nav div p {
+  text-align: center;
+  margin-left: 70px;
+}
+
+nav div h1 {
+  margin-left: 20px;
+}
+
+.arrow_button_next,
+.arrow_button_next2 {
+  right: 20px;
+  z-index: 1;
+  /* position: absolute; */
+}
+.arrow_button_prev,
+.arrow_button_prev {
+  left: 20px;
+  z-index: 1;
+  /* position: absolute; */
 }
 
 a,
@@ -45,54 +76,43 @@ nav ul {
 }
 
 /* carousel */
-
-.carousel-container {
-  /* height: 100vh; 100% de la hauteur de la vue */
+.carousel-container,
+.carousel-container2 {
+  /* height: 100vh; */
   width: 100%;
   background: white;
   position: relative;
   padding: 0 5%;
 }
 
-.carousel-container img {
+.carousel-container img,
+.carousel-container2 img {
   width: 100%;
   height: 90%;
   object-fit: cover;
   border-radius: 10px;
 }
 
+/* .carousel,
+.carousel2 {
+
+} */
+
 .carousel-slide {
   width: 100%;
-  height: 100%;
-  /* margin-inline: 2.5%; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.active {
-  min-width: 100%;
-  height: 100%;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-#imageDescription {
+#imageDescription,
+#imageDescription2 {
   font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-}
-
-.arrow_button_next {
-  right: 20px;
-  z-index: 1;
-}
-.arrow_button_prev {
-  left: 20px;
-  z-index: 1;
 }
 
 .arrow_button {
@@ -123,35 +143,34 @@ nav ul {
 }
 
 @media (max-width: 650px) {
-
-    #iconsBurger {
-      display: block;
-    }
-    #iconsBurger:before {
-      content: "\2630";
-    }
-    .active #iconsBurger:before {
-      content: "\2715";
-    }
-    nav ul {
-      position: fixed;
-      left: -100%;
-      top: 5%;
-      flex-direction: column;
-      background-color: skyblue;
-      width: 100%;
-      text-align: center;
-      transition: 0.25s;
-    }
-    nav ul li {
-      padding: 3px 0;
-    }
-    nav ul li:hover {
-      background: rgb(177, 219, 236);
-    }
-    nav.active ul {
-      left: 0;
-    }
+  #iconsBurger {
+    display: block;
+  }
+  #iconsBurger:before {
+    content: "\2630";
+  }
+  .active #iconsBurger:before {
+    content: "\2715";
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background-color: skyblue;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav ul li {
+    padding: 3px 0;
+  }
+  nav ul li:hover {
+    background: rgb(177, 219, 236);
+  }
+  nav.active ul {
+    left: 0;
+  }
 
   img {
     width: 12rem;
@@ -226,11 +245,15 @@ nav ul {
 
   .personne-card {
     width: 500px;
-    padding: 0 2,5%;
+    padding: 0 2, 5%;
     height: auto;
   }
 
-  .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
+  .groupDescription1,
+  .groupDescription2,
+  .groupDescription3,
+  .groupDescription4,
+  .groupDescription5 {
     display: flex;
   }
 
@@ -272,6 +295,4 @@ nav ul {
   .card-txt {
     max-width: 250px;
   }
-
 }
-
