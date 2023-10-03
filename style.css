@@ -1,179 +1,172 @@
-
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
-
- /* Styles pour la barre de navigation */
- nav {
-     display: flex;
-     justify-content: space-between;
-     background-color: beige;
-     height: 70px;
-     width: 100%;
- }
-
- .burger {
-     width: 40px;
-     margin-right: 20px;
- }
-
- nav div p {
-     text-align: center;
-     margin-left: 70px;
- }
-
- nav div h1 {
-     margin-left: 20px;
- }
-
- .arrow_button_next {
-    right: 20px;
-    z-index: 1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.arrow_button_prev {
-    left: 20px;
-    z-index: 1;
+/*navBar*/
+
+li {
+  list-style: none;
 }
 
-.arrow_button {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    transition: 0.3s all ease-in-out;
-    z-index: 1;
+a,
+a :visited {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Arial", cursive;
+  font-size: 18px;
 }
 
-.arrow_button:hover {
-    transform: translateY(-50%) scale(1.1);
+a:hover {
+  color: white;
 }
 
-.arrow_button svg {
-    width: 50px;
-    height: 50px;
+nav {
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.5rem + 1.5vw);
+  position: relative;
+  z-index: 2;
 }
-.arrow_button svg path {
-    stroke: white;
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
+
+#iconsBurger {
+  cursor: pointer;
+  display: none;
+}
+
+/* carousel */
 
 .carousel-container {
-    height: 100%;
-    width: 100%;
-    background: white;
-    position: relative;
-}
-
-/* Styles pour le carrousel */
-.carousel-container {
-    /* height: 100vh; 100% de la hauteur de la vue */
-    width: 100%;
-    background: white;
-    position: relative;
-    padding: 0 5%;
+  /* height: 100vh; 100% de la hauteur de la vue */
+  width: 100%;
+  background: white;
+  position: relative;
+  padding: 0 5%;
 }
 
 .carousel-container img {
-    width: 100%;
-    height: 90%; 
-    object-fit: cover; 
-    border-radius: 10px;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .carousel-slide {
-    width: 100%;
-    height: 100%;
-    /* margin-inline: 2.5%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  /* margin-inline: 2.5%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .active {
-    min-width: 100%; 
-    height: 100%;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+  min-width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
 #imageDescription {
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
- .container {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     background-color: lightgrey;
-     margin-bottom: 40px;
+.arrow_button_next {
+  right: 20px;
+  z-index: 1;
+}
+.arrow_button_prev {
+  left: 20px;
+  z-index: 1;
+}
 
- }
+.arrow_button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  z-index: 1;
+}
 
- .containers {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     background-color: blueviolet;
-     margin-bottom: 40px;
- }
+.arrow_button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
 
+.arrow_button svg {
+  width: 50px;
+  height: 50px;
+}
+.arrow_button svg path {
+  stroke: white;
+}
 
- .element1 {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+.big-container {
+  display: none;
+}
 
- }
+@media (max-width: 650px) {
 
- .photo {
-     margin-left: 10px;
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
- }
+    #iconsBurger {
+      display: block;
+    }
+    #iconsBurger:before {
+      content: "\2630";
+    }
+    .active #iconsBurger:before {
+      content: "\2715";
+    }
+    nav ul {
+      position: fixed;
+      left: -100%;
+      top: 5%;
+      flex-direction: column;
+      background-color: skyblue;
+      width: 100%;
+      text-align: center;
+      transition: 0.25s;
+    }
+    nav ul li {
+      padding: 3px 0;
+    }
+    nav ul li:hover {
+      background: rgb(177, 219, 236);
+    }
+    nav.active ul {
+      left: 0;
+    }
 
- .person {
-     margin-left: 20px;
-     font-family: 'Just Another Hand', cursive;
+  img {
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+}
 
- }
+@media screen and (min-width: 768px) {
+  .paragraph {
+    margin: 2rem 4rem;
+  }
+}
 
- .element2 {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-
-
-
- }
-
- .logo1 {
-     width: 40px;
-     height: 40px;
-     margin-right: 10px;
-
-
-
- }
-
- .logo2 {
-
-     width: 40px;
-     height: 40px;
-     margin-right: 10px;
-
-
-
-
- }
 @media screen and (min-width: 1024px) {
   @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
 
@@ -183,84 +176,35 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
-  
-/*navBar*/
 
-li {
-    list-style: none;
-}
+  .big-container {
+    display: block;
+  }
 
-a, a :visited {
-    color:black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Just Another Hand', cursive;
-}
-
-a:hover {
-    color: white;
-}
-
-nav {
-    background-color: skyblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-size: calc(0.5rem + 1.5vw);
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-}
-
-#icons {
-    cursor: pointer;
+  .carousel-container {
     display: none;
-}
+  }
 
-@media (max-width: 650px) {
-    #icons {
-        display: block;
-    }
-    #icons:before {
-        content: "\2630";
-    }
-    .active #icons:before {
-        content: "\2715";
-    }
-    nav ul {
-        position: fixed;
-        left: -100%;
-        top: 5%;
-        flex-direction: column;
-        background-color: skyblue;
-        width: 100%;
-        text-align: center;
-        transition: 0.25s;
-    }
-    nav ul li {
-       padding: 3px 0;
-    }
-    nav ul li:hover {
-        background: rgb(177, 219, 236);
-    }
-    nav.active ul {
-        left: 0;
-    }
+  img {
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
 
-}
-
-h2 {
-    font-family: 'Just Another Hand', cursive;
+  h2 {
+    font-family: "Just Another Hand", cursive;
     font-weight: 200;
     font-size: 2rem;
   }
 
   h3 {
-    margin: rem;
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  #title-nav {
+    margin: 0;
   }
 
   .titleLogo {
@@ -268,12 +212,6 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-
-  #logoOg {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
   }
 
   .div-groupes,
@@ -287,28 +225,53 @@ h2 {
   }
 
   .personne-card {
-    min-height: 475px;
+    width: 500px;
+    padding: 0 2,5%;
+    height: auto;
   }
-  .reversed {
+
+  .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
     display: flex;
-    flex-direction: column-reverse;
-    /* grid-row: 2; */
   }
 
-  img {
-    width: 12rem;
-    height: 15rem;
-    margin: 1rem;
-    border-radius: 1rem;
+  .groupDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Just Another Hand", cursive;
+  }
+
+  .logo-des-groupes {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  #logoLinkedin {
+    width: 40px;
+    height: 40px;
+  }
+
+  #logoGitHub {
+    width: 40px;
+    height: 40px;
+  }
+
+  .personnel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-txt {
+    max-width: 250px;
+  }
+
 }
 
-@media screen and (min-width: 768px){
-    .paragraph {
-        margin: 2rem 4rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    
-}
-}

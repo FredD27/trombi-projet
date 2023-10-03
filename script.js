@@ -2,7 +2,7 @@
 // NAVBAR
 const links = document.querySelectorAll("nav li");
 
-icons.addEventListener("click", () => {
+iconsBurger.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
@@ -11,7 +11,7 @@ links.forEach((link) => {
         nav.classList.remove("active");
     });
 });
-// 
+// CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   const slidesContainer = document.querySelector(".carousel");
   const nextButton = document.querySelector(".arrow_button_next");
@@ -117,237 +117,281 @@ const personnes = [
     {
       nom: "CHAUVEAU",
       prenom: "Mathieu",
-      // age: 33,
-      image: "./Photos/RastaRockets/IMG_0014.jpg",
+      age: 33,
+      image: "./Photos/Rasta-Rockets/IMG_0014.jpg",
       description: "Talent: Imitations multiples",
       objectif:
         "Objectif professionnel: Vendre des applications qui changeront le monde",
       bref: "En bref: Bon client de la connerie universelle",
+      linkedin: "https://www.linkedin.com/in/mathieu-chauveau-a21393291/",
+      gitHub: "https://github.com/MatCabdel"
     },
 
     {
       nom: "BARD",
       prenom: "Raphaël",
-      //  age: 25,
-      image: "./Photos/RastaRockets/IMG_0017.jpg",
+      age: 25,
+      image: "./Photos/Rasta-Rockets/IMG_0017.jpg",
       description: "Talent: Ne sait pas roter",
       objectif: "Objectif pro: Nomade Digital",
       bref: "En bref: La vie est un jeu",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "DUPONT",
       prenom: "Cédric",
-      //  age: 26,
-      image: "./Photos/RastaRockets/IMG_0019.jpg",
+      age: 26,
+      image: "./Photos/Rasta-Rockets/IMG_0019.jpg",
       description: "Talent: Très très bon vendeur",
       objectif: "Objectif professionnel: Nomade Digital",
       bref: "",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "Mcheik",
       prenom: "Mahdi",
-      //  age: "20 + 17 ans",
-      image: "./Photos/RastaRockets/IMG_0020.jpg",
+      age: "20 + 17",
+      image: "./Photos/Rasta-Rockets/IMG_0020.jpg",
       description: "Talent: « Je dessine gavé bien »",
       objectif: "Objectif professionnel: Développeur d'applications",
       bref: "En bref: « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "DELAIRE",
       prenom: "Marie",
-      //  age: 29,
-      image: "./Photos/RastaRockets/IMG_0022.jpg",
+      age: 29,
+      image: "./Photos/Rasta-Rockets/IMG_0022.jpg",
       description: "Talent: Incarne le talent lui-même",
       objectif:
-        "Objectif professionnel: Gérer sa propre entreprise avec </br> ses propres valeurs : on bosse, mais pas trop",
+        "Objectif professionnel: Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
       bref: "En bref: « Est-ce que c’est bon pour vous ? » -Octogone : Dimitri VS Squeezy",
+      linkedin: "https://www.linkedin.com/in/marie-delaire-dev/",
+      gitHub: "https://github.com/Hepsox"
     },
   ],
   [
     {
       nom: "BONNAURE",
       prenom: "Sylvain",
-      //  age: "Pas assez vieux pour connaître woodstuck",
-      image: "./Photos/Les 4 Fantastiques/IMG_0037.jpg",
+      age: "Pas assez vieux pour connaître woodstuck",
+      image: "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
       description:
-        "Talent: Créateur du cocktail officiel </br> du festival burlesque de Montréal",
+        "Talent: Créateur du cocktail officiel du festival burlesque de Montréal",
       objectif:
-        "Objectif professionnel: Vivre sa </br> meilleure vie (près de l'océan)",
+        "Objectif professionnel: Vivre sa meilleure vie (près de l'océan)",
       bref: "En bref: Qui ne tente rien n'a rien",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "DURANTY",
       prenom: "David",
-      //  age: 48,
-      image: "./Photos/Les 4 Fantastiques/IMG_0038.jpg",
+      age: 48,
+      image: "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
       description: "Talent: Triche avec son vélo électrique",
       objectif:
-        "Objectif professionnel: Devenir meilleur </br> que Dimitri (a.k.a: Dieu)",
+        "Objectif professionnel: Devenir meilleur que Dimitri (a.k.a: Dieu)",
       bref: "En bref: « T'inquiètes, je gère »",
+      linkedin: "https://www.linkedin.com/in/david-duranty-166998251/",
+      gitHub: "https://github.com/davidduranty"
     },
 
     {
       nom: "CAIREY",
       prenom: "Antoine",
-      //  age: 27,
-      image: "./Photos/Les 4 Fantastiques/IMG_0039.jpg",
+      age: 27,
+      image: "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
       description: "Talent: Champion de géoguessr",
-      objectif: "Objectif professionnel: Devenir </br> Elon Musk en mieux",
+      objectif: "Objectif professionnel: Devenir Elon Musk en mieux",
       bref: "En bref: « Chauve qui peut ! »",
+      linkedin: "https://www.linkedin.com/in/antoine-cairey/",
+      gitHub: "https://github.com/AntoineCairey"
     },
 
     {
       nom: "Guyomard",
       prenom: "Victor",
-      //  age: 24,
-      image: "./Photos/Les 4 Fantastiques/IMG_0040.jpg",
-      description: "Talent: Décapsule une bière, </br> avec une autre bière",
+      age: 24,
+      image: "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
+      description: "Talent: Décapsule une bière, avec une autre bière",
       objectif: "Objectif professionnel: Devenir Président",
-      bref: "En bref: Les plus belles années d’une vie </br> sont celles que l’ont a pas encore vécues",
+      bref: "En bref: Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
+      linkedin: "https://www.linkedin.com/in/victor-guyomard-b8b432158/",
+      gitHub: "https://github.com/bfsylvain"
     },
   ],
   [
     {
       nom: "HARMACH",
       prenom: "Nassime",
-      //  age: 21,
-      image: "./Photos/Tango Charlie/IMG_0005.jpg",
+      age: 21,
+      image: "./Photos/Tango-Charlie/IMG_0005.jpg",
       description: "Talent: Gps intégré dans son cerveau",
       objectif: "Objectif professionnel: Programmeur logiciel",
       bref: "En bref: La fin justifie les moyens",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "LAURIE",
       prenom: "Cassiopée",
-      //  age: 23,
-      image: "./Photos/Tango Charlie/IMG_0008.jpg",
+      age: 23,
+      image: "./Photos/Tango-Charlie/IMG_0008.jpg",
       description: "Talent: Voltige, avec des chevaux",
       objectif: "Hackeuse professionnelle",
       bref: "En bref: Hakuna matata",
+      linkedin: "#",
+      gitHub: "https://github.com/cassiopeelaurie"
     },
 
     {
       nom: "CAUVIN",
       prenom: "Annaëlle",
-      //  age: 22,
-      image: "./Photos/Tango Charlie/IMG_0009.jpg",
+      age: 22,
+      image: "./Photos/Tango-Charlie/IMG_0009.jpg",
       description: "Talent: N'arrive pas à être en retard",
       objectif: "Objectif professionnel: Nomade Digital",
-      bref: "En bref: « Je ne suis pas optimiste, </br> je suis déterminée »",
+      bref: "En bref: « Je ne suis pas optimiste, je suis déterminée »",
+      linkedin: "https://www.linkedin.com/in/anaelle-cauvin-4310a6201/",
+      gitHub: "https://github.com/Ellana33"
     },
 
     {
       nom: "VALLEIX",
       prenom: "Aurore",
-      //  age: 41,
-      image: "./Photos/Tango Charlie/IMG_0011.jpg",
+      age: 41,
+      image: "./Photos/Tango-Charlie/IMG_0011.jpg",
       description: "Talent: Touche son nez avec sa langue",
       objectif:
-        "Objectif professionnel: Développer au </br> quatres coins du monde",
+        "Objectif professionnel: Développer au quatres coins du monde",
       bref: "En bref: « Je vais bien, tout vas bien »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "HAYET",
       prenom: "Benoit",
-      //  age: 33,
-      image: "./Photos/Tango Charlie/IMG_0012.jpg",
+      age: 33,
+      image: "./Photos/Tango-Charlie/IMG_0012.jpg",
       description: "Talent: Réalise des peintures abstraites",
       objectif: "Objectif professionnel: Devenir Freelance",
-      bref: "En bref: « Il n’y a rien de noble à être </br> supérieur à vos semblables. La vraie </br> noblesse est d’être supérieur à celui </br> que vous avez été auparavant »",
+      bref: "En bref: « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
+      linkedin: "#",
+      gitHub: "https://github.com/Benoit-Hayet"
     },
   ],
   [
     {
       nom: "BRUN",
       prenom: "Florian",
-      //  age: 33,
-      image: "./Photos/The OG/IMG_9996.jpg",
+      age: 33,
+      image: "./Photos/The-OG/IMG_9996.jpg",
       description: "Talent: Roi du cookéo",
       objectif:
-        "Objectif professionnel: Aspirer à un </br> meilleur cadre de vie",
+        "Objectif professionnel: Devenir le maître de Javascript",
       bref: "En bref: Fidèle comme son ombre",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "GARCIA",
       prenom: "Victor",
-      //   age: 28,
-      image: "./Photos/The OG/IMG_9997.jpg",
+      age: 28,
+      image: "./Photos/The-OG/IMG_9997.jpg",
       description:
-        "Talent: Peux manger un bucket pour </br> deux + les deux frites au KFC, et un </br> burger en plus",
+        "Talent: Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
       objectif: "Objectif pro: Joueur e-sport",
       bref: "En bref: « Ca geek ce soir ? »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "HEMAMOU",
       prenom: "Adam",
-      //  age: 26,
-      image: "./Photos/The OG/IMG_9998.jpg",
+      age: 26,
+      image: "./Photos/The-OG/IMG_9998.jpg",
       description: "Talent: Chaud sur overwatch",
       objectif: "Objectif professionnel: Finir le caroussel",
       bref: "En bref: « J'en ai marre du caroussel »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "DRUET",
       prenom: "Frédérique",
-      //    age: "« Pas très vieille »",
-      image: "./Photos/The OG/IMG_9999.jpg",
-      description: "Talent: As de CSS",
-      objectif: "Objectif professionnel: Survivre à la WCS",
-      bref: "En bref: « J'aime pas Javascript »",
+      age: "« Pas très vieille »",
+      image: "./Photos/The-OG/IMG_9999.jpg",
+      description: "Talent: Bouge ses oreilles sans les toucher",
+      objectif: "Objectif professionnel: Comédie-dev à plein temps",
+      bref: "En bref: « Ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse »",
+      linkedin: "https://www.linkedin.com/in/fred-druet-855b58293/",
+      gitHub: "https://github.com/FredD27"
     },
   ],
   [
     {
       nom: "ABAJOLI",
       prenom: "Leslie",
-      //  age: 34,
-      image: "./Photos/Totally Spies/IMG_0026.jpg",
-      description: "Talent: Danse très bien </br> sur de l'afro rythm",
+      age: 34,
+      image: "./Photos/Totally-Spies/IMG_0026.jpg",
+      description: "Talent: Danse très bien sur de l'afro rythm",
       objectif:
-        "Objectif professionnel: </br> Développeuse web riche </br> et célèbre",
-      bref: "En bref: « Tout ce qui </br> est petit est mignon »",
+        "Objectif professionnel: Développeuse web riche et célèbre",
+      bref: "En bref: « Tout ce qui est petit est mignon »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "BORDES",
       prenom: "Lucas",
-      //  age: 48,
-      image: "./Photos/Totally Spies/IMG_0028.jpg",
-      description: "Talent: Décapsuler des bières </br> avec les pieds",
+      age: 48,
+      image: "./Photos/Totally-Spies/IMG_0028.jpg",
+      description: "Talent: Décapsuler des bières avec les pieds",
       objectif:
-        "Objectif professionnel: Survivre à une </br> autre journée à la Wild",
-      bref: "En bref: « Ce n’est pas l’émotion qui </br> définie l’expression mais </br> l’expression qui définie l’émotion »",
+        "Objectif professionnel: Survivre à une autre journée à la Wild",
+      bref: "En bref: « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "VANNIER",
       prenom: "Claire",
-      //  age: "Pas assez grande pour atteindre la dernière étagère",
-      image: "./Photos/Totally Spies/IMG_0032.jpg",
+      age: "Pas assez grande pour atteindre la dernière étagère",
+      image: "./Photos/Totally-Spies/IMG_0032.jpg",
       description: "Talent: Chanter sous la douche",
       objectif:
-        "Objectif professionnel: Apporter </br> aux autres ce </br> qu'on lui a apporté",
-      bref: "En bref: Réussir c'est prendre </br> le risque d'échouer",
+        "Objectif professionnel: Apporter aux autres ce qu'on lui a apporté",
+      bref: "En bref: Réussir c'est prendre le risque d'échouer",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
 
     {
       nom: "COUTAIS",
       prenom: "Nélia",
-      //  age: "Pas assez grande pour maîtriser le code",
-      image: "./Photos/Totally Spies/IMG_0034.jpg",
+      age: "Pas assez grande pour maîtriser le code",
+      image: "./Photos/Totally-Spies/IMG_0034.jpg",
       description: "Talent: Trop bien caché",
       objectif:
-        "Objectif professionnel: </br> Alternance et vivre de son travail",
-      bref: "En bref: « Some people live more in </br> 20 years than others do in 80, </br> it’s not the time that matters, </br> it’s the person »",
+        "Objectif professionnel: Alternance et vivre de son travail",
+      bref: "En bref: « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
+      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
+      gitHub: "https://github.com/bfsylvain"
     },
   ],
 ];
@@ -413,18 +457,17 @@ function createPersonneCard(personne) {
   card.classList.add("personne-card");
   const cardList = document.querySelectorAll(".personne-card");
 
-  for (let i = 1; i < cardList.length; i += 2) {
-    cardList[i].classList.add("reversed");
-  }
+  // for (let i = 1; i < cardList.length; i += 2) {
+  //   cardList[i].classList.add("reversed");
+  // }
 
   card.innerHTML = `
-        <img src="${personne.image}" alt="${personne.nom}">
-        <h3>${personne.prenom} ${personne.nom}</h3>
-        <p> <!--${personne.age} </br> -->
-        ${personne.description} </br>
-        ${personne.objectif} </br>
-        ${personne.bref}
-        </p>
+        <div class="personnel"><img src="${personne.image}" alt="${personne.nom}">
+        <div class="tamere"><h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+        <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
+        <a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
+        <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a>
+        </p></div></div>
     `;
   return card;
 }
@@ -436,31 +479,31 @@ function createPersonneCard(personne) {
 const groupDescriptions = [
   {
     titre: "Les Rasta Rockets",
-    logo: "img.logo",
+    logo: "./images/rastaRockett.jpg",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
     titre: "Les Quatres Fantastiques",
-    logo: "img.logo",
+    logo: "images/les4Fantastiques.jpeg",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
     titre: "Tango Charlie",
-    logo: "img.logo",
+    logo: "images/alphaTangoCharlie.jpg",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
     titre: "Les OGs",
-    logo: "img.logo",
+    logo: "images/theOg.png",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
     titre: "Les Totally Spies",
-    logo: "img.logo",
+    logo: "images/tottallySpies.jpg",
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
@@ -510,7 +553,8 @@ groupDescription5.appendChild(newGroup5);
 function createGroup(group) {
   const groupDiv = document.createElement("div");
   groupDiv.classList.add("groupDiv");
-  groupDiv.innerHTML = `<h4>${group.titre} ${group.logo}</h4>
+  groupDiv.innerHTML = `<h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}"></img></h4>
+                        
                         <p>${group.description}</p>`;
   return groupDiv;
 }
@@ -520,5 +564,3 @@ function createGroup(group) {
 //groupDiv.classList.add ajoute la classe "groupDiv" à la div,
 //groupDiv.innerHTML ajouter les éléments à afficher
 //return groupDiv sinon elle est inutilisable
-
-
