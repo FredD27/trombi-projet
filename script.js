@@ -464,7 +464,7 @@ function createPersonneCard(personne) {
   card.innerHTML = `
         <div class="personnel"><img src="${personne.image}" alt="${personne.nom}">
         <div class="tamere"><h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
-        <p> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
+        <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
         <a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
         <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a>
         </p></div></div>

@@ -198,6 +198,15 @@ nav ul {
     font-size: 2rem;
   }
 
+  h3 {
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  #title-nav {
+    margin: 0;
+  }
+
   .titleLogo {
     margin: 3rem;
     display: flex;
@@ -220,10 +229,6 @@ nav ul {
     padding: 0 2,5%;
     height: auto;
   }
-  .reversed {
-    display: flex;
-    flex-direction: column-reverse;
-    }
 
   .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
     display: flex;
@@ -238,6 +243,7 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: "Just Another Hand", cursive;
   }
 
   .logo-des-groupes {
@@ -261,6 +267,10 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .card-txt {
+    max-width: 250px;
   }
 
 }
