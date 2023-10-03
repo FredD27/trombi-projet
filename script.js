@@ -457,17 +457,17 @@ function createPersonneCard(personne) {
   card.classList.add("personne-card");
   const cardList = document.querySelectorAll(".personne-card");
 
-  for (let i = 1; i < cardList.length; i += 2) {
-    cardList[i].classList.add("reversed");
-  }
+  // for (let i = 1; i < cardList.length; i += 2) {
+  //   cardList[i].classList.add("reversed");
+  // }
 
   card.innerHTML = `
         <div class="personnel"><img src="${personne.image}" alt="${personne.nom}">
-        <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+        <div class="tamere"><h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
         <p> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
         <a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
         <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a>
-        </p></div>
+        </p></div></div>
     `;
   return card;
 }

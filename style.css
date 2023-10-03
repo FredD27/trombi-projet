@@ -216,7 +216,9 @@ nav ul {
   }
 
   .personne-card {
-    min-height: 475px;
+    width: 500px;
+    padding: 0 2,5%;
+    height: auto;
   }
   .reversed {
     display: flex;
@@ -260,5 +262,6 @@ nav ul {
     flex-direction: column;
     justify-content: space-between;
   }
+
 }
 
