@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+ 
+body {
+  background-color: aliceblue;
+}
 /*navBar*/
 
 li {
@@ -23,8 +27,9 @@ a:hover {
 }
 
 nav {
-  background-color: skyblue;
-  display: flex;
+  /* background-color:#0077b5; */
+  display: flex; 
+  background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -44,12 +49,34 @@ nav ul {
   display: none;
 }
 
+.logo-des-groupes {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, cursive;
+  font-size: 20px;
+}
+
+.groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
+  display: flex;
+  margin: 0 2rem;
+}
+
+
 /* carousel */
 
 .carousel-container {
   /* height: 100vh; 100% de la hauteur de la vue */
   width: 100%;
-  background: white;
+  background: aliceblue; 
   position: relative;
   padding: 0 5%;
 }
@@ -60,6 +87,8 @@ nav ul {
   object-fit: cover;
   border-radius: 10px;
 }
+
+
 
 .carousel-slide {
   width: 100%;
@@ -84,6 +113,9 @@ nav ul {
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
+  transition: .3s ease;
+  overflow: hidden;
+  max-height: 200px;
 }
 
 .arrow_button_next {
@@ -120,6 +152,10 @@ nav ul {
 
 .big-container {
   display: none;
+  background-color: aliceblue;
+  background-size: cover;
+  /* background-image: url(./images/pexels-artem-podrez-7232658.jpg); */
+  
 }
 
 @media (max-width: 650px) {
@@ -138,7 +174,7 @@ nav ul {
       left: -100%;
       top: 5%;
       flex-direction: column;
-      background-color: skyblue;
+      background-color: #0077b5;
       width: 100%;
       text-align: center;
       transition: 0.25s;
@@ -179,6 +215,10 @@ nav ul {
 
   .big-container {
     display: block;
+    padding-left: 20px;
+    width: 100%;
+    margin: 0 auto;
+   
   }
 
   .carousel-container {
@@ -221,37 +261,47 @@ nav ul {
   .div-groupes5 {
     display: flex;
     margin: 60px;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    background-color: aliceblue;  
   }
 
   .personne-card {
-    width: 500px;
+    width: 300px;
     padding: 0 2,5%;
     height: auto;
   }
 
   .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
     display: flex;
+    margin: 0 5rem;
   }
 
   .groupDiv {
     display: flex;
     flex-direction: column;
+    padding-left: 2rem;
+  }
+
+  .double-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   }
 
   h4 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-family: "Just Another Hand", cursive;
+    font-family: "Arial", cursive;
+    font-size: 30px;
   }
 
-  .logo-des-groupes {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 1px solid black;
+  .group-txt {
+    margin: 2rem 0 0 0;
+    
   }
+
 
   #logoLinkedin {
     width: 40px;
@@ -263,14 +313,40 @@ nav ul {
     height: 40px;
   }
 
+ .la-barre {
+  font-size: 50px;
+  text-align: center;
+}
+
   .personnel {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
+    align-items: center;
+    height: 550px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px grey;
+    margin: 10px;
+    width: 270px;
+    position: relative;
+    background: linear-gradient(to bottom,
+     #0077b5 40%,
+     white 40%);
+    }
 
   .card-txt {
     max-width: 250px;
+  }
+
+  .img-perso {
+    border: solid grey 2px;
+  }
+
+  .logo-des-groupes {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
   }
 
 }
