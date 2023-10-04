@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loadCurrentSlide();
   // _____________________________
   const imageDescription = document.getElementById("imageDescription");
+  imageDescription.classList.add("img-desc");
+  
 
   slidesContainer.addEventListener("click", function () {
     imageDescription.textContent = descriptions[currentSlideIndex];
@@ -325,8 +327,8 @@ const personnes = [
       age: 26,
       image: "./Photos/The-OG/IMG_9998.jpg",
       description: "<strong>Talent:</strong> Chaud sur overwatch",
-      objectif: "<strong>Objectif professionnel:</strong> Finir le caroussel",
-      bref: "<strong>En bref:</strong> « J'en ai marre du caroussel »",
+      objectif: "<strong>Objectif professionnel:</strong> Devenir contorsionniste",
+      bref: "<strong>En bref:</strong> « Rentrer dans un micro-onde »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
       gitHub: "https://github.com/bfsylvain",
     },
@@ -471,9 +473,9 @@ function createPersonneCard(personne) {
         <div class="personnel"><img class="img-perso" src="${personne.image}" alt="${personne.nom}">
         <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
         <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
-        <a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
-        <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a>
-        </p></div>
+  
+        </p><div class="double-logo"><a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
+        <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a></div>
     `;
   return card;
 }
@@ -487,13 +489,13 @@ const groupDescriptions = [
     titre: "Les Rasta Rockets",
     logo: "./images/rastaRockett.jpg",
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs restaurants du coin.",
+     "Chacun d'entre nous apporte ses compétences uniques, que ce soit en design web, en collecte de données, en développement ou en photographie pour créer une ressource complète et attractive. Nous croyons fermement que les bars locaux sont des joyaux de la vie nocturne, et nous voulons les mettre en lumière.",
   },
   {
     titre: "Les Quatres Fantastiques",
     logo: "images/les4Fantastiques.jpeg",
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
+      "Les 4 Fantastiques : Quatre cerveaux brillants, un seul objectif - dominer le monde du développement ! Avec Antoine, David, Sylvain et Victor, la technologie n'a qu'à bien se tenir. Préparez-vous à des lignes de code incroyables et à des solutions informatiques qui vous laisseront sans voix.",
   },
   {
     titre: "Tango Charlie",
@@ -511,7 +513,7 @@ const groupDescriptions = [
     titre: "Les Totally Spies",
     logo: "images/tottallySpies.jpg",
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
+      "Trois jeunes filles, Nelia, Claire et Leslie, mènent une double vie en tant qu'espionnes pour l'organisation secrète ZenList, dirigée par Jerry, tout en jonglant avec les défis de la vie quotidienne d'étudiants à la wild code School!",
   },
 ];
 
