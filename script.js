@@ -1,15 +1,14 @@
-
 // NAVBAR
 const links = document.querySelectorAll("nav li");
 
 iconsBurger.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  nav.classList.toggle("active");
 });
 
 links.forEach((link) => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("active");
-    });
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
 });
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
     "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
   ];
-  
 
   const descriptions = [
     "Description de l'image 1",
@@ -85,16 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // _______________________________
   let touchStartX = null;
   let touchEndX = null;
-  
-  slidesContainer.addEventListener('touchstart', function(event) {
+
+  slidesContainer.addEventListener("touchstart", function (event) {
     touchStartX = event.touches[0].clientX;
   });
-  
-  slidesContainer.addEventListener('touchmove', function(event) {
+
+  slidesContainer.addEventListener("touchmove", function (event) {
     touchEndX = event.touches[0].clientX;
   });
-  
-  slidesContainer.addEventListener('touchend', function() {
+
+  slidesContainer.addEventListener("touchend", function () {
     if (touchStartX !== null && touchEndX !== null) {
       const deltaX = touchEndX - touchStartX;
       if (deltaX > 0) {
@@ -103,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nextSlide();
       }
     }
-  
+
     touchStartX = null;
     touchEndX = null;
   });
@@ -124,7 +122,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Vendre des applications qui changeront le monde",
       bref: "<strong>En bref:</strong> Bon client de la connerie universelle",
       linkedin: "https://www.linkedin.com/in/mathieu-chauveau-a21393291/",
-      gitHub: "https://github.com/MatCabdel"
+      gitHub: "https://github.com/MatCabdel",
     },
 
     {
@@ -136,7 +134,7 @@ const personnes = [
       objectif: "<strong>Objectif pro:</strong> Nomade Digital",
       bref: "<strong>En bref:</strong> La vie est un jeu",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -148,19 +146,20 @@ const personnes = [
       objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
       bref: "<strong>En bref:</strong> On apprend pas à nager hors de l'eau",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
-      nom: "Mcheik",
+      nom: "MCHEIK",
       prenom: "Mahdi",
       age: "20 + 17",
       image: "./Photos/Rasta-Rockets/IMG_0020.jpg",
       description: "<strong>Talent:</strong> « Je dessine gavé bien »",
-      objectif: "<strong>Objectif professionnel:</strong> Développeur d'applications",
+      objectif:
+        "<strong>Objectif professionnel:</strong> Développeur d'applications",
       bref: "<strong>En bref:</strong> « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -173,7 +172,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Gérer sa propre entreprise avec ses propres valeurs : on bosse, mais pas trop",
       bref: "<strong>En bref:</strong> « Est-ce que c’est bon pour vous ? » -Octogone : Dimitri VS Squeezy",
       linkedin: "https://www.linkedin.com/in/marie-delaire-dev/",
-      gitHub: "https://github.com/Hepsox"
+      gitHub: "https://github.com/Hepsox",
     },
   ],
   [
@@ -188,7 +187,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Vivre sa meilleure vie (près de l'océan)",
       bref: "<strong>En bref:</strong> Qui ne tente rien n'a rien",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -201,7 +200,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Devenir meilleur que Dimitri (a.k.a: Dieu)",
       bref: "<strong>En bref:</strong> « T'inquiètes, je gère »",
       linkedin: "https://www.linkedin.com/in/david-duranty-166998251/",
-      gitHub: "https://github.com/davidduranty"
+      gitHub: "https://github.com/davidduranty",
     },
 
     {
@@ -210,22 +209,24 @@ const personnes = [
       age: 27,
       image: "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
       description: "<strong>Talent:</strong> Champion de géoguessr",
-      objectif: "<strong>Objectif professionnel:</strong> Devenir Elon Musk en mieux",
+      objectif:
+        "<strong>Objectif professionnel:</strong> Devenir Elon Musk en mieux",
       bref: "<strong>En bref:</strong> « Chauve qui peut ! »",
       linkedin: "https://www.linkedin.com/in/antoine-cairey/",
-      gitHub: "https://github.com/AntoineCairey"
+      gitHub: "https://github.com/AntoineCairey",
     },
 
     {
-      nom: "Guyomard",
+      nom: "GUYOMARD",
       prenom: "Victor",
       age: 24,
       image: "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
-      description: "<strong>Talent:</strong> Décapsule une bière, avec une autre bière",
+      description:
+        "<strong>Talent:</strong> Décapsule une bière, avec une autre bière",
       objectif: "<strong>Objectif professionnel:</strong> Devenir Président",
       bref: "<strong>En bref:</strong> Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
       linkedin: "https://www.linkedin.com/in/victor-guyomard-b8b432158/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
   ],
   [
@@ -238,7 +239,7 @@ const personnes = [
       objectif: "<strong>Objectif professionnel: </strong>Programmeur logiciel",
       bref: "<strong>En bref:</strong> La fin justifie les moyens",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -247,10 +248,11 @@ const personnes = [
       age: 23,
       image: "./Photos/Tango-Charlie/IMG_0008.jpg",
       description: "<strong>Talent:</strong> Voltige, avec des chevaux",
-      objectif: "<strong>Objectif professionnel:</strong> Hackeuse professionnelle",
+      objectif:
+        "<strong>Objectif professionnel:</strong> Hackeuse professionnelle",
       bref: "<strong>En bref:</strong> Hakuna matata",
       linkedin: "#",
-      gitHub: "https://github.com/cassiopeelaurie"
+      gitHub: "https://github.com/cassiopeelaurie",
     },
 
     {
@@ -262,7 +264,7 @@ const personnes = [
       objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
       bref: "<strong>En bref:</strong> « Je ne suis pas optimiste, je suis déterminée »",
       linkedin: "https://www.linkedin.com/in/anaelle-cauvin-4310a6201/",
-      gitHub: "https://github.com/Ellana33"
+      gitHub: "https://github.com/Ellana33",
     },
 
     {
@@ -275,7 +277,7 @@ const personnes = [
         "Objectif professionnel:</strong> Développer au quatres coins du monde",
       bref: "<strong>En bref:</strong> « Je vais bien, tout vas bien »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -287,7 +289,7 @@ const personnes = [
       objectif: "<strong>Objectif professionnel:</strong> Devenir Freelance",
       bref: "<strong>En bref:</strong> « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
       linkedin: "#",
-      gitHub: "https://github.com/Benoit-Hayet"
+      gitHub: "https://github.com/Benoit-Hayet",
     },
   ],
   [
@@ -301,7 +303,7 @@ const personnes = [
         "<strong>Objectif professionnel: </strong>Devenir le maître de Javascript",
       bref: "<strong>En bref:</strong> Fidèle comme son ombre",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -314,7 +316,7 @@ const personnes = [
       objectif: "<strong>Objectif pro: </strong>Joueur e-sport",
       bref: "<strong>En bref:</strong> « Ca geek ce soir ? »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -326,7 +328,7 @@ const personnes = [
       objectif: "<strong>Objectif professionnel:</strong> Finir le caroussel",
       bref: "<strong>En bref:</strong> « J'en ai marre du caroussel »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -334,11 +336,13 @@ const personnes = [
       prenom: "Frédérique",
       age: "« Pas très vieille »",
       image: "./Photos/The-OG/IMG_9999.jpg",
-      description: "<strong>Talent: </strong>Bouge ses oreilles sans les toucher",
-      objectif: "<strong>Objectif professionnel:</strong> Comédie-dev à plein temps",
+      description:
+        "<strong>Talent: </strong>Bouge ses oreilles sans les toucher",
+      objectif:
+        "<strong>Objectif professionnel:</strong> Comédie-dev à plein temps",
       bref: "<strong>En bref: </strong>« Ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse »",
       linkedin: "https://www.linkedin.com/in/fred-druet-855b58293/",
-      gitHub: "https://github.com/FredD27"
+      gitHub: "https://github.com/FredD27",
     },
   ],
   [
@@ -347,25 +351,27 @@ const personnes = [
       prenom: "Leslie",
       age: 34,
       image: "./Photos/Totally-Spies/IMG_0026.jpg",
-      description: "<strong>Talent:</strong> Danse très bien sur de l'afro rythm",
+      description:
+        "<strong>Talent:</strong> Danse très bien sur de l'afro rythm",
       objectif:
         "<strong>Objectif professionnel: </strong>Développeuse web riche et célèbre",
       bref: "<strong>En bref:</strong> « Tout ce qui est petit est mignon »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
       nom: "BORDES",
       prenom: "Lucas",
-      age: 48,
+      age: 28,
       image: "./Photos/Totally-Spies/IMG_0028.jpg",
-      description: "<strong>Talent: </strong>Décapsuler des bières avec les pieds",
+      description:
+        "<strong>Talent: </strong>Décapsuler des bières avec les pieds",
       objectif:
         "<strong>Objectif professionnel:</strong> Survivre à une autre journée à la Wild",
       bref: "<strong>En bref:</strong> « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -378,7 +384,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Apporter aux autres ce qu'on lui a apporté",
       bref: "<strong>En bref:</strong> Réussir c'est prendre le risque d'échouer",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
 
     {
@@ -391,7 +397,7 @@ const personnes = [
         "<strong>Objectif professionnel:</strong> Alternance et vivre de son travail",
       bref: "<strong>En bref:</strong> « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
       linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain"
+      gitHub: "https://github.com/bfsylvain",
     },
   ],
 ];
@@ -481,7 +487,7 @@ const groupDescriptions = [
     titre: "Les Rasta Rockets",
     logo: "./images/rastaRockett.jpg",
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
+      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs restaurants du coin.",
   },
   {
     titre: "Les Quatres Fantastiques",

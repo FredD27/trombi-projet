@@ -123,35 +123,34 @@ nav ul {
 }
 
 @media (max-width: 650px) {
-
-    #iconsBurger {
-      display: block;
-    }
-    #iconsBurger:before {
-      content: "\2630";
-    }
-    .active #iconsBurger:before {
-      content: "\2715";
-    }
-    nav ul {
-      position: fixed;
-      left: -100%;
-      top: 5%;
-      flex-direction: column;
-      background-color: #0077b5;
-      width: 100%;
-      text-align: center;
-      transition: 0.25s;
-    }
-    nav ul li {
-      padding: 3px 0;
-    }
-    nav ul li:hover {
-      background: rgb(177, 219, 236);
-    }
-    nav.active ul {
-      left: 0;
-    }
+  #iconsBurger {
+    display: block;
+  }
+  #iconsBurger:before {
+    content: "\2630";
+  }
+  .active #iconsBurger:before {
+    content: "\2715";
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background-color: #0077b5;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav ul li {
+    padding: 3px 0;
+  }
+  nav ul li:hover {
+    background: rgb(177, 219, 236);
+  }
+  nav.active ul {
+    left: 0;
+  }
 
   img {
     width: 12rem;
@@ -226,11 +225,15 @@ nav ul {
 
   .personne-card {
     width: 500px;
-    padding: 0 2,5%;
+    padding: 0 2, 5%;
     height: auto;
   }
 
-  .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
+  .groupDescription1,
+  .groupDescription2,
+  .groupDescription3,
+  .groupDescription4,
+  .groupDescription5 {
     display: flex;
     margin: 0 5rem;
   }
@@ -272,7 +275,7 @@ nav ul {
   .personnel {
     display: flex;
     flex-direction: column;
-    }
+  }
 
   .card-txt {
     max-width: 250px;
@@ -282,6 +285,4 @@ nav ul {
     border: solid black 2px;
     box-shadow: 5px 5px 5px grey;
   }
-
 }
-
