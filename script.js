@@ -365,7 +365,7 @@ const personnes = [
     {
       nom: "BORDES",
       prenom: "Lucas",
-      age: 48,
+      age: 28,
       image: "./Photos/Totally-Spies/IMG_0028.jpg",
       description:
         "<strong>Talent: </strong>Décapsuler des bières avec les pieds",
