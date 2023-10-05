@@ -594,6 +594,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setCarouselButtonListener();
   setSwipeListener();
+  document.getElementById("navbar-list").innerHTML += `<li><a href="index2.html">TrombiList</a></li>`;
 });
 
 //Fonction du nom de createGroup, paramètre group.
