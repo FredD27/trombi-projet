@@ -11,11 +11,12 @@ body {
 
 li {
   list-style: none;
+  /* background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4); */
 }
 
 a,
 a :visited {
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Arial", cursive;
@@ -23,7 +24,7 @@ a :visited {
 }
 
 a:hover {
-  color: white;
+  text-decoration: underline;
 }
 
 nav {
@@ -122,6 +123,7 @@ h4 {
   right: 20px;
   z-index: 1;
 }
+
 .arrow_button_prev {
   left: 20px;
   z-index: 1;
@@ -154,7 +156,6 @@ h4 {
   display: none;
   background-color: aliceblue;
   background-size: cover;
-  /* background-image: url(./images/pexels-artem-podrez-7232658.jpg); */
 }
 
 @media (max-width: 650px) {
@@ -164,16 +165,17 @@ h4 {
   #iconsBurger:before {
     content: "\2630";
   }
-  .active #iconsBurger:before {
+  .active #iconsBurger:after {
     content: "\2715";
+    color: white;
   }
   nav ul {
     position: fixed;
     left: -100%;
     top: 5%;
     flex-direction: column;
-    background-color: #0077b5;
-    width: 100%;
+    background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
+    width: 95%;
     text-align: center;
     transition: 0.25s;
   }
@@ -181,7 +183,7 @@ h4 {
     padding: 3px 0;
   }
   nav ul li:hover {
-    background: rgb(177, 219, 236);
+    background: rgb(19, 95, 125);
   }
   nav.active ul {
     left: 0;
@@ -209,6 +211,10 @@ h4 {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+  }
+
+  li {
+    background: none;
   }
 
   .big-container {
@@ -315,6 +321,8 @@ h4 {
   .la-barre {
     font-size: 50px;
     text-align: center;
+    margin: 2rem 0;
+    border: solid black 1px;
   }
 
   .personnel {
