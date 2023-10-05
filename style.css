@@ -15,15 +15,15 @@ li {
 
 a,
 a :visited {
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Arial", cursive;
+  font-family: 'Arial', cursive;
   font-size: 18px;
 }
 
 a:hover {
-  color: white;
+  text-decoration: underline;
 }
 
 nav {
@@ -122,6 +122,7 @@ h4 {
   right: 20px;
   z-index: 1;
 }
+
 .arrow_button_prev {
   left: 20px;
   z-index: 1;
@@ -153,25 +154,27 @@ h4 {
 .big-container {
   display: none;
   background-color: aliceblue;
-  background-size: cover;}
+  background-size: cover;
+}
 
 @media (max-width: 650px) {
   #iconsBurger {
     display: block;
   }
   #iconsBurger:before {
-    content: "\2630";
+    content: '\2630';
   }
-  .active #iconsBurger:before {
-    content: "\2715";
+  .active #iconsBurger:after {
+    content: '\2715';
+    color: white;
   }
   nav ul {
     position: fixed;
     left: -100%;
     top: 5%;
     flex-direction: column;
-    background-color: #0077b5;
-    width: 100%;
+    background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
+    width: 95%;
     text-align: center;
     transition: 0.25s;
   }
@@ -179,7 +182,7 @@ h4 {
     padding: 3px 0;
   }
   nav ul li:hover {
-    background: rgb(177, 219, 236);
+    background: rgb(19, 95, 125);
   }
   nav.active ul {
     left: 0;
@@ -200,13 +203,17 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
-  @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+  }
+
+  li {
+    background: none;
   }
 
   .big-container {
@@ -228,7 +235,7 @@ h4 {
   }
 
   h2 {
-    font-family: "Just Another Hand", cursive;
+    font-family: 'Just Another Hand', cursive;
     font-weight: 200;
     font-size: 2rem;
   }
@@ -292,7 +299,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Arial", cursive;
+    font-family: 'Arial', cursive;
     font-size: 30px;
   }
 
@@ -310,12 +317,12 @@ h4 {
     height: 40px;
   }
 
- .la-barre {
-  font-size: 50px;
-  text-align: center;
-  margin: 2rem 0;
-  border: solid black 1px;
-}
+  .la-barre {
+    font-size: 50px;
+    text-align: center;
+    margin: 2rem 0;
+    border: solid black 1px;
+  }
 
   .personnel {
     display: flex;
