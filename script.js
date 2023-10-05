@@ -357,22 +357,31 @@ const aliasGenerator = (group) => {
 
 const nextSlide = (node, index, imageDescription) => {
   groupDescriptions[index].currentSlideIndex++;
-  if (groupDescriptions[index].currentSlideIndex >= groupDescriptions[index].gens.length) {
+  if (
+    groupDescriptions[index].currentSlideIndex >=
+    groupDescriptions[index].gens.length
+  ) {
     groupDescriptions[index].currentSlideIndex = 0;
   }
-  loadCurrentSlide(node, groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex].image);
+  loadCurrentSlide(
+    node,
+    groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex]
+      .image
+  );
   imageDescription.textContent = "";
-  console.log(node);
-  console.log(groupDescriptions[index]);
-
 };
 
 const prevSlide = (node, index, imageDescription) => {
   groupDescriptions[index].currentSlideIndex--;
   if (groupDescriptions[index].currentSlideIndex < 0) {
-    groupDescriptions[index].currentSlideIndex = groupDescriptions[index].gens.length - 1;
+    groupDescriptions[index].currentSlideIndex =
+      groupDescriptions[index].gens.length - 1;
   }
-  loadCurrentSlide(node, groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex].image);
+  loadCurrentSlide(
+    node,
+    groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex]
+      .image
+  );
   imageDescription.textContent = "";
 };
 
@@ -428,50 +437,56 @@ const carouselGenerator = (group, index) => {
 
         <div class="carousel" id="carousel${index + 1}"></div>
 
-        <div class="imageDescription${index + 1}" id="imageDescription${index + 1}"></div>
+        <div class="imageDescription${index + 1}" id="imageDescription${
+    index + 1
+  }"></div>
       </div>
     </div>
   `;
 
-  const slidesContainer = document.getElementById(`carousel${index + 1}`);
-  const nextButton = document.getElementById(`next-${index + 1}`);
-  const prevButton = document.getElementById(`prev-${index + 1}`);
+  loadCurrentSlide(
+    document.getElementById(`carousel${index + 1}`),
+    group.gens[group.currentSlideIndex].image
+  );
+};
 
-  const imageDescription = document.getElementById(`imageDescription${index + 1}`);
-  nextButton.addEventListener("click", () => {nextSlide(slidesContainer, index, imageDescription)});
-  prevButton.addEventListener("click", () => {prevSlide(slidesContainer, index, imageDescription)});
+const setSwipeListener = () => {
+  const carousels = document.querySelectorAll(".carousel");
+  carousels.forEach((carousel) => {
+    const index = carousel.id.replace("carousel", "");
+    const imageDescription = document.getElementById(
+      `imageDescription${index}`
+    );
+    
+    carousel.addEventListener("click", function () {
+      imageDescription.textContent =
+        groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex].description;
+    });
+    // _______________________________
+    let touchStartX = null;
+    let touchEndX = null;
 
-  loadCurrentSlide(slidesContainer, group.gens[group.currentSlideIndex].image);
-  // _____________________________
+    carousel.addEventListener("touchstart", function (event) {
+      touchStartX = event.touches[0].clientX;
+    });
 
-  slidesContainer.addEventListener("click", function () {
-    imageDescription.textContent =
-      group.gens[group.currentSlideIndex].description;
-  });
-  // _______________________________
-  let touchStartX = null;
-  let touchEndX = null;
+    carousel.addEventListener("touchmove", function (event) {
+      touchEndX = event.touches[0].clientX;
+    });
 
-  slidesContainer.addEventListener("touchstart", function (event) {
-    touchStartX = event.touches[0].clientX;
-  });
-
-  slidesContainer.addEventListener("touchmove", function (event) {
-    touchEndX = event.touches[0].clientX;
-  });
-
-  slidesContainer.addEventListener("touchend", function () {
-    if (touchStartX !== null && touchEndX !== null) {
-      const deltaX = touchEndX - touchStartX;
-      if (deltaX > 0) {
-        prevSlide(slidesContainer, index, imageDescription);
-      } else if (deltaX < 0) {
-        nextSlide(slidesContainer, index, imageDescription);
+    carousel.addEventListener("touchend", function () {
+      if (touchStartX !== null && touchEndX !== null) {
+        const deltaX = touchEndX - touchStartX;
+        if (deltaX > 0) {
+          prevSlide(carousel, index - 1, imageDescription);
+        } else if (deltaX < 0) {
+          nextSlide(carousel, index - 1, imageDescription);
+        }
       }
-    }
 
-    touchStartX = null;
-    touchEndX = null;
+      touchStartX = null;
+      touchEndX = null;
+    });
   });
 };
 
@@ -504,7 +519,35 @@ const generateDivGroup = (group, index) => {
     divGroupes.appendChild(card);
   });
 };
+const setCarouselButtonListener = () => {
+  const buttons = document.querySelectorAll(".arrow_button");
 
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const buttonId = event.target.parentElement.id;
+      let index;
+      if (!buttonId) {
+        return;
+      }
+
+      if (buttonId.startsWith("next")) {
+        index = buttonId.replace("next-", "");
+        nextSlide(
+          document.getElementById(`carousel${index}`),
+          +index - 1,
+          document.getElementById(`imageDescription${index}`)
+        );
+      } else if (buttonId.startsWith("prev")) {
+        index = buttonId.replace("prev-", "");
+        prevSlide(
+          document.getElementById(`carousel${index}`),
+          +index - 1,
+          document.getElementById(`imageDescription${index}`)
+        );
+      }
+    });
+  });
+};
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   //Crée la variable div-groupes pour stocker l'élément html #div-groupes
@@ -514,6 +557,9 @@ document.addEventListener("DOMContentLoaded", function () {
     aliasGenerator(group);
     generateDivGroup(group, index + 1);
   });
+
+  setCarouselButtonListener();
+  setSwipeListener();
 
   //^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
   //du tableau personnes. Le paramètre de forEach est (personne), qui
