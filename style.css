@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: aliceblue;
 }
@@ -65,11 +66,7 @@ h4 {
   font-size: 20px;
 }
 
-.groupDescription1,
-.groupDescription2,
-.groupDescription3,
-.groupDescription4,
-.groupDescription5 {
+.group-description {
   display: flex;
   margin: 0 2rem;
 }
@@ -138,6 +135,8 @@ h4 {
   cursor: pointer;
   transition: 0.3s all ease-in-out;
   z-index: 1;
+  height: 50px;
+  width: 50px;
 }
 
 .arrow_button:hover {
@@ -145,8 +144,8 @@ h4 {
 }
 
 .arrow_button svg {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
 }
 .arrow_button svg path {
   stroke: white;
@@ -217,6 +216,10 @@ h4 {
     background: none;
   }
 
+  .small-container {
+    display: none;
+  }
+
   .big-container {
     display: block;
     padding-left: 20px;
@@ -257,7 +260,7 @@ h4 {
     align-items: center;
   }
 
-  .div-groupes,
+  .div-groupes1,
   .div-groupes2,
   .div-groupes3,
   .div-groupes4,
@@ -275,11 +278,7 @@ h4 {
     height: auto;
   }
 
-  .groupDescription1,
-  .groupDescription2,
-  .groupDescription3,
-  .groupDescription4,
-  .groupDescription5 {
+  .group-description {
     display: flex;
     margin: 0 5rem;
   }
