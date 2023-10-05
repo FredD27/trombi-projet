@@ -1,3 +1,16 @@
+// NAVBAR
+const links = document.querySelectorAll("nav li");
+
+iconsBurger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
+
 //CONTENU BODY DESKTOP
 
 //Tableau des personnes, eux même encapsulé dans des tableaux (1 tableau par groupe)
@@ -305,8 +318,8 @@ const personnes = [
 
 // console.log(valuePeople);
 
-//Crée la variable div-groupes pour stocker l'élément html #div-groupes
-const divGroupes = document.querySelector(".div-groupes");
+//Crée la variable group-list pour stocker l'élément html #r
+const divGroupes = document.querySelector(".group-list1");
 //Pour chaque (personne) dans le tableau personne[0], créer une card,
 //qui est égale ) à la fonction createPersonneCard(personne).
 
@@ -315,21 +328,21 @@ personnes[0].forEach((personne) => {
   divGroupes.appendChild(card);
 });
 
-const divGroupes2 = document.querySelector(".div-groupes2");
+const divGroupes2 = document.querySelector(".group-list2");
 
 personnes[1].forEach((personne) => {
   const card = createPersonneCard(personne);
   divGroupes2.appendChild(card);
 });
 
-const divGroupes3 = document.querySelector(".div-groupes3");
+const divGroupes3 = document.querySelector(".group-list3");
 
 personnes[2].forEach((personne) => {
   const card = createPersonneCard(personne);
   divGroupes3.appendChild(card);
 });
 
-const divGroupes4 = document.querySelector(".div-groupes4");
+const divGroupes4 = document.querySelector(".group-list4");
 let cardCounter = 0;
 
 personnes[3].forEach((personne) => {
@@ -344,7 +357,7 @@ personnes[3].forEach((personne) => {
   cardCounter++;
 });
 
-const divGroupes5 = document.querySelector(".div-groupes5");
+const divGroupes5 = document.querySelector(".group-list5");
 let cardCount = 0;
 
 personnes[4].forEach((personne) => {
@@ -364,111 +377,19 @@ personnes[4].forEach((personne) => {
 
 function createPersonneCard(personne) {
   const card = document.createElement("div");
-  card.classList.add("personne-card");
-  const cardList = document.querySelectorAll(".personne-card");
+  card.classList.add("cardPersonnel");
 
   // for (let i = 1; i < cardList.length; i += 2) {
   //   cardList[i].classList.add("reversed");
   // }
 
   card.innerHTML = `
-        <div class="listPersonnel"><img id="minimage"src="${personne.image}" alt="${personne.nom}">
-        <h3>${personne.prenom} ${personne.nom}</h3>
-        <div class="listLogo"><a href="${personne.linkedIn}" target="_blank"><img id="logoLinkedin" src="./images/Linkedin.png"></img></a>
-        <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a></div>
-        </div>
-    `;
+  <img id="minimage"src="${personne.image}" alt="${personne.nom}">
+  <div class="listPersonnel">
+            <h3>${personne.prenom} ${personne.nom}</h3>
+            <div class="listLogo"><a href="${personne.linkedIn}" target="_blank"><img id="logoLinkedin" src="./images/Linkedin.png"></img></a>
+            <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a></div>
+            </div>
+        `;
   return card;
 }
-
-// ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
-// à (personne) et qui permettra de créer une div, lui donner la class personne-card
-// et écrire dans le HTML les valeurs contenues dans l'objet personne.
-
-const groupDescriptions = [
-  {
-    titre: "Les Rasta Rockets",
-    logo: "./images/rastaRockett.jpg",
-    description:
-      "Chacun d'entre nous apporte ses compétences uniques, que ce soit en design web, en collecte de données, en développement ou en photographie pour créer une ressource complète et attractive. Nous croyons fermement que les bars locaux sont des joyaux de la vie nocturne, et nous voulons les mettre en lumière.",
-  },
-  {
-    titre: "Les Quatres Fantastiques",
-    logo: "images/les4Fantastiques.jpeg",
-    description:
-      "Les 4 Fantastiques : Quatre cerveaux brillants, un seul objectif - dominer le monde du développement ! Avec Antoine, David, Sylvain et Victor, la technologie n'a qu'à bien se tenir. Préparez-vous à des lignes de code incroyables et à des solutions informatiques qui vous laisseront sans voix.",
-  },
-  {
-    titre: "Tango Charlie",
-    logo: "images/alphaTangoCharlie.jpg",
-    description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
-  },
-  {
-    titre: "Les OGs",
-    logo: "images/theOg.png",
-    description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
-  },
-  {
-    titre: "Les Totally Spies",
-    logo: "images/tottallySpies.jpg",
-    description:
-      "Trois jeunes filles, Nelia, Claire et Leslie, mènent une double vie en tant qu'espionnes pour l'organisation secrète ZenList, dirigée par Jerry, tout en jonglant avec les défis de la vie quotidienne d'étudiants à la wild code School!",
-  },
-];
-
-// ^ Tableau des descriptions des groupes; comprend titre, logo, description
-const groupDescription1 = document.querySelector(".groupDescription1");
-const firstGroup = groupDescriptions[0];
-const newGroup = createGroup(firstGroup);
-//variable groupDescription1 = la div qui va contenir la description du groupe
-//firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
-//newGroup est la variable qui appelle la fonction createGroup et l'argument
-//permet de l'insérer dans firstGroup
-
-groupDescription1.appendChild(newGroup);
-//on fini sur un appendChild pour pousser notre nouvelle description dans la div
-//présente sur le HTML
-
-const groupDescription2 = document.querySelector(".groupDescription2");
-const secondGroup = groupDescriptions[1];
-const newGroup2 = createGroup(secondGroup);
-
-groupDescription2.appendChild(newGroup2);
-
-const groupDescription3 = document.querySelector(".groupDescription3");
-const thirdGroup = groupDescriptions[2];
-const newGroup3 = createGroup(thirdGroup);
-
-groupDescription3.appendChild(newGroup3);
-
-const groupDescription4 = document.querySelector(".groupDescription4");
-const fourthGroup = groupDescriptions[3];
-const newGroup4 = createGroup(fourthGroup);
-
-groupDescription4.appendChild(newGroup4);
-
-const groupDescription5 = document.querySelector(".groupDescription5");
-const fifthGroup = groupDescriptions[4];
-const newGroup5 = createGroup(fifthGroup);
-
-groupDescription5.appendChild(newGroup5);
-
-//J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
-//sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
-//un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
-
-function createGroup(group) {
-  const groupDiv = document.createElement("div");
-  groupDiv.classList.add("groupDiv");
-  groupDiv.innerHTML = `<h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}"></img></h4>
-                        <p class="group-txt">${group.description}</p>`;
-  return groupDiv;
-}
-
-//Fonction du nom de createGroup, paramètre group.
-//variable groupDiv crée une div,
-//groupDiv.classList.add ajoute la classe "groupDiv" à la div,
-//groupDiv.innerHTML ajouter les éléments à afficher
-//return groupDiv sinon elle est inutilisable
