@@ -1,6 +1,16 @@
 // NAVBAR
 const links = document.querySelectorAll("nav li");
 
+window.addEventListener("scroll", function () {
+  var scrollPosition = window.scrollY;
+  var topBtn = document.querySelector(".top_btn");
+  if (scrollPosition > 200) {
+    topBtn.classList.add("show");
+  } else {
+    topBtn.classList.remove("show");
+  }
+});
+
 const groupDescriptions = [
   {
     alias: "rasta-rockets",

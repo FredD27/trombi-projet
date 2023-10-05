@@ -3,10 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+ 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: aliceblue;
 }
+
+header .back_to_top:hover {
+  transform: translateY(-50%);
+  transition: all ease 0.8s;
+}
+
+header .back_to_top {
+  /* background-color: red; */
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1;
+  transition: all ease 0.8s;
+}
+
+header .back_to_top .top_btn .scroll_up > svg {
+  height: 50px;
+  width: 50px;
+  stroke:#0077b5;
+  
+  
+}
+
+/* Scroll_btn JS */
+.top_btn {
+  display: none;
+}
+
+.top_btn.show {
+  display: block;
+}
+
 /*navBar*/
 
 li {
@@ -71,6 +107,7 @@ h4 {
 .groupDescription5 {
   display: flex;
   margin: 0 2rem;
+  font-size: 1.5rem;
 }
 
 /* carousel */
@@ -160,35 +197,38 @@ h4 {
 }
 
 @media (max-width: 650px) {
-  #iconsBurger {
-    display: block;
-  }
-  #iconsBurger:before {
-    content: '\2630';
-  }
-  .active #iconsBurger:after {
-    content: '\2715';
-    color: white;
-  }
-  nav ul {
-    position: fixed;
-    left: -100%;
-    top: 5%;
-    flex-direction: column;
-    background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
-    width: 95%;
-    text-align: center;
-    transition: 0.25s;
-  }
-  nav ul li {
-    padding: 3px 0;
-  }
-  nav ul li:hover {
-    background: rgb(19, 95, 125);
-  }
-  nav.active ul {
-    left: 0;
-  }
+
+    #iconsBurger {
+      display: block;
+    }
+    #iconsBurger:before {
+      content: "\2630";
+      color: white;
+    }
+    .active #iconsBurger:after {
+      content: "\2715";
+      color: white;
+    }
+    nav ul {
+      position: fixed;
+      left: -100%;
+      top: 5%;
+      flex-direction: column;
+      background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
+      width: 95%;
+      text-align: center;
+      transition: 0.25s;
+      
+    }
+    nav ul li {
+      padding: 3px 0;
+    }
+    nav ul li:hover {
+      background: rgb(19, 95, 125);
+    }
+    nav.active ul {
+      left: 0;
+    }
 
   img {
     width: 12rem;
