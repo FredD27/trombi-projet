@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   background-color: aliceblue;
 }
@@ -28,7 +28,7 @@ a:hover {
 
 nav {
   /* background-color:#0077b5; */
-  display: flex; 
+  display: flex;
   background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
   justify-content: space-between;
   align-items: center;
@@ -56,7 +56,6 @@ nav ul {
   border: 1px solid black;
 }
 
-
 h4 {
   display: flex;
   justify-content: space-between;
@@ -65,18 +64,17 @@ h4 {
   font-size: 20px;
 }
 
-.groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
+.group-description {
   display: flex;
   margin: 0 2rem;
 }
-
 
 /* carousel */
 
 .carousel-container {
   /* height: 100vh; 100% de la hauteur de la vue */
   width: 100%;
-  background: aliceblue; 
+  background: aliceblue;
   position: relative;
   padding: 0 5%;
 }
@@ -87,8 +85,6 @@ h4 {
   object-fit: cover;
   border-radius: 10px;
 }
-
-
 
 .carousel-slide {
   width: 100%;
@@ -113,7 +109,7 @@ h4 {
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-  transition: .3s ease;
+  transition: 0.3s ease;
   overflow: hidden;
   max-height: 200px;
 }
@@ -155,39 +151,37 @@ h4 {
   background-color: aliceblue;
   background-size: cover;
   /* background-image: url(./images/pexels-artem-podrez-7232658.jpg); */
-  
 }
 
 @media (max-width: 650px) {
-
-    #iconsBurger {
-      display: block;
-    }
-    #iconsBurger:before {
-      content: "\2630";
-    }
-    .active #iconsBurger:before {
-      content: "\2715";
-    }
-    nav ul {
-      position: fixed;
-      left: -100%;
-      top: 5%;
-      flex-direction: column;
-      background-color: #0077b5;
-      width: 100%;
-      text-align: center;
-      transition: 0.25s;
-    }
-    nav ul li {
-      padding: 3px 0;
-    }
-    nav ul li:hover {
-      background: rgb(177, 219, 236);
-    }
-    nav.active ul {
-      left: 0;
-    }
+  #iconsBurger {
+    display: block;
+  }
+  #iconsBurger:before {
+    content: "\2630";
+  }
+  .active #iconsBurger:before {
+    content: "\2715";
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background-color: #0077b5;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav ul li {
+    padding: 3px 0;
+  }
+  nav ul li:hover {
+    background: rgb(177, 219, 236);
+  }
+  nav.active ul {
+    left: 0;
+  }
 
   img {
     width: 12rem;
@@ -213,12 +207,15 @@ h4 {
     font-family: sans-serif;
   }
 
+  .small-container {
+    display: none;
+  }
+
   .big-container {
     display: block;
     padding-left: 20px;
     width: 100%;
     margin: 0 auto;
-   
   }
 
   .carousel-container {
@@ -254,7 +251,7 @@ h4 {
     align-items: center;
   }
 
-  .div-groupes,
+  .div-groupes1,
   .div-groupes2,
   .div-groupes3,
   .div-groupes4,
@@ -263,16 +260,16 @@ h4 {
     margin: 60px;
     justify-content: space-around;
     margin-bottom: 0;
-    background-color: aliceblue;  
+    background-color: aliceblue;
   }
 
   .personne-card {
     width: 300px;
-    padding: 0 2,5%;
+    padding: 0 2, 5%;
     height: auto;
   }
 
-  .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
+  .group-description {
     display: flex;
     margin: 0 5rem;
   }
@@ -284,9 +281,9 @@ h4 {
   }
 
   .double-logo {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   h4 {
@@ -299,9 +296,7 @@ h4 {
 
   .group-txt {
     margin: 2rem 0 0 0;
-    
   }
-
 
   #logoLinkedin {
     width: 40px;
@@ -313,11 +308,11 @@ h4 {
     height: 40px;
   }
 
- .la-barre {
-  font-size: 50px;
-  text-align: center;
-  max-width: 90vw;
-}
+  .la-barre {
+    font-size: 50px;
+    text-align: center;
+    max-width: 90vw;
+  }
 
   .personnel {
     display: flex;
@@ -330,10 +325,8 @@ h4 {
     margin: 10px;
     width: 270px;
     position: relative;
-    background: linear-gradient(to bottom,
-     #0077b5 40%,
-     white 40%);
-    }
+    background: linear-gradient(to bottom, #0077b5 40%, white 40%);
+  }
 
   .card-txt {
     max-width: 250px;
@@ -349,6 +342,4 @@ h4 {
     border-radius: 50%;
     border: 1px solid black;
   }
-
 }
-
