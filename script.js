@@ -457,10 +457,12 @@ const setSwipeListener = () => {
     const imageDescription = document.getElementById(
       `imageDescription${index}`
     );
-    
+
     carousel.addEventListener("click", function () {
       imageDescription.textContent =
-        groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex].description;
+        groupDescriptions[index - 1].gens[
+          groupDescriptions[index - 1].currentSlideIndex
+        ].description;
     });
     // _______________________________
     let touchStartX = null;
