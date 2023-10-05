@@ -4,14 +4,49 @@
   box-sizing: border-box;
 }
  
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: aliceblue;
 }
+
+header .back_to_top:hover {
+  transform: translateY(-50%);
+  transition: all ease 0.8s;
+}
+
+header .back_to_top {
+  /* background-color: red; */
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1;
+  transition: all ease 0.8s;
+}
+
+header .back_to_top .top_btn .scroll_up > svg {
+  height: 50px;
+  width: 50px;
+  stroke:#0077b5;
+  
+  
+}
+
+/* Scroll_btn JS */
+.top_btn {
+  display: none;
+}
+
+.top_btn.show {
+  display: block;
+}
+
 /*navBar*/
 
 li {
   list-style: none;
-  /* background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4); */
 }
 
 
@@ -71,6 +106,7 @@ h4 {
 .groupDescription1, .groupDescription2, .groupDescription3, .groupDescription4, .groupDescription5 {
   display: flex;
   margin: 0 2rem;
+  font-size: 1.5rem;
 }
 
 
@@ -169,6 +205,7 @@ h4 {
     }
     #iconsBurger:before {
       content: "\2630";
+      color: white;
     }
     .active #iconsBurger:after {
       content: "\2715";

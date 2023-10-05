@@ -11,6 +11,17 @@ links.forEach((link) => {
         nav.classList.remove("active");
     });
 });
+
+window.addEventListener("scroll", function() {
+  var scrollPosition = window.scrollY;
+  var topBtn = document.querySelector(".top_btn");
+  if (scrollPosition > 200) {
+      topBtn.classList.add("show");
+  } else {
+      topBtn.classList.remove("show");
+  }
+ });
+
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   const slidesContainer = document.querySelector(".carousel");
