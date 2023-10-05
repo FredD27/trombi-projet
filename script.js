@@ -1,6 +1,4 @@
 // NAVBAR
-const links = document.querySelectorAll("nav li");
-
 window.addEventListener("scroll", function () {
   var scrollPosition = window.scrollY;
   var topBtn = document.querySelector(".top_btn");
@@ -350,7 +348,7 @@ iconsBurger.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-links.forEach((link) => {
+document.querySelectorAll("nav li").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
   });
@@ -358,6 +356,10 @@ links.forEach((link) => {
 
 const aliasGenerator = (group) => {
   const navbarList = document.getElementById("navbar-list");
+
+  if(!navbarList) {
+    return;
+  }
 
   navbarList.innerHTML += `
   <li>
@@ -405,6 +407,11 @@ const loadCurrentSlide = (node, imgPath) => {
 
 const carouselGenerator = (group, index) => {
   const smallContainer = document.querySelector(".small-container");
+
+  if(!smallContainer) {
+    return;
+  }
+
   smallContainer.innerHTML += `
     <div id="${group.alias}">
       <div class="groupDescription${index + 1}"></div>
@@ -524,6 +531,11 @@ const createPersonneCard = (personne) => {
 
 const generateDivGroup = (group, index) => {
   const divGroupes = document.querySelector(`.div-groupes${index}`);
+
+  if(!divGroupes) {
+    return;
+  }
+
   group.gens.forEach((personne) => {
     const card = createPersonneCard(personne);
     divGroupes.appendChild(card);
@@ -573,6 +585,11 @@ const createGroup = (group) => {
 }
 const generateGroupDescription = (group, index) => {
   const groupDescription = document.querySelector(`.groupDescription${index + 1}`);
+
+  if (!groupDescription) {
+    return;
+  }
+
   const newGroup = createGroup(group);
   //variable groupDescription1 = la div qui va contenir la description du groupe
   //firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
@@ -594,7 +611,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setCarouselButtonListener();
   setSwipeListener();
-  document.getElementById("navbar-list").innerHTML += `<li><a href="index2.html">TrombiList</a></li>`;
+
+  if (document.getElementById("navbar-list")) {
+    document.getElementById("navbar-list").innerHTML += `<li><a href="index2.html">TrombiList</a></li>`;
+  }
 });
 
 //Fonction du nom de createGroup, paramètre group.

@@ -1,11 +1,9 @@
 // NAVBAR
-const links = document.querySelectorAll("nav li");
-
 iconsBurger.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-links.forEach((link) => {
+document.querySelectorAll("nav li").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
   });
@@ -321,24 +319,24 @@ const personnes = [
 //Crée la variable group-list pour stocker l'élément html #r
 const divGroupes = document.querySelector(".group-list1");
 //Pour chaque (personne) dans le tableau personne[0], créer une card,
-//qui est égale ) à la fonction createPersonneCard(personne).
+//qui est égale ) à la fonction createPersonneCard2(personne).
 
 personnes[0].forEach((personne) => {
-  const card = createPersonneCard(personne);
+  const card = createPersonneCard2(personne);
   divGroupes.appendChild(card);
 });
 
 const divGroupes2 = document.querySelector(".group-list2");
 
 personnes[1].forEach((personne) => {
-  const card = createPersonneCard(personne);
+  const card = createPersonneCard2(personne);
   divGroupes2.appendChild(card);
 });
 
 const divGroupes3 = document.querySelector(".group-list3");
 
 personnes[2].forEach((personne) => {
-  const card = createPersonneCard(personne);
+  const card = createPersonneCard2(personne);
   divGroupes3.appendChild(card);
 });
 
@@ -346,7 +344,7 @@ const divGroupes4 = document.querySelector(".group-list4");
 let cardCounter = 0;
 
 personnes[3].forEach((personne) => {
-  const card = createPersonneCard(personne);
+  const card = createPersonneCard2(personne);
   divGroupes4.appendChild(card);
   // Si le reste de la division de cardCounter par 2 est égal à 1,
   // alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
@@ -361,7 +359,7 @@ const divGroupes5 = document.querySelector(".group-list5");
 let cardCount = 0;
 
 personnes[4].forEach((personne) => {
-  const card = createPersonneCard(personne);
+  const card = createPersonneCard2(personne);
   divGroupes5.appendChild(card);
   if (cardCount % 2 === 1) {
     card.classList.add("reversed");
@@ -375,7 +373,7 @@ personnes[4].forEach((personne) => {
 // du tableau personnes. Le paramètre de forEach est (personne), qui
 // devient le modèle de l'objet à l'index 0 du tableau personnes.
 
-function createPersonneCard(personne) {
+function createPersonneCard2(personne) {
   const card = document.createElement("div");
   card.classList.add("cardPersonnel");
 
