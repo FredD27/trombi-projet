@@ -3,8 +3,10 @@ const links = document.querySelectorAll("nav li");
 
 const groupDescriptions = [
   {
+    alias: "rasta-rockets",
     titre: "Les Rasta Rockets",
     logo: "./images/rastaRockett.jpg",
+    currentSlideIndex: 0,
     gens: [
       {
         nom: "CHAUVEAU",
@@ -73,8 +75,10 @@ const groupDescriptions = [
       "Chacun d'entre nous apporte ses compétences uniques, que ce soit en design web, en collecte de données, en développement ou en photographie pour créer une ressource complète et attractive. Nous croyons fermement que les bars locaux sont des joyaux de la vie nocturne, et nous voulons les mettre en lumière.",
   },
   {
+    alias: "les-fantastiques",
     titre: "Les Quatres Fantastiques",
     logo: "images/les4Fantastiques.jpeg",
+    currentSlideIndex: 0,
     gens: [
       {
         nom: "BONNAURE",
@@ -133,8 +137,10 @@ const groupDescriptions = [
       "Les 4 Fantastiques : Quatre cerveaux brillants, un seul objectif - dominer le monde du développement ! Avec Antoine, David, Sylvain et Victor, la technologie n'a qu'à bien se tenir. Préparez-vous à des lignes de code incroyables et à des solutions informatiques qui vous laisseront sans voix.",
   },
   {
+    alias: "tango-charlie",
     titre: "Tango Charlie",
     logo: "images/alphaTangoCharlie.jpg",
+    currentSlideIndex: 0,
     gens: [
       {
         nom: "HARMACH",
@@ -200,13 +206,14 @@ const groupDescriptions = [
         gitHub: "https://github.com/Benoit-Hayet",
       },
     ],
-
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
+    alias: "the-OG",
     titre: "Les OGs",
     logo: "images/theOg.png",
+    currentSlideIndex: 0,
     gens: [
       {
         nom: "BRUN",
@@ -261,13 +268,14 @@ const groupDescriptions = [
         gitHub: "https://github.com/FredD27",
       },
     ],
-
     description:
       "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
   },
   {
+    alias: "totally-spies",
     titre: "Les Totally Spies",
     logo: "images/tottallySpies.jpg",
+    currentSlideIndex: 0,
     gens: [
       {
         nom: "ABAJOLI",
@@ -323,7 +331,6 @@ const groupDescriptions = [
         gitHub: "https://github.com/bfsylvain",
       },
     ],
-
     description:
       "Trois jeunes filles, Nelia, Claire et Leslie, mènent une double vie en tant qu'espionnes pour l'organisation secrète ZenList, dirigée par Jerry, tout en jonglant avec les défis de la vie quotidienne d'étudiants à la wild code School!",
   },
@@ -338,54 +345,108 @@ links.forEach((link) => {
     nav.classList.remove("active");
   });
 });
-// CAROUSEL
-document.addEventListener("DOMContentLoaded", function () {
-  const slidesContainer = document.querySelector(".carousel");
-  const nextButton = document.querySelector(".arrow_button_next");
-  const prevButton = document.querySelector(".arrow_button_prev");
-  let currentSlideIndex = 0;
 
-  function loadCurrentSlide() {
-    slidesContainer.innerHTML = "";
+const aliasGenerator = (group) => {
+  const navbarList = document.getElementById("navbar-list");
 
-    const currentSlide = document.createElement("div");
-    currentSlide.classList.add("carousel-slide");
-    currentSlide.classList.add("fade-transition");
-    const img = document.createElement("img");
-    img.src = groupDescriptions[0].gens[currentSlideIndex].image;
-    currentSlide.appendChild(img);
-    slidesContainer.appendChild(currentSlide);
+  navbarList.innerHTML += `
+  <li>
+    <a href="#${group.alias}">${group.titre}</a>
+  </li>`;
+};
+
+const nextSlide = (node, index, imageDescription) => {
+  groupDescriptions[index].currentSlideIndex++;
+  if (groupDescriptions[index].currentSlideIndex >= groupDescriptions[index].gens.length) {
+    groupDescriptions[index].currentSlideIndex = 0;
   }
+  loadCurrentSlide(node, groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex].image);
+  imageDescription.textContent = "";
+  console.log(node);
+  console.log(groupDescriptions[index]);
 
-  function nextSlide() {
-    currentSlideIndex++;
-    if (currentSlideIndex >= groupDescriptions[0].gens.length) {
-      currentSlideIndex = 0;
-    }
-    loadCurrentSlide();
-    imageDescription.textContent = "";
+};
+
+const prevSlide = (node, index, imageDescription) => {
+  groupDescriptions[index].currentSlideIndex--;
+  if (groupDescriptions[index].currentSlideIndex < 0) {
+    groupDescriptions[index].currentSlideIndex = groupDescriptions[index].gens.length - 1;
   }
+  loadCurrentSlide(node, groupDescriptions[index].gens[groupDescriptions[index].currentSlideIndex].image);
+  imageDescription.textContent = "";
+};
 
-  function prevSlide() {
-    currentSlideIndex--;
-    if (currentSlideIndex < 0) {
-      currentSlideIndex = groupDescriptions[0].gens.length - 1;
-    }
-    loadCurrentSlide();
-    imageDescription.textContent = "";
-  }
+const loadCurrentSlide = (node, imgPath) => {
+  node.innerHTML = `
+    <div class="carousel-slide">
+      <img src="${imgPath}" loading="lazy" />
+    </div>
+  `;
+};
 
-  nextButton.addEventListener("click", nextSlide);
-  prevButton.addEventListener("click", prevSlide);
+const carouselGenerator = (group, index) => {
+  const smallContainer = document.querySelector(".small-container");
+  smallContainer.innerHTML += `
+    <div id="${group.alias}">
+      <div class="groupDescription${index + 1}"></div>
 
-  loadCurrentSlide();
+      <div class="carousel-container">
+        <div class="arrow">
+          <button class="arrow_button arrow_button_prev" id="prev-${index + 1}">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+          <button class="arrow_button arrow_button_next" id="next-${index + 1}">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="carousel" id="carousel${index + 1}"></div>
+
+        <div class="imageDescription${index + 1}" id="imageDescription${index + 1}"></div>
+      </div>
+    </div>
+  `;
+
+  const slidesContainer = document.getElementById(`carousel${index + 1}`);
+  const nextButton = document.getElementById(`next-${index + 1}`);
+  const prevButton = document.getElementById(`prev-${index + 1}`);
+
+  const imageDescription = document.getElementById(`imageDescription${index + 1}`);
+  nextButton.addEventListener("click", () => {nextSlide(slidesContainer, index, imageDescription)});
+  prevButton.addEventListener("click", () => {prevSlide(slidesContainer, index, imageDescription)});
+
+  loadCurrentSlide(slidesContainer, group.gens[group.currentSlideIndex].image);
   // _____________________________
-  const imageDescription = document.getElementById("imageDescription");
-  imageDescription.classList.add("img-desc");
 
   slidesContainer.addEventListener("click", function () {
     imageDescription.textContent =
-      groupDescriptions[0].gens[currentSlideIndex].description;
+      group.gens[group.currentSlideIndex].description;
   });
   // _______________________________
   let touchStartX = null;
@@ -403,156 +464,115 @@ document.addEventListener("DOMContentLoaded", function () {
     if (touchStartX !== null && touchEndX !== null) {
       const deltaX = touchEndX - touchStartX;
       if (deltaX > 0) {
-        prevSlide();
+        prevSlide(slidesContainer, index, imageDescription);
       } else if (deltaX < 0) {
-        nextSlide();
+        nextSlide(slidesContainer, index, imageDescription);
       }
     }
 
     touchStartX = null;
     touchEndX = null;
   });
-});
+};
 
-//CONTENU BODY DESKTOP
-
-//Crée la variable div-groupes pour stocker l'élément html #div-groupes
-const divGroupes = document.querySelector(".div-groupes");
-//Pour chaque (personne) dans le tableau personne[0], créer une card,
-//qui est égale ) à la fonction createPersonneCard(personne).
-
-groupDescriptions[0].gens.forEach((personne) => {
-  const card = createPersonneCard(personne);
-  divGroupes.appendChild(card);
-});
-
-const divGroupes2 = document.querySelector(".div-groupes2");
-
-groupDescriptions[1].gens.forEach((personne) => {
-  const card = createPersonneCard(personne);
-  divGroupes2.appendChild(card);
-});
-
-const divGroupes3 = document.querySelector(".div-groupes3");
-
-groupDescriptions[2].gens.forEach((personne) => {
-  const card = createPersonneCard(personne);
-  divGroupes3.appendChild(card);
-});
-
-const divGroupes4 = document.querySelector(".div-groupes4");
-let cardCounter = 0;
-
-groupDescriptions[3].gens.forEach((personne) => {
-  const card = createPersonneCard(personne);
-  divGroupes4.appendChild(card);
-  // Si le reste de la division de cardCounter par 2 est égal à 1,
-  //alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
-  if (cardCounter % 2 === 1) {
-    card.classList.add("reversed");
-  }
-
-  cardCounter++;
-});
-
-const divGroupes5 = document.querySelector(".div-groupes5");
-let cardCount = 0;
-
-groupDescriptions[4].gens.forEach((personne) => {
-  const card = createPersonneCard(personne);
-  divGroupes5.appendChild(card);
-  if (cardCount % 2 === 1) {
-    card.classList.add("reversed");
-  }
-
-  cardCount++;
-});
-
-//^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
-//du tableau personnes. Le paramètre de forEach est (personne), qui
-//devient le modèle de l'objet à l'index 0 du tableau personnes.
-
-function createPersonneCard(personne) {
+const createPersonneCard = (personne) => {
   const card = document.createElement("div");
   card.classList.add("personne-card");
-  const cardList = document.querySelectorAll(".personne-card");
-
-  // for (let i = 1; i < cardList.length; i += 2) {
-  //   cardList[i].classList.add("reversed");
-  // }
 
   card.innerHTML = `
-    <div class="personnel">
-      <img class="img-perso" src="${personne.image}" alt="${personne.nom}">
-      <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
-      <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br></p>
-      <div class="double-logo">
-        <a href="${personne.linkedin}" target="_blank">
-          <img id="logoLinkedin" src="./images/LinkedIn.png"/>
-        </a> 
-        <a href="${personne.gitHub}" target="_blank">
-          <img id="logoGitHub" src="./images/logoGitHub.png"/>
-        </a>
-      </div>
+  <div class="personnel">
+    <img class="img-perso" src="${personne.image}" alt="${personne.nom}" loading="lazy" />
+    <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+    <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br></p>
+    <div class="double-logo">
+      <a href="${personne.linkedin}" target="_blank">
+        <img id="logoLinkedin" src="./images/LinkedIn.png" loading="lazy" />
+      </a> 
+      <a href="${personne.gitHub}" target="_blank">
+        <img id="logoGitHub" src="./images/logoGitHub.png" loading="lazy" />
+      </a>
     </div>
-    `;
+  </div>
+  `;
   return card;
-}
+};
 
-// ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
-// à (personne) et qui permettra de créer une div, lui donner la class personne-card
-// et écrire dans le HTML les valeurs contenues dans l'objet personne.
+const generateDivGroup = (group, index) => {
+  const divGroupes = document.querySelector(`.div-groupes${index}`);
+  group.gens.forEach((personne) => {
+    const card = createPersonneCard(personne);
+    divGroupes.appendChild(card);
+  });
+};
 
-// ^ Tableau des descriptions des groupes; comprend titre, logo, description
-const groupDescription1 = document.querySelector(".groupDescription1");
-const firstGroup = groupDescriptions[0];
-const newGroup = createGroup(firstGroup);
-//variable groupDescription1 = la div qui va contenir la description du groupe
-//firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
-//newGroup est la variable qui appelle la fonction createGroup et l'argument
-//permet de l'insérer dans firstGroup
+// CAROUSEL
+document.addEventListener("DOMContentLoaded", function () {
+  //Crée la variable div-groupes pour stocker l'élément html #div-groupes
 
-groupDescription1.appendChild(newGroup);
-//on fini sur un appendChild pour pousser notre nouvelle description dans la div
-//présente sur le HTML
+  groupDescriptions.forEach((group, index) => {
+    carouselGenerator(group, index);
+    aliasGenerator(group);
+    generateDivGroup(group, index + 1);
+  });
 
-const groupDescription2 = document.querySelector(".groupDescription2");
-const secondGroup = groupDescriptions[1];
-const newGroup2 = createGroup(secondGroup);
+  //^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
+  //du tableau personnes. Le paramètre de forEach est (personne), qui
+  //devient le modèle de l'objet à l'index 0 du tableau personnes.
 
-groupDescription2.appendChild(newGroup2);
+  // ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
+  // à (personne) et qui permettra de créer une div, lui donner la class personne-card
+  // et écrire dans le HTML les valeurs contenues dans l'objet personne.
 
-const groupDescription3 = document.querySelector(".groupDescription3");
-const thirdGroup = groupDescriptions[2];
-const newGroup3 = createGroup(thirdGroup);
+  // ^ Tableau des descriptions des groupes; comprend titre, logo, description
+  const groupDescription1 = document.querySelector(".groupDescription1");
+  const firstGroup = groupDescriptions[0];
+  const newGroup = createGroup(firstGroup);
+  //variable groupDescription1 = la div qui va contenir la description du groupe
+  //firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
+  //newGroup est la variable qui appelle la fonction createGroup et l'argument
+  //permet de l'insérer dans firstGroup
 
-groupDescription3.appendChild(newGroup3);
+  groupDescription1.appendChild(newGroup);
+  //on fini sur un appendChild pour pousser notre nouvelle description dans la div
+  //présente sur le HTML
 
-const groupDescription4 = document.querySelector(".groupDescription4");
-const fourthGroup = groupDescriptions[3];
-const newGroup4 = createGroup(fourthGroup);
+  const groupDescription2 = document.querySelector(".groupDescription2");
+  const secondGroup = groupDescriptions[1];
+  const newGroup2 = createGroup(secondGroup);
 
-groupDescription4.appendChild(newGroup4);
+  groupDescription2.appendChild(newGroup2);
 
-const groupDescription5 = document.querySelector(".groupDescription5");
-const fifthGroup = groupDescriptions[4];
-const newGroup5 = createGroup(fifthGroup);
+  const groupDescription3 = document.querySelector(".groupDescription3");
+  const thirdGroup = groupDescriptions[2];
+  const newGroup3 = createGroup(thirdGroup);
 
-groupDescription5.appendChild(newGroup5);
+  groupDescription3.appendChild(newGroup3);
 
-//J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
-//sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
-//un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
+  const groupDescription4 = document.querySelector(".groupDescription4");
+  const fourthGroup = groupDescriptions[3];
+  const newGroup4 = createGroup(fourthGroup);
 
-function createGroup(group) {
-  const groupDiv = document.createElement("div");
-  groupDiv.classList.add("groupDiv");
-  groupDiv.innerHTML = `
-    <h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}"/></h4>
+  groupDescription4.appendChild(newGroup4);
+
+  const groupDescription5 = document.querySelector(".groupDescription5");
+  const fifthGroup = groupDescriptions[4];
+  const newGroup5 = createGroup(fifthGroup);
+
+  groupDescription5.appendChild(newGroup5);
+
+  //J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
+  //sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
+  //un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
+
+  function createGroup(group) {
+    const groupDiv = document.createElement("div");
+    groupDiv.classList.add("groupDiv");
+    groupDiv.innerHTML = `
+    <h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}" loading="lazy" /></h4>
     <p class="group-txt">${group.description}</p>`;
-  return groupDiv;
-}
-
+    return groupDiv;
+  }
+});
 //Fonction du nom de createGroup, paramètre group.
 //variable groupDiv crée une div,
 //groupDiv.classList.add ajoute la classe "groupDiv" à la div,
