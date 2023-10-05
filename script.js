@@ -458,6 +458,7 @@ const carouselGenerator = (group, index) => {
     }"></div>
       </div>
     </div>
+    <div class="la-barre"></div>
   `;
 
   loadCurrentSlide(

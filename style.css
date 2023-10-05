@@ -365,13 +365,6 @@ h4 {
     height: 40px;
   }
 
-  .la-barre {
-    font-size: 50px;
-    text-align: center;
-    margin: 2rem 0;
-    border: solid black 1px;
-  }
-
   .personnel {
     display: flex;
     flex-direction: column;
@@ -400,4 +393,11 @@ h4 {
     border-radius: 50%;
     border: 1px solid black;
   }
+}
+
+.la-barre {
+  font-size: 50px;
+  text-align: center;
+  margin: 2rem 0;
+  border: solid black 1px;
 }
