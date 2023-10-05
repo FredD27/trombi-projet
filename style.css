@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   background-color: aliceblue;
 }
@@ -153,10 +153,7 @@ h4 {
 .big-container {
   display: none;
   background-color: aliceblue;
-  background-size: cover;
-  /* background-image: url(./images/pexels-artem-podrez-7232658.jpg); */
-  
-}
+  background-size: cover;}
 
 @media (max-width: 650px) {
   #iconsBurger {
@@ -262,7 +259,8 @@ h4 {
     margin: 60px;
     justify-content: space-around;
     margin-bottom: 0;
-    background-color: aliceblue;  
+    background-color: aliceblue;
+
   }
 
   .personne-card {
@@ -319,6 +317,8 @@ h4 {
  .la-barre {
   font-size: 50px;
   text-align: center;
+  margin: 2rem 0;
+  border: solid black 1px;
 }
 
   .personnel {
