@@ -154,7 +154,7 @@ const personnes = [
     {
       nom: "MCHEIK",
       prenom: "Mahdi",
-      age: "20 + 17",
+      age: "« 20 + 17 »",
       image: "./Photos/Rasta-Rockets/IMG_0020.jpg",
       description: "<strong>Talent:</strong> « Je dessine gavé bien »",
       objectif:
@@ -181,7 +181,7 @@ const personnes = [
     {
       nom: "BONNAURE",
       prenom: "Sylvain",
-      age: "Pas assez vieux pour connaître woodstuck",
+      age: "« Pas assez vieux pour connaître woodstuck »",
       image: "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
       description:
         "<strong>Talent:</strong> Créateur du cocktail officiel du festival burlesque de Montréal",
@@ -379,7 +379,7 @@ const personnes = [
     {
       nom: "VANNIER",
       prenom: "Claire",
-      age: "Pas assez grande pour atteindre la dernière étagère",
+      age: "« Pas assez grande pour atteindre la dernière étagère »",
       image: "./Photos/Totally-Spies/IMG_0032.jpg",
       description: "<strong>Talent:</strong> Chanter sous la douche",
       objectif:
@@ -392,7 +392,7 @@ const personnes = [
     {
       nom: "COUTAIS",
       prenom: "Nélia",
-      age: "Pas assez grande pour maîtriser le code",
+      age: "« Pas assez grande pour maîtriser le code »",
       image: "./Photos/Totally-Spies/IMG_0034.jpg",
       description: "<strong>Talent:</strong> Trop bien caché",
       objectif:
