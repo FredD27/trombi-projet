@@ -447,6 +447,7 @@ const carouselGenerator = (group, index) => {
     document.getElementById(`carousel${index + 1}`),
     group.gens[group.currentSlideIndex].image
   );
+  generateGroupDescription(group, index)
 };
 
 const setSwipeListener = () => {
@@ -577,8 +578,8 @@ document.addEventListener("DOMContentLoaded", function () {
   groupDescriptions.forEach((group, index) => {
     generateGroupDescription(group, index)
     carouselGenerator(group, index);
-    aliasGenerator(group);
     generateDivGroup(group, index + 1);
+    aliasGenerator(group);
   });
 
   setCarouselButtonListener();
