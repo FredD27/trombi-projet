@@ -26,27 +26,39 @@
     padding: 12px;
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1500px;
   }
 
   .cardPersonnel {
     background-color: skyblue;
     display: flex;
-    padding: 1%;
+    padding: 12px;
     border-radius: 15px;
     box-shadow: 2px 4px 2px 2px;
+  }
+  .group-5 .cardPersonnel {
+    width: 19%;
+  }
+  .group-4 .cardPersonnel {
+    width: 24%;
+  }
+
+  .cardPersonnel img {
+    margin: 0;
   }
 
   .listPersonnel {
     font-size: 25px;
     border-radius: 10px;
+    width: fill-available;
+    width: -webkit-fill-available;
     /* box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.5);
     padding: 10px;*/
   }
 
   .listPersonnel > h3 {
     font-size: 15px;
-    padding-top: 3%;
+    text-align: center;
   }
 
   .listLogo {
@@ -77,9 +89,8 @@
   .group-list {
     display: flex;
     margin-top: 60px;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: aliceblue;
-    gap: 8px;
   }
 
   .personnel {
