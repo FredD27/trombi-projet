@@ -10,107 +10,11 @@ links.forEach((link) => {
     nav.classList.remove("active");
   });
 });
-// CAROUSEL
-document.addEventListener("DOMContentLoaded", function () {
-  const slidesContainer = document.querySelector(".carousel");
-  const nextButton = document.querySelector(".arrow_button_next");
-  const prevButton = document.querySelector(".arrow_button_prev");
-  let currentSlideIndex = 0;
-
-  const imagesArray = [
-    "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0038.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0039.jpg",
-    "./Photos/Les-4-Fantastiques/IMG_0040.jpg",
-  ];
-
-  const descriptions = [
-    "Description de l'image 1",
-    "Description de l'image 2",
-    "Description de l'image 3",
-    "Description de l'image 4",
-  ];
-
-  function loadCurrentSlide() {
-    slidesContainer.innerHTML = "";
-
-    const currentSlide = document.createElement("div");
-    currentSlide.classList.add("carousel-slide");
-    currentSlide.classList.add("fade-transition");
-    const img = document.createElement("img");
-    img.src = imagesArray[currentSlideIndex];
-    currentSlide.appendChild(img);
-    slidesContainer.appendChild(currentSlide);
-  }
-
-  imagesArray.forEach((imagePath) => {
-    const slide = document.createElement("div");
-    slide.classList.add("carousel-slide");
-    const img = document.createElement("img");
-    img.src = imagePath;
-    slide.appendChild(img);
-    slidesContainer.appendChild(slide);
-  });
-
-  function nextSlide() {
-    currentSlideIndex++;
-    if (currentSlideIndex >= imagesArray.length) {
-      currentSlideIndex = 0;
-    }
-    loadCurrentSlide();
-    imageDescription.textContent = "";
-  }
-
-  function prevSlide() {
-    currentSlideIndex--;
-    if (currentSlideIndex < 0) {
-      currentSlideIndex = imagesArray.length - 1;
-    }
-    loadCurrentSlide();
-    imageDescription.textContent = "";
-  }
-
-  nextButton.addEventListener("click", nextSlide);
-  prevButton.addEventListener("click", prevSlide);
-
-  loadCurrentSlide();
-  // _____________________________
-  const imageDescription = document.getElementById("imageDescription");
-  imageDescription.classList.add("img-desc");
-
-  slidesContainer.addEventListener("click", function () {
-    imageDescription.textContent = descriptions[currentSlideIndex];
-  });
-  // _______________________________
-  let touchStartX = null;
-  let touchEndX = null;
-
-  slidesContainer.addEventListener("touchstart", function (event) {
-    touchStartX = event.touches[0].clientX;
-  });
-
-  slidesContainer.addEventListener("touchmove", function (event) {
-    touchEndX = event.touches[0].clientX;
-  });
-
-  slidesContainer.addEventListener("touchend", function () {
-    if (touchStartX !== null && touchEndX !== null) {
-      const deltaX = touchEndX - touchStartX;
-      if (deltaX > 0) {
-        prevSlide();
-      } else if (deltaX < 0) {
-        nextSlide();
-      }
-    }
-
-    touchStartX = null;
-    touchEndX = null;
-  });
-});
 
 //CONTENU BODY DESKTOP
 
 //Tableau des personnes, eux même encapsulé dans des tableaux (1 tableau par groupe)
+
 const personnes = [
   [
     {
@@ -153,7 +57,7 @@ const personnes = [
     {
       nom: "MCHEIK",
       prenom: "Mahdi",
-      age: "« 20 + 17 »",
+      age: "20 + 17",
       image: "./Photos/Rasta-Rockets/IMG_0020.jpg",
       description: "<strong>Talent:</strong> « Je dessine gavé bien »",
       objectif:
@@ -180,7 +84,7 @@ const personnes = [
     {
       nom: "BONNAURE",
       prenom: "Sylvain",
-      age: "« Pas assez vieux pour connaître woodstuck »",
+      age: "Pas assez vieux pour connaître woodstuck",
       image: "./Photos/Les-4-Fantastiques/IMG_0037.jpg",
       description:
         "<strong>Talent:</strong> Créateur du cocktail officiel du festival burlesque de Montréal",
@@ -365,7 +269,7 @@ const personnes = [
     {
       nom: "BORDES",
       prenom: "Lucas",
-      age: 28,
+      age: 48,
       image: "./Photos/Totally-Spies/IMG_0028.jpg",
       description:
         "<strong>Talent: </strong>Décapsuler des bières avec les pieds",
@@ -379,7 +283,7 @@ const personnes = [
     {
       nom: "VANNIER",
       prenom: "Claire",
-      age: "« Pas assez grande pour atteindre la dernière étagère »",
+      age: "Pas assez grande pour atteindre la dernière étagère",
       image: "./Photos/Totally-Spies/IMG_0032.jpg",
       description: "<strong>Talent:</strong> Chanter sous la douche",
       objectif:
@@ -390,9 +294,9 @@ const personnes = [
     },
 
     {
-      nom: "COUTAIS",
+      nom: "COURTAIS",
       prenom: "Nélia",
-      age: "« Pas assez grande pour maîtriser le code »",
+      age: "Pas assez grande pour maîtriser le code",
       image: "./Photos/Totally-Spies/IMG_0034.jpg",
       description: "<strong>Talent:</strong> Trop bien caché",
       objectif:
@@ -404,8 +308,18 @@ const personnes = [
   ],
 ];
 
-//Crée la variable div-groupes pour stocker l'élément html #div-groupes
-const divGroupes = document.querySelector(".div-groupes");
+// Filtre tableau !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// const searchPerson = document.querySelector(".searchContainer");
+// const addPerson = document.createElement("div");
+// searchPerson.appendChild(addPerson);
+// const valueInput = document.getElementById("searchPeople");
+// const valuePeople = valueInput.value;
+
+// console.log(valuePeople);
+
+//Crée la variable group-list pour stocker l'élément html #r
+const divGroupes = document.querySelector(".group-list1");
 //Pour chaque (personne) dans le tableau personne[0], créer une card,
 //qui est égale ) à la fonction createPersonneCard(personne).
 
@@ -414,36 +328,36 @@ personnes[0].forEach((personne) => {
   divGroupes.appendChild(card);
 });
 
-const divGroupes2 = document.querySelector(".div-groupes2");
+const divGroupes2 = document.querySelector(".group-list2");
 
 personnes[1].forEach((personne) => {
   const card = createPersonneCard(personne);
   divGroupes2.appendChild(card);
 });
 
-const divGroupes3 = document.querySelector(".div-groupes3");
+const divGroupes3 = document.querySelector(".group-list3");
 
 personnes[2].forEach((personne) => {
   const card = createPersonneCard(personne);
   divGroupes3.appendChild(card);
 });
 
-const divGroupes4 = document.querySelector(".div-groupes4");
+const divGroupes4 = document.querySelector(".group-list4");
 let cardCounter = 0;
 
 personnes[3].forEach((personne) => {
   const card = createPersonneCard(personne);
   divGroupes4.appendChild(card);
   // Si le reste de la division de cardCounter par 2 est égal à 1,
-  //alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
-  if (cardCounter % 2 === 1) {
-    card.classList.add("reversed");
-  }
+  // alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
+  // if (cardCounter % 2 === 1) {
+  //   card.classList.add("reversed");
+  // }
 
   cardCounter++;
 });
 
-const divGroupes5 = document.querySelector(".div-groupes5");
+const divGroupes5 = document.querySelector(".group-list5");
 let cardCount = 0;
 
 personnes[4].forEach((personne) => {
@@ -455,119 +369,27 @@ personnes[4].forEach((personne) => {
 
   cardCount++;
 });
+// Ceci est le tableau qui contient la liste des différents groupe de la promotion JavaScript --->
 
-//^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
-//du tableau personnes. Le paramètre de forEach est (personne), qui
-//devient le modèle de l'objet à l'index 0 du tableau personnes.
+// Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
+// du tableau personnes. Le paramètre de forEach est (personne), qui
+// devient le modèle de l'objet à l'index 0 du tableau personnes.
 
 function createPersonneCard(personne) {
   const card = document.createElement("div");
-  card.classList.add("personne-card");
-  const cardList = document.querySelectorAll(".personne-card");
+  card.classList.add("cardPersonnel");
 
   // for (let i = 1; i < cardList.length; i += 2) {
   //   cardList[i].classList.add("reversed");
   // }
 
   card.innerHTML = `
-        <div class="personnel"><img class="img-perso" src="${personne.image}" alt="${personne.nom}">
-        <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
-        <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br>
-  
-        </p><div class="double-logo"><a href="${personne.linkedin}" target="_blank"><img id="logoLinkedin" src="./images/LinkedIn.png"></img></a> 
-        <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a></div>
-    `;
+  <img id="minimage"src="${personne.image}" alt="${personne.nom}">
+  <div class="listPersonnel">
+            <h3>${personne.prenom} ${personne.nom}</h3>
+            <div class="listLogo"><a href="${personne.linkedIn}" target="_blank"><img id="logoLinkedin" src="./images/Linkedin.png"></img></a>
+            <a href="${personne.gitHub}" target="_blank"><img id="logoGitHub" src="./images/logoGitHub.png"></img></a></div>
+            </div>
+        `;
   return card;
 }
-
-// ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
-// à (personne) et qui permettra de créer une div, lui donner la class personne-card
-// et écrire dans le HTML les valeurs contenues dans l'objet personne.
-
-const groupDescriptions = [
-  {
-    titre: "Les Rasta Rockets",
-    logo: "./images/rastaRockett.jpg",
-    description:
-      "Chacun d'entre nous apporte ses compétences uniques, que ce soit en design web, en collecte de données, en développement ou en photographie pour créer une ressource complète et attractive. Nous croyons fermement que les bars locaux sont des joyaux de la vie nocturne, et nous voulons les mettre en lumière.",
-  },
-  {
-    titre: "Les Quatres Fantastiques",
-    logo: "images/les4Fantastiques.jpeg",
-    description:
-      "Les 4 Fantastiques : Quatre cerveaux brillants, un seul objectif - dominer le monde du développement ! Avec Antoine, David, Sylvain et Victor, la technologie n'a qu'à bien se tenir. Préparez-vous à des lignes de code incroyables et à des solutions informatiques qui vous laisseront sans voix.",
-  },
-  {
-    titre: "Tango Charlie",
-    logo: "images/alphaTangoCharlie.jpg",
-    description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
-  },
-  {
-    titre: "Les OGs",
-    logo: "images/theOg.png",
-    description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
-  },
-  {
-    titre: "Les Totally Spies",
-    logo: "images/tottallySpies.jpg",
-    description:
-      "Trois jeunes filles, Nelia, Claire et Leslie, mènent une double vie en tant qu'espionnes pour l'organisation secrète ZenList, dirigée par Jerry, tout en jonglant avec les défis de la vie quotidienne d'étudiants à la wild code School!",
-  },
-];
-
-// ^ Tableau des descriptions des groupes; comprend titre, logo, description
-const groupDescription1 = document.querySelector(".groupDescription1");
-const firstGroup = groupDescriptions[0];
-const newGroup = createGroup(firstGroup);
-//variable groupDescription1 = la div qui va contenir la description du groupe
-//firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
-//newGroup est la variable qui appelle la fonction createGroup et l'argument
-//permet de l'insérer dans firstGroup
-
-groupDescription1.appendChild(newGroup);
-//on fini sur un appendChild pour pousser notre nouvelle description dans la div
-//présente sur le HTML
-
-const groupDescription2 = document.querySelector(".groupDescription2");
-const secondGroup = groupDescriptions[1];
-const newGroup2 = createGroup(secondGroup);
-
-groupDescription2.appendChild(newGroup2);
-
-const groupDescription3 = document.querySelector(".groupDescription3");
-const thirdGroup = groupDescriptions[2];
-const newGroup3 = createGroup(thirdGroup);
-
-groupDescription3.appendChild(newGroup3);
-
-const groupDescription4 = document.querySelector(".groupDescription4");
-const fourthGroup = groupDescriptions[3];
-const newGroup4 = createGroup(fourthGroup);
-
-groupDescription4.appendChild(newGroup4);
-
-const groupDescription5 = document.querySelector(".groupDescription5");
-const fifthGroup = groupDescriptions[4];
-const newGroup5 = createGroup(fifthGroup);
-
-groupDescription5.appendChild(newGroup5);
-
-//J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
-//sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
-//un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
-
-function createGroup(group) {
-  const groupDiv = document.createElement("div");
-  groupDiv.classList.add("groupDiv");
-  groupDiv.innerHTML = `<h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}"></img></h4>
-                        <p class="group-txt">${group.description}</p>`;
-  return groupDiv;
-}
-
-//Fonction du nom de createGroup, paramètre group.
-//variable groupDiv crée une div,
-//groupDiv.classList.add ajoute la classe "groupDiv" à la div,
-//groupDiv.innerHTML ajouter les éléments à afficher
-//return groupDiv sinon elle est inutilisable
