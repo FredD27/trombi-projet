@@ -1,6 +1,6 @@
 // NAVBAR
 const links = document.querySelectorAll("nav li");
-
+  
 const groupDescriptions = [
   {
     alias: "rasta-rockets",

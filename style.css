@@ -15,7 +15,6 @@ li {
   /* background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4); */
 }
 
-
 a,
 a :visited {
   color: white;
@@ -27,7 +26,6 @@ a :visited {
 
 a:hover {
   text-decoration: underline;
-
 }
 
 nav {
@@ -156,41 +154,40 @@ h4 {
 .big-container {
   display: none;
   background-color: aliceblue;
-  background-size: cover;}
+  background-size: cover;
+}
 
 @media (max-width: 650px) {
+  #iconsBurger {
+    display: block;
+  }
+  #iconsBurger:before {
+    content: "\2630";
+  }
+  .active #iconsBurger:after {
+    content: "\2715";
+    color: white;
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
+    width: 95%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav ul li {
+    padding: 3px 0;
+  }
+  nav ul li:hover {
+    background: rgb(19, 95, 125);
+  }
+  nav.active ul {
+    left: 0;
+  }
 
-    #iconsBurger {
-      display: block;
-    }
-    #iconsBurger:before {
-      content: "\2630";
-    }
-    .active #iconsBurger:after {
-      content: "\2715";
-      color: white;
-    }
-    nav ul {
-      position: fixed;
-      left: -100%;
-      top: 5%;
-      flex-direction: column;
-      background: linear-gradient(90deg, #539bb1, #0077b5, #012d5be4);
-      width: 95%;
-      text-align: center;
-      transition: 0.25s;
-      
-    }
-    nav ul li {
-      padding: 3px 0;
-    }
-    nav ul li:hover {
-      background: rgb(19, 95, 125);
-    }
-    nav.active ul {
-      left: 0;
-    }
-  
   img {
     width: 12rem;
     height: 15rem;
@@ -214,7 +211,7 @@ h4 {
     box-sizing: border-box;
     font-family: sans-serif;
   }
-  
+
   li {
     background: none;
   }
@@ -320,12 +317,12 @@ h4 {
     height: 40px;
   }
 
- .la-barre {
-  font-size: 50px;
-  text-align: center;
-  margin: 2rem 0;
-  border: solid black 1px;
-}
+  .la-barre {
+    font-size: 50px;
+    text-align: center;
+    margin: 2rem 0;
+    border: solid black 1px;
+  }
 
   .personnel {
     display: flex;
