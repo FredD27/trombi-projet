@@ -493,11 +493,16 @@ const setSwipeListener = () => {
   console.log(carousels);
 };
 
+const groupCardDescription = () => {
+    
+}
+
 const createPersonneCard = (personne) => {
   const card = document.createElement("div");
   card.classList.add("personne-card");
 
   card.innerHTML = `
+  
   <div class="personnel">
     <img class="img-perso" src="${personne.image}" alt="${personne.nom}" loading="lazy" />
     <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
@@ -551,11 +556,31 @@ const setCarouselButtonListener = () => {
     });
   });
 };
+
+const createGroup = (group) => {
+  const groupDiv = document.createElement("div");
+  groupDiv.classList.add("groupDiv");
+  groupDiv.innerHTML = `
+  <h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}" loading="lazy" /></h4>
+  <p class="group-txt">${group.description}</p>`;
+  return groupDiv;
+}
+const generateGroupDescription = (group, index)=> {
+  const groupDescription = document.querySelector(`.groupDescription${index + 1}`);
+  const newGroup = createGroup(group);
+  //variable groupDescription1 = la div qui va contenir la description du groupe
+  //firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
+  //newGroup est la variable qui appelle la fonction createGroup et l'argument
+  //permet de l'insérer dans firstGroup
+
+  groupDescription.appendChild(newGroup);
+}
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   //Crée la variable div-groupes pour stocker l'élément html #div-groupes
 
   groupDescriptions.forEach((group, index) => {
+    generateGroupDescription(group, index)
     carouselGenerator(group, index);
     aliasGenerator(group);
     generateDivGroup(group, index + 1);
@@ -563,65 +588,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setCarouselButtonListener();
   setSwipeListener();
-
-  //^ Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
-  //du tableau personnes. Le paramètre de forEach est (personne), qui
-  //devient le modèle de l'objet à l'index 0 du tableau personnes.
-
-  // ^ Création de la fonction createCardPersonne(personne), qui sera appelée grâce
-  // à (personne) et qui permettra de créer une div, lui donner la class personne-card
-  // et écrire dans le HTML les valeurs contenues dans l'objet personne.
-
-  // ^ Tableau des descriptions des groupes; comprend titre, logo, description
-  const groupDescription1 = document.querySelector(".groupDescription1");
-  const firstGroup = groupDescriptions[0];
-  const newGroup = createGroup(firstGroup);
-  //variable groupDescription1 = la div qui va contenir la description du groupe
-  //firstGroup va contenir l'objet du tableau groupDescriptions à l'index 0
-  //newGroup est la variable qui appelle la fonction createGroup et l'argument
-  //permet de l'insérer dans firstGroup
-
-  groupDescription1.appendChild(newGroup);
-  //on fini sur un appendChild pour pousser notre nouvelle description dans la div
-  //présente sur le HTML
-
-  const groupDescription2 = document.querySelector(".groupDescription2");
-  const secondGroup = groupDescriptions[1];
-  const newGroup2 = createGroup(secondGroup);
-
-  groupDescription2.appendChild(newGroup2);
-
-  const groupDescription3 = document.querySelector(".groupDescription3");
-  const thirdGroup = groupDescriptions[2];
-  const newGroup3 = createGroup(thirdGroup);
-
-  groupDescription3.appendChild(newGroup3);
-
-  const groupDescription4 = document.querySelector(".groupDescription4");
-  const fourthGroup = groupDescriptions[3];
-  const newGroup4 = createGroup(fourthGroup);
-
-  groupDescription4.appendChild(newGroup4);
-
-  const groupDescription5 = document.querySelector(".groupDescription5");
-  const fifthGroup = groupDescriptions[4];
-  const newGroup5 = createGroup(fifthGroup);
-
-  groupDescription5.appendChild(newGroup5);
-
-  //J'ai crée des variables avec la même formule, je peux pas faire de boucle forEach comme
-  //sur le premier tableau, parce que array[0].ForEach sert à cibler un tableau dans
-  //un tableau, et en l'espèce il s'agit d'1 tableau contenant des objets
-
-  function createGroup(group) {
-    const groupDiv = document.createElement("div");
-    groupDiv.classList.add("groupDiv");
-    groupDiv.innerHTML = `
-    <h4>${group.titre} <img class="logo-des-groupes"src="${group.logo}" loading="lazy" /></h4>
-    <p class="group-txt">${group.description}</p>`;
-    return groupDiv;
-  }
 });
+
 //Fonction du nom de createGroup, paramètre group.
 //variable groupDiv crée une div,
 //groupDiv.classList.add ajoute la classe "groupDiv" à la div,
