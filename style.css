@@ -13,7 +13,7 @@ body {
 }
 
 header .back_to_top:hover {
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   transition: all ease 0.8s;
 }
 
@@ -107,7 +107,7 @@ h4 {
 .groupDescription5 {
   display: flex;
   margin: 0 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 /* carousel */
@@ -293,6 +293,7 @@ h4 {
 
   #title-nav {
     margin: 0;
+    color:aliceblue;
   }
 
   .titleLogo {
@@ -327,6 +328,7 @@ h4 {
   .groupDescription5 {
     display: flex;
     margin: 0 5rem;
+    font-size: 1.5rem;
   }
 
   .groupDiv {
