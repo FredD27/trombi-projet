@@ -317,61 +317,83 @@ const personnes = [
 // console.log(valuePeople);
 
 //Crée la variable group-list pour stocker l'élément html #r
-const divGroupes = document.querySelector(".group-list1");
-//Pour chaque (personne) dans le tableau personne[0], créer une card,
-//qui est égale ) à la fonction createPersonneCard2(personne).
+afficherTableau("");
 
-personnes[0].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes.appendChild(card);
-});
+function afficherTableau(name) {
+  const divGroupes = document.querySelector(".group-list1");
 
-const divGroupes2 = document.querySelector(".group-list2");
+  personnes[0].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes.appendChild(card);
+    }
+  });
 
-personnes[1].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes2.appendChild(card);
-});
+  const divGroupes2 = document.querySelector(".group-list2");
 
-const divGroupes3 = document.querySelector(".group-list3");
+  personnes[1].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes2.appendChild(card);
+    }
+  });
 
-personnes[2].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes3.appendChild(card);
-});
+  const divGroupes3 = document.querySelector(".group-list3");
 
-const divGroupes4 = document.querySelector(".group-list4");
-let cardCounter = 0;
+  personnes[2].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes3.appendChild(card);
+    }
+  });
 
-personnes[3].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes4.appendChild(card);
-  // Si le reste de la division de cardCounter par 2 est égal à 1,
-  // alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
-  // if (cardCounter % 2 === 1) {
-  //   card.classList.add("reversed");
-  // }
+  const divGroupes4 = document.querySelector(".group-list4");
+  let cardCounter = 0;
 
-  cardCounter++;
-});
+  personnes[3].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes4.appendChild(card);
 
-const divGroupes5 = document.querySelector(".group-list5");
-let cardCount = 0;
+      cardCounter++;
+    }
+  });
 
-personnes[4].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes5.appendChild(card);
-  if (cardCount % 2 === 1) {
-    card.classList.add("reversed");
-  }
+  const divGroupes5 = document.querySelector(".group-list5");
+  let cardCount = 0;
 
-  cardCount++;
-});
-// Ceci est le tableau qui contient la liste des différents groupe de la promotion JavaScript --->
+  personnes[4].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes5.appendChild(card);
+      if (cardCount % 2 === 1) {
+        card.classList.add("reversed");
+      }
 
-// Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
-// du tableau personnes. Le paramètre de forEach est (personne), qui
-// devient le modèle de l'objet à l'index 0 du tableau personnes.
+      cardCount++;
+    }
+  });
+}
 
 function createPersonneCard2(personne) {
   const card = document.createElement("div");
@@ -391,3 +413,20 @@ function createPersonneCard2(personne) {
         `;
   return card;
 }
+
+function filtrerNom(name) {
+  elements = document.getElementsByClassName("group-list");
+  for (let elt of elements) {
+    while (elt.firstChild) {
+      elt.removeChild(elt.firstChild);
+    }
+  }
+  afficherTableau(name);
+}
+
+const input = document.getElementById("filtre");
+
+input.addEventListener("input", function () {
+  const valeur = input.value;
+  filtrerNom(valeur);
+});

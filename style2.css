@@ -34,7 +34,8 @@
     display: flex;
     padding: 12px;
     border-radius: 15px;
-    box-shadow: 2px 4px 2px 2px;
+    box-shadow: 2px 4px 2px 2px lightgrey;
+    background: linear-gradient(to bottom, #0077b5 40%, white 40%);
   }
   .group-5 .cardPersonnel {
     width: 19%;
