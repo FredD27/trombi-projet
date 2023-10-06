@@ -17,11 +17,15 @@ header .back_to_top:hover {
   transition: all ease 0.8s;
 }
 
+#trombi-nav {
+  display: none;
+}
+
 header .back_to_top {
   /* background-color: red; */
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 15px;
+  right: 5px;
   z-index: 1;
   transition: all ease 0.8s;
 }
@@ -196,7 +200,22 @@ h4 {
   background-size: cover;
 }
 
+.style-description {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: white;
+  scroll-behavior: smooth;
+  scroll-margin-top: 30px;
+  width: 100%;
+  transition: .3s all;
+}
+
+
 @media (max-width: 650px) {
+
+ 
 
     #iconsBurger {
       display: block;
@@ -209,7 +228,7 @@ h4 {
       content: "\2715";
       color: white;
     }
-    nav ul {
+    nav ul, #trombi-nav {
       position: fixed;
       left: -100%;
       top: 5%;
@@ -252,6 +271,17 @@ h4 {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+  }
+
+  header .back_to_top {
+    right: 25px;
+  }
+
+  #trombi-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   li {

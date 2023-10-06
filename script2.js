@@ -36,8 +36,8 @@ const personnes = [
       description: "<strong>Talent:</strong> Ne sait pas roter",
       objectif: "<strong>Objectif pro:</strong> Nomade Digital",
       bref: "<strong>En bref:</strong> La vie est un jeu",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -48,8 +48,8 @@ const personnes = [
       description: "<strong>Talent:</strong> Très très bon vendeur",
       objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
       bref: "<strong>En bref:</strong> On apprend pas à nager hors de l'eau",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -61,8 +61,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Développeur d'applications",
       bref: "<strong>En bref:</strong> « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -128,8 +128,8 @@ const personnes = [
         "<strong>Talent:</strong> Décapsule une bière, avec une autre bière",
       objectif: "<strong>Objectif professionnel:</strong> Devenir Président",
       bref: "<strong>En bref:</strong> Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
-      linkedin: "https://www.linkedin.com/in/victor-guyomard-b8b432158/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
   ],
   [
@@ -141,8 +141,8 @@ const personnes = [
       description: "<strong>Talent: </strong>Gps intégré dans son cerveau",
       objectif: "<strong>Objectif professionnel: </strong>Programmeur logiciel",
       bref: "<strong>En bref:</strong> La fin justifie les moyens",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -154,7 +154,7 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Hackeuse professionnelle",
       bref: "<strong>En bref:</strong> Hakuna matata",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com",
       gitHub: "https://github.com/cassiopeelaurie",
     },
 
@@ -179,8 +179,8 @@ const personnes = [
       objectif:
         "Objectif professionnel:</strong> Développer au quatres coins du monde",
       bref: "<strong>En bref:</strong> « Je vais bien, tout vas bien »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -191,7 +191,7 @@ const personnes = [
       description: "<strong>Talent:</strong> Réalise des peintures abstraites",
       objectif: "<strong>Objectif professionnel:</strong> Devenir Freelance",
       bref: "<strong>En bref:</strong> « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com",
       gitHub: "https://github.com/Benoit-Hayet",
     },
   ],
@@ -205,8 +205,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel: </strong>Devenir le maître de Javascript",
       bref: "<strong>En bref:</strong> Fidèle comme son ombre",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com/in/florian-b-09544b255/",
+      gitHub: "https://github.com/BRUNFlorian",
     },
 
     {
@@ -218,8 +218,8 @@ const personnes = [
         "<strong>Talent:</strong> Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
       objectif: "<strong>Objectif pro: </strong>Joueur e-sport",
       bref: "<strong>En bref:</strong> « Ca geek ce soir ? »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com/in/victorgj95/",
+      gitHub: "https://github.com/Ractag",
     },
 
     {
@@ -231,8 +231,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Devenir contorsionniste",
       bref: "<strong>En bref:</strong> « Rentrer dans un micro-onde »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com/Daaamns",
     },
 
     {
@@ -260,8 +260,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel: </strong>Développeuse web riche et célèbre",
       bref: "<strong>En bref:</strong> « Tout ce qui est petit est mignon »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com/LeslieCore34",
     },
 
     {
@@ -274,8 +274,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Survivre à une autre journée à la Wild",
       bref: "<strong>En bref:</strong> « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com/feed/",
+      gitHub: "https://github.com/lulb11",
     },
 
     {
@@ -287,8 +287,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Apporter aux autres ce qu'on lui a apporté",
       bref: "<strong>En bref:</strong> Réussir c'est prendre le risque d'échouer",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
 
     {
@@ -300,8 +300,8 @@ const personnes = [
       objectif:
         "<strong>Objectif professionnel:</strong> Alternance et vivre de son travail",
       bref: "<strong>En bref:</strong> « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
-      linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-      gitHub: "https://github.com/bfsylvain",
+      linkedin: "https://www.linkedin.com",
+      gitHub: "https://github.com",
     },
   ],
 ];
@@ -317,61 +317,83 @@ const personnes = [
 // console.log(valuePeople);
 
 //Crée la variable group-list pour stocker l'élément html #r
-const divGroupes = document.querySelector(".group-list1");
-//Pour chaque (personne) dans le tableau personne[0], créer une card,
-//qui est égale ) à la fonction createPersonneCard2(personne).
+afficherTableau("");
 
-personnes[0].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes.appendChild(card);
-});
+function afficherTableau(name) {
+  const divGroupes = document.querySelector(".group-list1");
 
-const divGroupes2 = document.querySelector(".group-list2");
+  personnes[0].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes.appendChild(card);
+    }
+  });
 
-personnes[1].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes2.appendChild(card);
-});
+  const divGroupes2 = document.querySelector(".group-list2");
 
-const divGroupes3 = document.querySelector(".group-list3");
+  personnes[1].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes2.appendChild(card);
+    }
+  });
 
-personnes[2].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes3.appendChild(card);
-});
+  const divGroupes3 = document.querySelector(".group-list3");
 
-const divGroupes4 = document.querySelector(".group-list4");
-let cardCounter = 0;
+  personnes[2].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes3.appendChild(card);
+    }
+  });
 
-personnes[3].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes4.appendChild(card);
-  // Si le reste de la division de cardCounter par 2 est égal à 1,
-  // alors ajoute la classe 'reversed' à l'élément HTML représenté par la variable card.
-  // if (cardCounter % 2 === 1) {
-  //   card.classList.add("reversed");
-  // }
+  const divGroupes4 = document.querySelector(".group-list4");
+  let cardCounter = 0;
 
-  cardCounter++;
-});
+  personnes[3].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes4.appendChild(card);
 
-const divGroupes5 = document.querySelector(".group-list5");
-let cardCount = 0;
+      cardCounter++;
+    }
+  });
 
-personnes[4].forEach((personne) => {
-  const card = createPersonneCard2(personne);
-  divGroupes5.appendChild(card);
-  if (cardCount % 2 === 1) {
-    card.classList.add("reversed");
-  }
+  const divGroupes5 = document.querySelector(".group-list5");
+  let cardCount = 0;
 
-  cardCount++;
-});
-// Ceci est le tableau qui contient la liste des différents groupe de la promotion JavaScript --->
+  personnes[4].forEach((personne) => {
+    if (
+      name === "" ||
+      personne.nom.toUpperCase().includes(name.toUpperCase()) ||
+      personne.prenom.toUpperCase().includes(name.toUpperCase())
+    ) {
+      const card = createPersonneCard2(personne);
+      divGroupes5.appendChild(card);
+      if (cardCount % 2 === 1) {
+        card.classList.add("reversed");
+      }
 
-// Ici, VSCode comprends personnes[0].forEach = l'objet à l'index 0
-// du tableau personnes. Le paramètre de forEach est (personne), qui
-// devient le modèle de l'objet à l'index 0 du tableau personnes.
+      cardCount++;
+    }
+  });
+}
 
 function createPersonneCard2(personne) {
   const card = document.createElement("div");
@@ -391,3 +413,20 @@ function createPersonneCard2(personne) {
         `;
   return card;
 }
+
+function filtrerNom(name) {
+  elements = document.getElementsByClassName("group-list");
+  for (let elt of elements) {
+    while (elt.firstChild) {
+      elt.removeChild(elt.firstChild);
+    }
+  }
+  afficherTableau(name);
+}
+
+const input = document.getElementById("filtre");
+
+input.addEventListener("input", function () {
+  const valeur = input.value;
+  filtrerNom(valeur);
+});
