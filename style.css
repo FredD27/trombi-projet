@@ -17,6 +17,10 @@ header .back_to_top:hover {
   transition: all ease 0.8s;
 }
 
+#trombi-nav {
+  display: none;
+}
+
 header .back_to_top {
   /* background-color: red; */
   position: fixed;
@@ -224,7 +228,7 @@ h4 {
       content: "\2715";
       color: white;
     }
-    nav ul {
+    nav ul, #trombi-nav {
       position: fixed;
       left: -100%;
       top: 5%;
@@ -271,6 +275,13 @@ h4 {
 
   header .back_to_top {
     right: 25px;
+  }
+
+  #trombi-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   li {
