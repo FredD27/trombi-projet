@@ -454,11 +454,9 @@ const carouselGenerator = (group, index) => {
 
         <div class="carousel" id="carousel${index + 1}"></div>
 
-        <div class="imageDescription${index + 1}" id="imageDescription${index + 1
-    }"></div>
       </div>
+      <div class="style-description" class="imageDescription${index + 1}" id="imageDescription${index + 1}"></div>
     </div>
-    <div class="la-barre"></div>
   `;
 
   loadCurrentSlide(
@@ -477,9 +475,15 @@ const setSwipeListener = () => {
     );
 
     carousel.addEventListener("click", function () {
-      imageDescription.textContent =
-        groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex].description;
+      const personne = groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex];
+
+      imageDescription.innerHTML =` 
+        <div class="imageDescription">
+          <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+          <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br></p>
+        </div>`
     });
+
     // _______________________________
     let touchStartX = null;
     let touchEndX = null;
