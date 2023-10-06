@@ -363,7 +363,7 @@ const aliasGenerator = (group) => {
 
   navbarList.innerHTML += `
   <li>
-    <a href="#${group.alias}">${group.titre}</a>
+    <a href="#${group.alias}${window.innerWidth < 1024 ? '-small' : ''}">${group.titre}</a>
   </li>`;
 };
 
@@ -413,7 +413,7 @@ const carouselGenerator = (group, index) => {
   }
 
   smallContainer.innerHTML += `
-    <div id="${group.alias}">
+    <div id="${group.alias}-small">
       <div class="groupDescription${index + 1}"></div>
 
       <div class="carousel-container">
