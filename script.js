@@ -37,8 +37,8 @@ const groupDescriptions = [
         description: "<strong>Talent:</strong> Ne sait pas roter",
         objectif: "<strong>Objectif pro:</strong> Nomade Digital",
         bref: "<strong>En bref:</strong> La vie est un jeu",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -49,8 +49,8 @@ const groupDescriptions = [
         description: "<strong>Talent:</strong> Très très bon vendeur",
         objectif: "<strong>Objectif professionnel:</strong> Nomade Digital",
         bref: "<strong>En bref:</strong> On apprend pas à nager hors de l'eau",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -62,8 +62,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Développeur d'applications",
         bref: "<strong>En bref:</strong> « Parfois, il ne faut pas seulement tourner la page, il faut changer de livre »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -138,7 +138,7 @@ const groupDescriptions = [
         objectif: "<strong>Objectif professionnel:</strong> Devenir Président",
         bref: "<strong>En bref:</strong> Les plus belles années d’une vie sont celles que l’ont a pas encore vécues",
         linkedin: "https://www.linkedin.com/in/victor-guyomard-b8b432158/",
-        gitHub: "https://github.com/bfsylvain",
+        gitHub: "https://github.com",
       },
     ],
     description:
@@ -159,8 +159,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel: </strong>Programmeur logiciel",
         bref: "<strong>En bref:</strong> La fin justifie les moyens",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -197,8 +197,8 @@ const groupDescriptions = [
         objectif:
           "Objectif professionnel:</strong> Développer au quatres coins du monde",
         bref: "<strong>En bref:</strong> « Je vais bien, tout vas bien »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -210,12 +210,12 @@ const groupDescriptions = [
           "<strong>Talent:</strong> Réalise des peintures abstraites",
         objectif: "<strong>Objectif professionnel:</strong> Devenir Freelance",
         bref: "<strong>En bref:</strong> « Il n’y a rien de noble à être supérieur à vos semblables. La vraie noblesse est d’être supérieur à celui que vous avez été auparavant »",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com",
         gitHub: "https://github.com/Benoit-Hayet",
       },
     ],
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
+      " L’équipe Tango Charlie s’est réunie pour vous trouver les meilleurs restaurants et ne pas vous laisser le ventre vide.",
   },
   {
     alias: "the-OG",
@@ -232,8 +232,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel: </strong>Devenir le maître de Javascript",
         bref: "<strong>En bref:</strong> Fidèle comme son ombre",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com/in/florian-b-09544b255/",
+        gitHub: "https://github.com/BRUNFlorian",
       },
 
       {
@@ -245,8 +245,8 @@ const groupDescriptions = [
           "<strong>Talent:</strong> Peux manger un bucket pour deux + les deux frites au KFC, et un burger en plus",
         objectif: "<strong>Objectif pro: </strong>Joueur e-sport",
         bref: "<strong>En bref:</strong> « Ca geek ce soir ? »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com/Ractag",
       },
 
       {
@@ -258,8 +258,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Devenir contorsionniste",
         bref: "<strong>En bref:</strong> « Rentrer dans un micro-onde »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com/Daaamns",
       },
 
       {
@@ -272,12 +272,12 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Comédie-dev à plein temps",
         bref: "<strong>En bref: </strong>« Ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse »",
-        linkedin: "https://www.linkedin.com/in/fred-druet-855b58293/",
+        linkedin: "https://www.linkedin.com",
         gitHub: "https://github.com/FredD27",
       },
     ],
     description:
-      "Les Rasta Rockets, contre toute attente, ne sont pas des Rastas. Ce groupe de 5 développeurs web en puissance est sympathique et doué en code, surtout si vous cherchez les meilleurs bars du coin.",
+      "C'est dans l'équipe des OG's que nous retrouvons les meilleurs gangsters codeurs. Ils ne manquent jamais de motivation, ni de ressources pour amener leur projet toujours plus haut et toujours plus loin. Faites leur confiance, ils ne vont décevront pas!!!",
   },
   {
     alias: "totally-spies",
@@ -295,8 +295,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel: </strong>Développeuse web riche et célèbre",
         bref: "<strong>En bref:</strong> « Tout ce qui est petit est mignon »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -309,8 +309,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Survivre à une autre journée à la Wild",
         bref: "<strong>En bref:</strong> « Ce n’est pas l’émotion qui définie l’expression mais l’expression qui définie l’émotion »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -322,8 +322,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Apporter aux autres ce qu'on lui a apporté",
         bref: "<strong>En bref:</strong> Réussir c'est prendre le risque d'échouer",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
 
       {
@@ -335,8 +335,8 @@ const groupDescriptions = [
         objectif:
           "<strong>Objectif professionnel:</strong> Alternance et vivre de son travail",
         bref: "<strong>En bref:</strong> « Some people live more in 20 years than others do in 80, it’s not the time that matters, it’s the person »",
-        linkedin: "https://www.linkedin.com/in/sylvain-bonnaure/",
-        gitHub: "https://github.com/bfsylvain",
+        linkedin: "https://www.linkedin.com",
+        gitHub: "https://github.com",
       },
     ],
     description:
@@ -454,11 +454,9 @@ const carouselGenerator = (group, index) => {
 
         <div class="carousel" id="carousel${index + 1}"></div>
 
-        <div class="imageDescription${index + 1}" id="imageDescription${index + 1
-    }"></div>
       </div>
+      <div class="style-description" class="imageDescription${index + 1}" id="imageDescription${index + 1}"></div>
     </div>
-    <div class="la-barre"></div>
   `;
 
   loadCurrentSlide(
@@ -477,9 +475,15 @@ const setSwipeListener = () => {
     );
 
     carousel.addEventListener("click", function () {
-      imageDescription.textContent =
-        groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex].description;
+      const personne = groupDescriptions[index - 1].gens[groupDescriptions[index - 1].currentSlideIndex];
+
+      imageDescription.innerHTML =` 
+        <div class="imageDescription">
+          <h3>${personne.prenom} ${personne.nom} ${personne.age}</h3>
+          <p class="card-txt"> ${personne.description} </br>${personne.objectif} </br>${personne.bref} </br></p>
+        </div>`
     });
+
     // _______________________________
     let touchStartX = null;
     let touchEndX = null;
@@ -614,7 +618,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setSwipeListener();
 
   if (document.getElementById("navbar-list")) {
-    document.getElementById("navbar-list").innerHTML += `<li><a href="index2.html">TrombiList</a></li>`;
+    document.getElementById("navbar-list").innerHTML += `<li><a id="trombi-nav" href="index2.html">TrombiList</a></li>`;
   }
 });
 
